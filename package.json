@@ -1,0 +1,22 @@
+{
+  "name": "nicolas_portfolio_first",
+  "version": "1.0.0",
+  "description": "Private portfolio for work-study research",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NicolasMB3/Nicolas_portfolio_first.git"
+  },
+  "author": "NicolasB",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NicolasMB3/Nicolas_portfolio_first/issues"
+  },
+  "homepage": "https://github.com/NicolasMB3/Nicolas_portfolio_first#readme",
+  "dependencies": {
+    "sass": "^1.47.0"
+  }
+}

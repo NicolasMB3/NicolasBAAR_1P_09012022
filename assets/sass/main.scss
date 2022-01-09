@@ -1,0 +1,35 @@
+@use 'utils' as *;
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;900&display=swap');
+
+body {
+   margin: 0;
+   padding: 0;
+   font-family: 'Rubik', sans-serif;
+   background: $primary;
+}
+
+header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   background-color: $secondary;
+   border-bottom: 1px solid $third;
+   height: auto;
+   @include box-gradiant;
+   #title-left, #title-right {
+      .text--bold {
+         font-weight: bold;
+      }
+      ul {
+         list-style-type: none;
+         margin: 0.7rem 0;
+         padding: 0 0.8rem;
+         li {
+            display: inline;
+            color: #FFFFFF;
+            mix-blend-mode: hard-light;
+            padding: 0.5rem 0.5rem;
+         }
+      }
+   }
+}
