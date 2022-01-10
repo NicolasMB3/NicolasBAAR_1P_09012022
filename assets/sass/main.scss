@@ -71,7 +71,7 @@ main {
             }
          }
          .research-bar {
-            background: rgba(12, 15, 18, 0.7);
+            background: rgba(12, 15, 18, 0.50);
             border-radius: 7px;
             width: 50%;
             display: flex;
@@ -104,7 +104,8 @@ main {
             }
          }
          .button-switch {
-            background: rgba(12, 15, 18, 0.7);
+            font-size: 14px;
+            background: rgba(12, 15, 18, 0.50);
             padding: 0.3rem 1rem;
             border-radius: 7px;
             margin-right: 10rem;
@@ -119,6 +120,7 @@ main {
          background: rgba(37, 38, 40, 0.7);
          border-radius: 0 0 20px 20px;
          border: 1px solid #212121;
+         border-top: 0;
       }
    }
 }

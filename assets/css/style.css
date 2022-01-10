@@ -59,7 +59,7 @@ main .container .terminal-header .left-right .fa-chevron-left {
   margin-right: 1rem;
 }
 main .container .terminal-header .research-bar {
-  background: rgba(12, 15, 18, 0.7);
+  background: rgba(12, 15, 18, 0.5);
   border-radius: 7px;
   width: 50%;
   display: flex;
@@ -104,7 +104,8 @@ main .container .terminal-header .button-management #circle-grey {
   background: radial-gradient(125% 125% at 50% 50%, #CECDCD 0%, rgba(215, 215, 215, 0.6) 100%);
 }
 main .container .terminal-header .button-switch {
-  background: rgba(12, 15, 18, 0.7);
+  font-size: 14px;
+  background: rgba(12, 15, 18, 0.5);
   padding: 0.3rem 1rem;
   border-radius: 7px;
   margin-right: 10rem;
@@ -115,6 +116,7 @@ main .container #terminal {
   background: rgba(37, 38, 40, 0.7);
   border-radius: 0 0 20px 20px;
   border: 1px solid #212121;
+  border-top: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
