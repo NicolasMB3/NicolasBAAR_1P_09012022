@@ -1,5 +1,6 @@
 @use 'utils' as *;
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300;400;500;600;800&display=swap');
 
 //
 // Disable navigator margin and padding (???)
@@ -9,6 +10,22 @@ body {
    padding: 0;
    font-family: 'Rubik', sans-serif;
    background: $primary;
+   height: 100vh;
+}
+
+//
+// General stylist class for bold text
+//
+.text--bold {
+   font-weight: bold;
+}
+
+a {
+   text-decoration: none;
+   @include text;
+   &:visited {
+      text-decoration: none;
+   }
 }
 
 //
@@ -23,17 +40,13 @@ header {
    height: auto;
    @include box-gradiant;
    #title-left, #title-right {
-      .text--bold {
-         font-weight: bold;
-      }
       ul {
          list-style-type: none;
          margin: 0.5rem 0;
          padding: 0 0.8rem;
          li {
             display: inline;
-            color: #FFFFFF;
-            mix-blend-mode: hard-light;
+            @include text;
             padding: 0.5rem 0.5rem;
             font-size: 14px;
          }
@@ -55,15 +68,15 @@ main {
       // Terminal head modifications here
       //
       .terminal-header {
-         width: 60vw;
+         width: auto;
          background: rgba(33, 33, 33, 0.37);
-         border: 1px solid #212121;
+         border: 1px solid #2121216e;
          border-radius: 20px 20px 0 0;
          height: 45px;
          display: flex;
          justify-content: space-between;
          align-items: center;
-         color: #A6A6A6;
+         @include text;
          .left-right {
             margin-left: 2rem;
             .fa-chevron-left {
@@ -86,6 +99,9 @@ main {
                }
             }
          }
+         //
+         // Close/Reduce... from MacOS button
+         //
          .button-management {
             display: flex;
             align-items: center;
@@ -106,7 +122,7 @@ main {
          .button-switch {
             font-size: 14px;
             background: rgba(12, 15, 18, 0.50);
-            padding: 0.3rem 1rem;
+            padding: 0.3rem 0.7rem;
             border-radius: 7px;
             margin-right: 10rem;
          }
@@ -115,12 +131,44 @@ main {
       // Terminal text modifications here
       //
       #terminal {
-         height: 550px;
+         height: auto;
          width: 60vw;
-         background: rgba(37, 38, 40, 0.7);
+         background: rgba(33, 33, 33, 0.37);
          border-radius: 0 0 20px 20px;
          border: 1px solid #212121;
          border-top: 0;
+         padding: 1rem;
+         .terminal-text {
+            height: 500px;
+            width: auto;
+            overflow: scroll;
+            overflow-x: hidden;
+            @include text;
+            font-family: 'Source Code Pro', monospace;
+            font-size: 14px;
+         }
       }
    }
+}
+
+//
+// Little ad (and contact text) with random sentences
+//
+footer {
+   margin-left: 1rem;
+   font-size: 14px;
+   @include text;
+}
+
+//
+// Scroll bar custom
+//
+.terminal-text::-webkit-scrollbar {
+   width: 0.4em;
+   position: absolute;
+}
+.terminal-text::-webkit-scrollbar-thumb {
+   background: rgba(33, 33, 33, 0.50);
+   border-radius: 20px;
+   outline: 1px solid rgb(33, 33, 33, 0.50);
 }

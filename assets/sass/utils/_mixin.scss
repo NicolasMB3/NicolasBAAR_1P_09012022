@@ -5,6 +5,11 @@
    ;
 }
 
+@mixin text {
+   color: #FFFFFF;
+   mix-blend-mode: hard-light;
+}
+
 @mixin button-management {
    width: 12px;
    height: 12px;
