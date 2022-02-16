@@ -28,6 +28,14 @@ a {
    }
 }
 
+.text--margin-left {
+   margin-left: 10px;
+}
+
+.text--green {
+   color: $green;
+}
+
 //
 // Informations about me and display date and time
 //
@@ -84,7 +92,7 @@ main {
             }
          }
          .research-bar {
-            background: rgba(12, 15, 18, 0.50);
+            background: rgba(12, 15, 18, 0.3);
             border-radius: 7px;
             width: 50%;
             display: flex;
@@ -120,8 +128,8 @@ main {
             }
          }
          .button-switch {
-            font-size: 14px;
-            background: rgba(12, 15, 18, 0.50);
+            font-size: 12px;
+            background: rgba(12, 15, 18, 0.3);
             padding: 0.3rem 0.7rem;
             border-radius: 7px;
             margin-right: 10rem;
@@ -138,14 +146,31 @@ main {
          border: 1px solid #212121;
          border-top: 0;
          padding: 1rem;
-         .terminal-text {
-            height: 500px;
+         li {
+            padding: 0.2rem 0;
+         }
+         #terminal-text {
+            height: 600px;
             width: auto;
             overflow: scroll;
             overflow-x: hidden;
             @include text;
             font-family: 'Source Code Pro', monospace;
             font-size: 14px;
+            #terminal-input {
+               display: flex;
+               align-items: center;
+               input {
+                  font-size: 14px;
+                  margin-left: 0.5rem;
+                  height: 20px;
+                  font-family: 'Source Code Pro', monospace;
+                  @include text;
+                  background-color: #f5be4f00;
+                  border: none;
+                  outline: none;
+               }
+            }
          }
       }
    }
@@ -163,11 +188,11 @@ footer {
 //
 // Scroll bar custom
 //
-.terminal-text::-webkit-scrollbar {
+#terminal-text::-webkit-scrollbar {
    width: 0.4em;
    position: absolute;
 }
-.terminal-text::-webkit-scrollbar-thumb {
+#terminal-text::-webkit-scrollbar-thumb {
    background: rgba(33, 33, 33, 0.50);
    border-radius: 20px;
    outline: 1px solid rgb(33, 33, 33, 0.50);
