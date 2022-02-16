@@ -12,6 +12,11 @@ body {
   font-weight: bold;
 }
 
+.text--warning {
+  font-weight: bold;
+  color: #EC6A5E;
+}
+
 a {
   text-decoration: none;
   color: #FFFFFF;
@@ -167,6 +172,18 @@ main .container #terminal #terminal-text #terminal-input input {
   background-color: #f5be4f00;
   border: none;
   outline: none;
+}
+main .container #terminal #terminal-text #terminal-input-new {
+  display: flex;
+  align-items: center;
+  padding: 0.7rem 0;
+}
+main .container #terminal #terminal-text #terminal-input-new #teest {
+  padding-left: 0.5rem;
+  font-size: 14px;
+  font-family: "Source Code Pro", monospace;
+  color: #FFFFFF;
+  mix-blend-mode: hard-light;
 }
 
 footer {
