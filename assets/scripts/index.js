@@ -1,6 +1,25 @@
 const textTerminal = document.getElementById('terminal-text');
 let inputValue = document.querySelector('#command');
 
+function time() {
+   let getTime;
+   let time;
+   setInterval(() => {
+      getTime = new Date();
+      time = getTime.getHours() + ':' + getTime.getMinutes();
+      document.getElementById('time').innerHTML = time;
+   }, 1000);
+}
+
+function date() {
+   let getDate;
+   getDate = new Date();
+   let date = getDate.getDate() + '/' + ("0" + (getDate.getMonth() + 1)).slice(-2) + '/' + getDate.getFullYear();
+   document.getElementById('date').innerHTML = date;;
+}
+
+date()
+
 function inputToText() {
    // Stockage de la valeur écrite
    const tempDataInput = inputValue.value;
@@ -77,4 +96,5 @@ function pressKey() {
    });
 }
 
+time();
 pressKey();
