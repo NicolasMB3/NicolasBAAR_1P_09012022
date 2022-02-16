@@ -43,6 +43,10 @@ function pressKey() {
             inputToText();
             writeAnwser(`La commande help n'est pas encore disponible`);
             newInput();
+         } else if (inputValue.value === '') {
+            inputToText();
+            writeAnwser(`Merci d'écrire une commande`);
+            newInput();
          } else {
             inputToText();
             writeAnwser(`La commande ` + inputValue.value + ` n'est pas disponible pour le moment ..`);
