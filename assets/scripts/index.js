@@ -21,7 +21,7 @@ function newInput() {
    textTerminal.innerHTML += 
       `<div id="terminal-input">
          <p><span class="text--bold">C:\\Users\\Nicolas></span></p>
-         <input type="text" id="command" name="command" required minlength="4" maxlength="8" autocomplete="off" autofocus>
+         <input type="text" id="command" name="command" required minlength="4" maxlength="14" autocomplete="off" autofocus>
       </div>`
    inputValue = document.querySelector('#command');
    inputValue.focus();
@@ -39,13 +39,34 @@ function writeAnwser(text) {
 function pressKey() {
    inputValue.addEventListener("keypress", (e) => {
       if (e.key === 'Enter') {
-         if(inputValue.value === 'help') {
+         if(inputValue.value === 'nicolas') {
             inputToText();
-            writeAnwser(`La commande help n'est pas encore disponible`);
+            writeAnwser(`Développeur web full-stack. Mordu d’informatique, j’ai appris à programmer dès mon plus jeune âge dans divers langages informatiques comme JavaScript, PHP ... 
+            Polyvalent, je maîtrise les différentes étapes techniques de la création d’un site web ; de la compréhension des besoins utilisateurs, à la conception des maquettes jusqu’au 
+            développement front-end et back-end.`);
+            newInput();
+         }  else if (inputValue.value === 'status') {
+            inputToText();
+            writeAnwser(`Oui ! Je suis toujours à la recherche d'une alternance pour Janvier 2022 🧑‍💻`);
+            newInput();
+         } else if (inputValue.value == 'clear') {
+            textTerminal.innerHTML = `<p>[NBos] : Liste des commandes disponibles</p>
+            <ul>
+               <li>help : Affiche toutes les commandes disponibles</li>
+               <li>nicolas : En savoir plus sur moi</li>
+               <li>status : Savoir si je suis toujours à la recherche d'une alternance</li>
+               <li>theme [light/dark] : Change le thème du site</li>
+               <li>contact : Rentrer en contact avec moi</li>
+               <li>clear : Nettoie la console</li>
+            </ul>`;
+            newInput();
+         } else if (inputValue.value == 'help') {
+            inputToText();
+            writeAnwser(`En cours de création`);
             newInput();
          } else if (inputValue.value === '') {
             inputToText();
-            writeAnwser(`Merci d'écrire une commande`);
+            writeAnwser(`Merci d'écrire une commande (liste disponible avec la commande help)`);
             newInput();
          } else {
             inputToText();
