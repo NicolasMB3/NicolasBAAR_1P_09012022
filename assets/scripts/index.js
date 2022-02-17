@@ -18,8 +18,6 @@ function date() {
    document.getElementById('date').innerHTML = date;;
 }
 
-date()
-
 function inputToText() {
    // Stockage de la valeur écrite
    const tempDataInput = inputValue.value;
@@ -69,15 +67,7 @@ function pressKey() {
             writeAnwser(`Oui ! Je suis toujours à la recherche d'une alternance pour Janvier 2022 🧑‍💻`);
             newInput();
          } else if (inputValue.value == 'clear') {
-            textTerminal.innerHTML = `<p>[NBos] : Liste des commandes disponibles</p>
-            <ul>
-               <li>help : Affiche toutes les commandes disponibles</li>
-               <li>nicolas : En savoir plus sur moi</li>
-               <li>status : Savoir si je suis toujours à la recherche d'une alternance</li>
-               <li>theme [light/dark] : Change le thème du site</li>
-               <li>contact : Rentrer en contact avec moi</li>
-               <li>clear : Nettoie la console</li>
-            </ul>`;
+            textTerminal.innerHTML = ``;
             newInput();
          } else if (inputValue.value == 'help') {
             inputToText();
@@ -97,4 +87,5 @@ function pressKey() {
 }
 
 time();
+date();
 pressKey();
