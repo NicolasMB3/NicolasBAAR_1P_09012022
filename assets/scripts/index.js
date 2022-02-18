@@ -191,7 +191,7 @@ function resize() {
     modifiers: [
       // keep the edges inside the parent
       interact.modifiers.restrictEdges({
-        outer: 'parent'
+        outer: 'self'
       }),
 
       // minimum size
