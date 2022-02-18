@@ -28,7 +28,7 @@ function inputToText() {
    textTerminal.innerHTML +=  `
    <div id="terminal-input-new">
       <span class="text--bold" id="terminal-title">C:\\Users\\Nicolas></span>
-      <span id="teest">` + tempDataInput + `</span>
+      <span id="new-input--style">` + tempDataInput + `</span>
    </div>`;
 }
 
@@ -77,6 +77,7 @@ function pressKey() {
          } else if (inputValue.value == 'clear bin') {
             inputToText();
             const binImage = document.getElementById('image-bin');
+            writeAnwser(`La corbeille a été vidée.`);
             binImage.src = "assets/images/folder-bin.png";
             newInput();
          } else if (inputValue.value == 'help') {
@@ -259,7 +260,6 @@ function resize() {
 }
 
 // Dark Mode 
-
 function darkMode() {
    var checkbox = document.getElementById('button-switch');
    var checkboxFile = document.getElementById('button-switch-file');

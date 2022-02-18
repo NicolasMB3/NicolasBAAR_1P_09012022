@@ -15,6 +15,7 @@ html {
    --lightTerminalBar: rgba(12, 15, 18, 0.3);
    --lightPlaceholder: rgb(241, 237, 237);
    --lightBtn: #FFFFFF;
+   --lightTransBorder: rgba(241, 237, 237, 0);
 }
 
 // 
@@ -34,7 +35,7 @@ html[data-theme='dark'] {
 }
 
 //
-// Disable navigator margin and padding (???)
+// Disable navigator's margins and paddings (???)
 //
 body {
    margin: 0;
@@ -80,6 +81,7 @@ body {
    -khtml-user-select: none;
    -webkit-user-select: none;
    user-select: none;
+   border: 1px solid var(--lightTransBorder);
    &:hover {
       background-color: var(--lightBackground);
       border: 1px solid var(--lightBorder);
@@ -111,6 +113,7 @@ body {
    -khtml-user-select: none;
    -webkit-user-select: none;
    user-select: none;
+   border: 1px solid var(--lightTransBorder);
    @include text;
    color: var(--lightText);
    &:hover {
@@ -144,6 +147,7 @@ body {
    -khtml-user-select: none;
    -webkit-user-select: none;
    user-select: none;
+   border: 1px solid var(--lightTransBorder);
    @include text;
    color: var(--lightText);
    &:hover {
@@ -177,6 +181,7 @@ body {
    -khtml-user-select: none;
    -webkit-user-select: none;
    user-select: none;
+   border: 1px solid var(--lightTransBorder);
    @include text;
    color: var(--lightText);
    &:hover {
@@ -212,6 +217,7 @@ body {
    -khtml-user-select: none;
    -webkit-user-select: none;
    user-select: none;
+   border: 1px solid var(--lightTransBorder);
    &:hover {
       background-color: var(--lightBackground);
       border: 1px solid var(--lightBorder);
@@ -419,7 +425,7 @@ main {
                display: flex;
                align-items: center;
                padding: 0.7rem 0;
-               #teest {
+               #new-input--style {
                   padding-left: 0.5rem;
                   font-size: 14px;
                   font-family: 'Source Code Pro', monospace;

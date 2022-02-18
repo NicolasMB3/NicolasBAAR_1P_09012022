@@ -10,6 +10,7 @@ html {
   --lightTerminalBar: rgba(12, 15, 18, 0.3);
   --lightPlaceholder: rgb(241, 237, 237);
   --lightBtn: #FFFFFF;
+  --lightTransBorder: rgba(241, 237, 237, 0);
 }
 
 html[data-theme=dark] {
@@ -63,6 +64,7 @@ body {
   -khtml-user-select: none;
   -webkit-user-select: none;
   user-select: none;
+  border: 1px solid var(--lightTransBorder);
 }
 #image-desktop-google:hover {
   background-color: var(--lightBackground);
@@ -94,6 +96,7 @@ body {
   -khtml-user-select: none;
   -webkit-user-select: none;
   user-select: none;
+  border: 1px solid var(--lightTransBorder);
   mix-blend-mode: hard-light;
   color: var(--lightText);
 }
@@ -127,6 +130,7 @@ body {
   -khtml-user-select: none;
   -webkit-user-select: none;
   user-select: none;
+  border: 1px solid var(--lightTransBorder);
   mix-blend-mode: hard-light;
   color: var(--lightText);
 }
@@ -160,6 +164,7 @@ body {
   -khtml-user-select: none;
   -webkit-user-select: none;
   user-select: none;
+  border: 1px solid var(--lightTransBorder);
   mix-blend-mode: hard-light;
   color: var(--lightText);
 }
@@ -195,6 +200,7 @@ body {
   -khtml-user-select: none;
   -webkit-user-select: none;
   user-select: none;
+  border: 1px solid var(--lightTransBorder);
 }
 #image-desktop-google:hover {
   background-color: var(--lightBackground);
@@ -401,7 +407,7 @@ main .container #terminal #terminal-text #terminal-input-new {
   align-items: center;
   padding: 0.7rem 0;
 }
-main .container #terminal #terminal-text #terminal-input-new #teest {
+main .container #terminal #terminal-text #terminal-input-new #new-input--style {
   padding-left: 0.5rem;
   font-size: 14px;
   font-family: "Source Code Pro", monospace;
