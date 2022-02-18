@@ -23,13 +23,13 @@ html {
 html[data-theme='dark'] {
    background: var(--lightBg);
    --lightWallpaper: url('../images/wallpaper_lite.svg');
-   --lightText: #222222;
-   --lightBackground: rgba(221, 207, 207, 0.47);
-   --lightBorder: #797878b7;
-   --lightTerminalHeaderBackground: rgba(221, 207, 207, 0.55);
-   --lightTerminalBodyBackground: rgba(221, 207, 207, 0.40);
+   --lightText: #ffffff;
+   --lightBackground: rgba(123, 129, 137, 0.45);
+   --lightBorder: rgba(255, 255, 255, 0.125);
+   --lightTerminalHeaderBackground: rgba(123, 129, 137, 0.50);
+   --lightTerminalBodyBackground: rgba(123, 129, 137, 0.45);
    --lightTerminalBar: rgba(131, 144, 158, 0.3);
-   --lightPlaceholder: rgb(37, 37, 37);
+   --lightPlaceholder: rgb(255, 255, 255);
    --lightBtn: #FFBD07;
 }
 
@@ -307,14 +307,15 @@ main {
       //
       .terminal-header {
          width: auto;
-         background: var(--lightTerminalHeaderBackground);
+         background-color: var(--lightTerminalHeaderBackground);
          border: 1px solid var(--lightBorder);
          border-radius: 15px 15px 0 0;
          height: 45px;
          display: flex;
          justify-content: space-between;
          align-items: center;
-         backdrop-filter: blur(15px);
+         backdrop-filter: blur(15px) saturate(120%);
+         -webkit-backdrop-filter: blur(15px) saturate(121%);
          cursor: grab;
          @include text;
          color: var(--lightText);
