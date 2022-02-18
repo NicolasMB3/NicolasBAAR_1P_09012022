@@ -2,14 +2,13 @@ const textTerminal = document.getElementById('terminal-text');
 let inputValue = document.querySelector('#command');
 
 function time() {
-   let getTime;
-   let time;
    setInterval(() => {
-      getTime = new Date();
-      if (getTime.getHours() < 12) {
-         time = ("0" + getTime.getHours()).slice(-2) + ':' + ("0" + getTime.getMinutes()).slice(-2) + ' AM';
+      let getTime = new Date();
+      let time = ("0" + getTime.getHours()).slice(-2) + ':' + ("0" + getTime.getMinutes()).slice(-2);
+      if (getTime.getHours() <= 12) {
+         time += ' AM';
       } else {
-         time = ("0" + getTime.getHours()).slice(-2) + ' PM ' + ("0" + getTime.getMinutes()).slice(-2) + ' PM';
+         time += ' PM';
       }
       document.getElementById('time').innerHTML = time;
    }, 1000);
@@ -71,7 +70,14 @@ function pressKey() {
             writeAnwser(`Oui ! Je suis toujours à la recherche d'une alternance pour Janvier 2022 🧑‍💻`);
             newInput();
          } else if (inputValue.value == 'clear') {
+            const binImage = document.getElementById('image-bin');
+            binImage.src = "assets/images/folder-bin-not-empty.png";
             textTerminal.innerHTML = ``;
+            newInput();
+         } else if (inputValue.value == 'unclear') {
+            inputToText();
+            const binImage = document.getElementById('image-bin');
+            binImage.src = "assets/images/folder-bin.png";
             newInput();
          } else if (inputValue.value == 'help') {
             inputToText();
