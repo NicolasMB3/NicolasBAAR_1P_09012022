@@ -203,6 +203,7 @@ main {
          justify-content: space-between;
          align-items: center;
          backdrop-filter: blur(15px);
+         cursor: grab;
          @include text;
          .left-right {
             margin-left: 2rem;
@@ -269,6 +270,7 @@ main {
             padding: 0.2rem 0;
          }
          #terminal-text {
+            cursor: initial !important;
             height: 600px;
             width: auto;
             overflow: scroll;

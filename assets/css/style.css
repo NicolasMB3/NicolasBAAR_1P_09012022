@@ -186,6 +186,7 @@ main .container .terminal-header {
   justify-content: space-between;
   align-items: center;
   backdrop-filter: blur(15px);
+  cursor: grab;
   color: #FFFFFF;
   mix-blend-mode: hard-light;
 }
@@ -260,6 +261,7 @@ main .container #terminal li {
   padding: 0.2rem 0;
 }
 main .container #terminal #terminal-text {
+  cursor: initial !important;
   height: 600px;
   width: auto;
   overflow: scroll;
