@@ -13,18 +13,6 @@ body {
    height: 100vh;
 }
 
-#element {
-   position: absolute;
-}
-
-.dragPoint {
-   z-index: 1;
-   position: absolute;
-   width: 100% !important;
-   height: 50px !important;
-   background-color: #af343400 !important;
-}
-
 //
 // General stylist class for bold text
 //
@@ -200,13 +188,14 @@ main {
    flex-wrap: wrap;
    height: 90vh;
    .container {
+      backdrop-filter: blur(15px);
       @include box-gradiant;
       //
       // Terminal head modifications here
       //
       .terminal-header {
          width: auto;
-         background: rgba(33, 33, 33, 0.35);
+         background: rgba(33, 33, 33, 0.5);
          border: 1px solid #2121216e;
          border-radius: 15px 15px 0 0;
          height: 45px;
@@ -276,7 +265,6 @@ main {
          border: 1px solid #212121;
          border-top: 0;
          padding: 1rem;
-         backdrop-filter: blur(15px);
          li {
             padding: 0.2rem 0;
          }

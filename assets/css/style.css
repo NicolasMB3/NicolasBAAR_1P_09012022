@@ -8,18 +8,6 @@ body {
   height: 100vh;
 }
 
-#element {
-  position: absolute;
-}
-
-.dragPoint {
-  z-index: 1;
-  position: absolute;
-  width: 100% !important;
-  height: 50px !important;
-  background-color: #af343400 !important;
-}
-
 .text--bold {
   font-weight: bold;
 }
@@ -185,11 +173,12 @@ main {
   height: 90vh;
 }
 main .container {
+  backdrop-filter: blur(15px);
   box-shadow: 0px 0px 7.3px rgba(0, 0, 0, 0.035), 0px 0px 58px rgba(0, 0, 0, 0.07);
 }
 main .container .terminal-header {
   width: auto;
-  background: rgba(33, 33, 33, 0.35);
+  background: rgba(33, 33, 33, 0.5);
   border: 1px solid #2121216e;
   border-radius: 15px 15px 0 0;
   height: 45px;
@@ -266,7 +255,6 @@ main .container #terminal {
   border: 1px solid #212121;
   border-top: 0;
   padding: 1rem;
-  backdrop-filter: blur(15px);
 }
 main .container #terminal li {
   padding: 0.2rem 0;

@@ -7,7 +7,7 @@
    <link href="assets/css/style.css" rel="stylesheet">
    <script src="https://kit.fontawesome.com/17e84708c0.js" crossorigin="anonymous"></script>
    <title>CMD \> Nicolas BAAR</title>
-   <script src="https://cdn.jsdelivr.net/gh/interactiveJS/interactiveJS@v2.0.1/src/individuals/draggable.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
 </head>
 <body>
    <header>
@@ -40,50 +40,48 @@
          <img src="assets/images/folder-bin.png" width="42px"> 
          <p>Corbeille</p>
       </div>
-      <div id="element">
-         <div class="container">
-            <div class="terminal-header">
-               <div class="button-management">
-                  <div id="circle-red"></div>
-                  <div id="circle-orange"></div>
-                  <div id="circle-grey"></div>
-                  <div class="left-right">
-                     <i class="fas fa-chevron-left"></i>
-                     <i class="fas fa-chevron-right"></i>
-                  </div>
-               </div>
-               <div class="research-bar">
-                  <p id="text--margin0"><i class="fas fa-lock"></i>nicolasbaar.exe</p>
-               </div>
-               <div class="button-switch">
-                  <i class="fas fa-adjust"></i>
+      <div class="container">
+         <div class="terminal-header">
+            <div class="button-management">
+               <div id="circle-red"></div>
+               <div id="circle-orange"></div>
+               <div id="circle-grey"></div>
+               <div class="left-right">
+                  <i class="fas fa-chevron-left"></i>
+                  <i class="fas fa-chevron-right"></i>
                </div>
             </div>
-            <div id="terminal">
-               <div id="terminal-text">
-                  <p>[X-01] NBos terminal [version 0.01]</p>
-                  <p>(c)Nicolas BAAR. Tous droits réservés.</p>
-                  <p><span class="text--bold">C:\Users\Nicolas></span> npm run server</p>
-                  <p>[NBos] : Démarrage du serveur ...</p>
-                  <p>[NBos] : Erreur Xv5ED -> Veuillez choisir un thème avant de commencer la configuration</p>
-                  <ul>
-                     <li>Dark Mode</li>
-                     <li>Light Mode</li>
-                  </ul>
-                  <p>[NBos] : État du serveur : <span class="text--green text--bold">ON</span></p>
-                  <p>[NBos] : Liste des commandes disponibles</p>
-                  <ul>
-                     <li>help : Affiche toutes les commandes disponibles</li>
-                     <li>nicolas : En savoir plus sur moi</li>
-                     <li>status : Savoir si je suis toujours à la recherche d'une alternance</li>
-                     <li>theme [light/dark] : Change le thème du site</li>
-                     <li>contact : Rentrer en contact avec moi</li>
-                     <li>clear : Nettoie la console</li>
-                  </ul>
-                  <div id="terminal-input">
-                     <p><span class="text--bold" id="terminal-title">C:\Users\Nicolas></span></p>
-                     <input type="text" id="command" name="command" required minlength="4" maxlength="14" autocomplete="off" autofocus>
-                  </div>
+            <div class="research-bar">
+               <p id="text--margin0"><i class="fas fa-lock"></i>nicolasbaar.exe</p>
+            </div>
+            <div class="button-switch">
+               <i class="fas fa-adjust"></i>
+            </div>
+         </div>
+         <div id="terminal">
+            <div id="terminal-text">
+               <p>[X-01] NBos terminal [version 0.01]</p>
+               <p>(c)Nicolas BAAR. Tous droits réservés.</p>
+               <p><span class="text--bold">C:\Users\Nicolas></span> npm run server</p>
+               <p>[NBos] : Démarrage du serveur ...</p>
+               <p>[NBos] : Erreur Xv5ED -> Veuillez choisir un thème avant de commencer la configuration</p>
+               <ul>
+                  <li>Dark Mode</li>
+                  <li>Light Mode</li>
+               </ul>
+               <p>[NBos] : État du serveur : <span class="text--green text--bold">ON</span></p>
+               <p>[NBos] : Liste des commandes disponibles</p>
+               <ul>
+                  <li>help : Affiche toutes les commandes disponibles</li>
+                  <li>nicolas : En savoir plus sur moi</li>
+                  <li>status : Savoir si je suis toujours à la recherche d'une alternance</li>
+                  <li>theme [light/dark] : Change le thème du site</li>
+                  <li>contact : Rentrer en contact avec moi</li>
+                  <li>clear : Nettoie la console</li>
+               </ul>
+               <div id="terminal-input">
+                  <p><span class="text--bold" id="terminal-title">C:\Users\Nicolas></span></p>
+                  <input type="text" id="command" name="command" required minlength="4" maxlength="14" autocomplete="off" autofocus>
                </div>
             </div>
          </div>

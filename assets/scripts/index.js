@@ -79,15 +79,91 @@ function pressKey() {
             newInput();
          } else {
             inputToText();
-            writeAnwser(`La commande ` + inputValue.value + ` n'est pas disponible pour le moment ..`);
+            writeAnwser(`La commande ` + inputValue.value + ` est introuvable, tapez 'help' pour plus d'informations ..`);
             newInput();
          }
       }
    });
 }
 
-draggable('element');
+function dragAndDrop() {
+   // target elements with the "draggable" class
+   interact('.container').styleCursor(false)
+   .draggable({
+   // enable inertial throwing
+   inertia: true,
+   // keep the element within the area of it's parent
+   modifiers: [
+      interact.modifiers.restrictRect({
+         restriction: 'parent',
+         endOnly: false
+      })
+   ],
+   // enable autoScroll
+   autoScroll: false,
 
+   listeners: {
+      // call this function on every dragmove event
+      move: dragMoveListener,
+   }
+   })
+
+   function dragMoveListener (event) {
+   var target = event.target
+   // keep the dragged position in the data-x/data-y attributes
+   var x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx
+   var y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy
+
+   // translate the element
+   target.style.transform = 'translate(' + x + 'px, ' + y + 'px)'
+
+   // update the posiion attributes
+   target.setAttribute('data-x', x)
+   target.setAttribute('data-y', y)
+   }
+
+   // this function is used later in the resizing and gesture demos
+   window.dragMoveListener = dragMoveListener
+}
+
+function snapping() {
+   const onClick = function() {
+      console.log(this.id)
+      var element = document.getElementById(this.id);
+      var x = 0; var y = 0
+      
+      interact(element).styleCursor(false)
+      .draggable({
+         modifiers: [
+            interact.modifiers.snap({
+            targets: [
+               interact.snappers.grid({ x: 30, y: 30 })
+            ],
+            range: Infinity,
+            relativePoints: [ { x: 0, y: 0 } ]
+            }),
+            interact.modifiers.restrict({
+            restriction: element.parentNode,
+            elementRect: { top: 0, left: 0, bottom: 1, right: 1 },
+            endOnly: true
+            })
+         ],
+         inertia: true
+      })
+      .on('dragmove', function (event) {
+         x += event.dx
+         y += event.dy
+      
+         event.target.style.transform = 'translate(' + x + 'px, ' + y + 'px)'
+      })
+   }
+   document.getElementById('image-desktop-google').onclick = onClick;
+   document.getElementById('image-desktop-vsc').onclick = onClick;
+   document.getElementById('image-desktop-folder').onclick = onClick;
+}
+
+snapping();
+dragAndDrop();
 time();
 date();
 pressKey();
