@@ -133,6 +133,10 @@ body {
    color: #EC6A5E;
 }
 
+::placeholder {
+   color: rgb(241, 237, 237);
+}
+
 a {
    text-decoration: none;
    @include text;
@@ -188,6 +192,7 @@ main {
    flex-wrap: wrap;
    height: 90vh;
    .container {
+      border-radius: 15px;
       backdrop-filter: blur(15px);
       @include box-gradiant;
       //
@@ -282,6 +287,7 @@ main {
                display: flex;
                align-items: center;
                input {
+                  width: 80%;
                   font-size: 14px;
                   margin-left: 0.5rem;
                   height: 20px;
@@ -290,6 +296,7 @@ main {
                   background-color: #f5be4f00;
                   border: none;
                   outline: none;
+                  color: white;
                }
             }
             #terminal-input-new {

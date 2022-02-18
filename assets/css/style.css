@@ -122,6 +122,10 @@ body {
   color: #EC6A5E;
 }
 
+::placeholder {
+  color: #f1eded;
+}
+
 a {
   text-decoration: none;
   color: #FFFFFF;
@@ -173,6 +177,7 @@ main {
   height: 90vh;
 }
 main .container {
+  border-radius: 15px;
   backdrop-filter: blur(15px);
   box-shadow: 0px 0px 7.3px rgba(0, 0, 0, 0.035), 0px 0px 58px rgba(0, 0, 0, 0.07);
 }
@@ -276,6 +281,7 @@ main .container #terminal #terminal-text #terminal-input {
   align-items: center;
 }
 main .container #terminal #terminal-text #terminal-input input {
+  width: 80%;
   font-size: 14px;
   margin-left: 0.5rem;
   height: 20px;
@@ -285,6 +291,7 @@ main .container #terminal #terminal-text #terminal-input input {
   background-color: #f5be4f00;
   border: none;
   outline: none;
+  color: white;
 }
 main .container #terminal #terminal-text #terminal-input-new {
   display: flex;

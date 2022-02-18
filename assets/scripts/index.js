@@ -6,7 +6,11 @@ function time() {
    let time;
    setInterval(() => {
       getTime = new Date();
-      time = getTime.getHours() + ':' + ("0" + getTime.getMinutes()).slice(-2);
+      if (getTime.getHours() < 12) {
+         time = ("0" + getTime.getHours()).slice(-2) + ':' + ("0" + getTime.getMinutes()).slice(-2) + ' AM';
+      } else {
+         time = ("0" + getTime.getHours()).slice(-2) + ' PM ' + ("0" + getTime.getMinutes()).slice(-2) + ' PM';
+      }
       document.getElementById('time').innerHTML = time;
    }, 1000);
 }
@@ -128,7 +132,7 @@ function dragAndDrop() {
 
 function snapping() {
    const onClick = function() {
-      console.log(this.id)
+
       var element = document.getElementById(this.id);
       var x = 0; var y = 0
       
@@ -182,7 +186,7 @@ function resize() {
         x += event.deltaRect.left
         y += event.deltaRect.top
 
-        target.style.transform = 'translate(' + x + 'px,' + y + 'px)'
+        target.style.transform = 'translate(' + x + 'rem,' + y + 'rem)'
 
         target.setAttribute('data-x', x)
         target.setAttribute('data-y', y)
@@ -196,7 +200,7 @@ function resize() {
 
       // minimum size
       interact.modifiers.restrictSize({
-        min: { width: 726, height: 620 }
+        min: { width: 726, height: 600 }
       })
     ],
 
