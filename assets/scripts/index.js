@@ -6,7 +6,7 @@ function time() {
    let time;
    setInterval(() => {
       getTime = new Date();
-      time = getTime.getHours() + ':' + getTime.getMinutes();
+      time = getTime.getHours() + ':' + ("0" + getTime.getMinutes()).slice(-2);
       document.getElementById('time').innerHTML = time;
    }, 1000);
 }
@@ -85,6 +85,8 @@ function pressKey() {
       }
    });
 }
+
+draggable('element');
 
 time();
 date();
