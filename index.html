@@ -7,10 +7,11 @@
    <link href="assets/css/style.css" rel="stylesheet">
    <script src="https://kit.fontawesome.com/17e84708c0.js" crossorigin="anonymous"></script>
    <title>CMD \> Nicolas BAAR</title>
+   <link rel="icon" href="assets/images/favicon.png" />
    <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
 </head>
 <body>
-   <header>
+   <header id="header-section">
       <div id="title-left">
          <ul>
             <li class="text--bold">NbOS</li>
@@ -33,8 +34,10 @@
          <p>CV Numérique</p>
       </div>
       <div id="image-desktop-vsc">
-         <img src="assets/images/folder.svg" alt="Icône pour le dossier Linkedin sur le bureau" width="42"> 
-         <p>Page Linkedin</p>
+         <a href="https://www.linkedin.com/in/nicolasbaar02/" target="_blank">
+            <img src="assets/images/chrome.png" alt="Icône pour le dossier Linkedin sur le bureau" width="42"> 
+            <p>Page Linkedin</p>
+         </a>
       </div>
       <div id="image-desktop-terminal">
          <img src="assets/images/terminal.png" alt="Icône pour le terminal sur le bureau" width="42"> 
@@ -58,7 +61,7 @@
             <div class="research-bar">
                <p id="text--margin0"><i class="fas fa-lock"></i>nicolasbaar.exe</p>
             </div>
-            <div class="button-switch">
+            <div id="button-switch">
                <i class="fas fa-adjust"></i>
             </div>
          </div>
@@ -86,6 +89,35 @@
                <div id="terminal-input">
                   <p><span class="text--bold" id="terminal-title">C:\Users\Nicolas></span></p>
                   <input type="text" id="command" name="command" placeholder="Entrer votre commande ici" required minlength="4" maxlength="14" autocomplete="off" autofocus>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="container absolute" id="close-open-file">
+         <div class="terminal-header">
+            <div class="button-management">
+               <div id="circle-red-file"></div>
+               <div id="circle-orange"></div>
+               <div id="circle-grey"></div>
+               <div class="left-right">
+                  <i class="fas fa-chevron-left"></i>
+                  <i class="fas fa-chevron-right"></i>
+               </div>
+            </div>
+            <div class="research-bar">
+               <p id="text--margin0"><i class="fas fa-lock"></i>C:/Users/Nicolas> Mon CV Numérique</p>
+            </div>
+            <div id="button-switch-file">
+               <i class="fas fa-adjust"></i>
+            </div>
+         </div>
+         <div class="resize-drag" id="terminal">
+            <div id="terminal-text">
+               <div id="image-desktop-google">
+                  <a href="assets/extras/CV_2022.pdf" target="_blank">
+                     <img src="assets/images/file.jpg" alt="Icône pour le dossier CV sur le bureau" width="42"> 
+                     <p>CV 2022</p>
+                  </a>
                </div>
             </div>
          </div>

@@ -175,15 +175,34 @@ function snapping() {
 
 function closeOpenTerminal() {
    const buttonClose = document.getElementById('circle-red');
+   const buttonCloseFile = document.getElementById('circle-red-file');
    const container = document.getElementById('close-open');
+   const containerFile = document.getElementById('close-open-file');
    const terminalIcon = document.getElementById('image-desktop-terminal');
+   const CVIcon = document.getElementById('image-desktop-google');
 
    buttonClose.addEventListener('click', function(e) {
       container.style.visibility = 'hidden';
    });
 
    terminalIcon.addEventListener('dblclick', function(e) {
-      container.style.visibility = 'visible';
+      if (container.style.visibility === 'visible') {
+         container.style.visibility = 'hidden';
+      } else {
+         container.style.visibility = 'visible';
+      }
+   });
+
+   buttonCloseFile.addEventListener('click', function(e) {
+      containerFile.style.visibility = 'hidden';
+   });
+
+   CVIcon.addEventListener('dblclick', function(e) {
+      if (containerFile.style.visibility === 'visible') {
+         containerFile.style.visibility = 'hidden';
+      } else {
+         containerFile.style.visibility = 'visible';
+      }
    });
 }
 
@@ -239,6 +258,30 @@ function resize() {
   })
 }
 
+// Dark Mode 
+
+function darkMode() {
+   var checkbox = document.getElementById('button-switch');
+   var checkboxFile = document.getElementById('button-switch-file');
+
+   checkbox.addEventListener('click', function() {
+      if(document.documentElement.getAttribute("data-theme") == "dark") {
+         document.documentElement.setAttribute('data-theme', 'light')
+      } else {
+         document.documentElement.setAttribute('data-theme', 'dark')
+      }
+   })
+
+   checkboxFile.addEventListener('click', function() {
+      if(document.documentElement.getAttribute("data-theme") == "dark") {
+         document.documentElement.setAttribute('data-theme', 'light')
+      } else {
+         document.documentElement.setAttribute('data-theme', 'dark')
+      }
+   })
+}
+
+darkMode();
 closeOpenTerminal();
 resize();
 snapping();
