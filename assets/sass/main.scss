@@ -6,7 +6,7 @@
 // LITE MODE VARIABLES
 //
 html {
-   --lightWallpaper: url('../images/wallpaper_dark.jpg');
+   --lightWallpaper: url('../images/wallpaper_dark.svg');
    --lightText: #FFFFFF;;
    --lightBackground: rgba(33, 33, 33, 0.47);
    --lightBorder: #212121;
@@ -22,7 +22,7 @@ html {
 //
 html[data-theme='dark'] {
    background: var(--lightBg);
-   --lightWallpaper: url('../images/wallpaper_white.jpg');
+   --lightWallpaper: url('../images/wallpaper_lite.svg');
    --lightText: #222222;
    --lightBackground: rgba(221, 207, 207, 0.47);
    --lightBorder: #797878b7;
@@ -40,7 +40,14 @@ body {
    margin: 0;
    padding: 0;
    font-family: 'Rubik', sans-serif;
-   background-image: var(--lightWallpaper);
+   width: 100%;
+   background-repeat: no-repeat;
+   object-fit: cover;
+   background: var(--lightWallpaper) no-repeat center center fixed; 
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
    height: 100vh;
 }
 
