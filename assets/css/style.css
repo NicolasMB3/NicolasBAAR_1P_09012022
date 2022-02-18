@@ -82,6 +82,41 @@ body {
   justify-content: center;
 }
 
+#image-desktop-terminal {
+  position: absolute;
+  align-items: center;
+  top: 305px;
+  left: 30px;
+  display: flex;
+  width: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+  border: 1px solid rgba(34, 34, 131, 0);
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  color: #FFFFFF;
+  mix-blend-mode: hard-light;
+}
+#image-desktop-terminal:hover {
+  border: 1px solid;
+  background-color: rgba(51, 51, 134, 0.308);
+  border: 1px solid #A6A6A6;
+  cursor: pointer;
+  backdrop-filter: blur(15px);
+}
+#image-desktop-terminal img, #image-desktop-terminal p {
+  margin-top: 0.4rem;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+}
+
 #image-desktop-folder {
   position: absolute;
   align-items: center;
@@ -218,6 +253,8 @@ main .container .terminal-header .research-bar #text--margin0 i {
   margin: 0 0.5rem;
 }
 main .container .terminal-header .button-management {
+  cursor: pointer;
+  z-index: 2;
   display: flex;
   align-items: center;
   margin: 1rem;

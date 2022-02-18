@@ -74,7 +74,7 @@ function pressKey() {
             binImage.src = "assets/images/folder-bin-not-empty.png";
             textTerminal.innerHTML = ``;
             newInput();
-         } else if (inputValue.value == 'unclear') {
+         } else if (inputValue.value == 'clear bin') {
             inputToText();
             const binImage = document.getElementById('image-bin');
             binImage.src = "assets/images/folder-bin.png";
@@ -170,6 +170,21 @@ function snapping() {
    document.getElementById('image-desktop-google').onclick = onClick;
    document.getElementById('image-desktop-vsc').onclick = onClick;
    document.getElementById('image-desktop-folder').onclick = onClick;
+   document.getElementById('image-desktop-terminal').onclick = onClick;
+}
+
+function closeOpenTerminal() {
+   const buttonClose = document.getElementById('circle-red');
+   const container = document.getElementById('close-open');
+   const terminalIcon = document.getElementById('image-desktop-terminal');
+
+   buttonClose.addEventListener('click', function(e) {
+      container.style.visibility = 'hidden';
+   });
+
+   terminalIcon.addEventListener('dblclick', function(e) {
+      container.style.visibility = 'visible';
+   });
 }
 
 function resize() {
@@ -224,6 +239,7 @@ function resize() {
   })
 }
 
+closeOpenTerminal();
 resize();
 snapping();
 dragAndDrop();
