@@ -54,32 +54,35 @@ body {
 }
 
 //
-// Desktop icons
+// Linkedin icon
 //
-#image-desktop-google {
-   @include desktop-icons;
-   top: 75px;
-   left: 30px;
-}
-
 #image-desktop-vsc {
    @include desktop-icons;
    top: 190px;
    left: 30px;
 }
 
+//
+// Terminal icon
+//
 #image-desktop-terminal {
    @include desktop-icons;
    top: 305px;
    left: 30px;
 }
 
+//
+// Bin icon
+//
 #image-desktop-folder {
    @include desktop-icons;
-   bottom: 15px;
+   bottom: 100px;
    right: 30px;
 }
 
+//
+// Portfolio icon
+//
 #image-desktop-google {
    @include desktop-icons;
    top: 75px;
@@ -210,7 +213,7 @@ main {
             align-items: center;
             justify-content: center;
             font-size: 14px;
-            #text--margin0 {
+            .text--margin0 {
                margin: 0;
                padding: 0.3rem;
                i {
@@ -235,11 +238,11 @@ main {
                   background: #973c34;
                }
             }
-            #circle-orange {
+            .circle-orange {
                @include button-management;
                background: #F5BF4F;
             }
-            #circle-grey {
+            .circle-grey {
                @include button-management;
                background: radial-gradient(125% 125% at 50% 50%, #CECDCD 0%, rgba(215, 215, 215, 0.6) 100%);
             }
@@ -257,7 +260,7 @@ main {
       //
       // Terminal text modifications here
       //
-      #terminal {
+      .terminal {
          height: auto;
          width: 60vw;
          background: var(--lightTerminalBodyBackground);
@@ -312,7 +315,16 @@ main {
 // Link (and contact text) with random sentences(?)
 //
 footer {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
    margin-left: 1rem;
    font-size: 14px;
    @include text;
+   p {
+      margin-top: 3px;
+   }
+   i {
+      margin-left: 0.3rem;
+   }
 }

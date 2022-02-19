@@ -42,41 +42,6 @@ body {
   height: 100vh;
 }
 
-#image-desktop-google {
-  position: absolute;
-  align-items: center;
-  display: flex;
-  width: 2rem;
-  flex-wrap: wrap;
-  justify-content: center;
-  text-align: center;
-  width: 100px;
-  height: 100px;
-  border-radius: 5px;
-  -moz-user-select: none;
-  -khtml-user-select: none;
-  -webkit-user-select: none;
-  user-select: none;
-  border: 1px solid var(--lightTransBorder);
-  mix-blend-mode: hard-light;
-  color: var(--lightText);
-  color: var(--lightText);
-  top: 75px;
-  left: 30px;
-}
-#image-desktop-google:hover {
-  background-color: var(--lightBackground);
-  border: 1px solid var(--lightBorder);
-  cursor: pointer;
-  backdrop-filter: blur(15px);
-}
-#image-desktop-google img, #image-desktop-google p {
-  margin-top: 0.4rem;
-  margin-left: auto;
-  margin-right: auto;
-  justify-content: center;
-}
-
 #image-desktop-vsc {
   position: absolute;
   align-items: center;
@@ -166,7 +131,7 @@ body {
   mix-blend-mode: hard-light;
   color: var(--lightText);
   color: var(--lightText);
-  bottom: 15px;
+  bottom: 100px;
   right: 30px;
 }
 #image-desktop-folder:hover {
@@ -331,11 +296,11 @@ main .container .terminal-header .research-bar {
   justify-content: center;
   font-size: 14px;
 }
-main .container .terminal-header .research-bar #text--margin0 {
+main .container .terminal-header .research-bar .text--margin0 {
   margin: 0;
   padding: 0.3rem;
 }
-main .container .terminal-header .research-bar #text--margin0 i {
+main .container .terminal-header .research-bar .text--margin0 i {
   margin: 0 0.5rem;
 }
 main .container .terminal-header .button-management {
@@ -356,7 +321,7 @@ main .container .terminal-header .button-management #circle-red, main .container
 main .container .terminal-header .button-management #circle-red:hover, main .container .terminal-header .button-management #circle-red-file:hover {
   background: #973c34;
 }
-main .container .terminal-header .button-management #circle-orange {
+main .container .terminal-header .button-management .circle-orange {
   width: 12px;
   height: 12px;
   border-radius: 20px;
@@ -364,7 +329,7 @@ main .container .terminal-header .button-management #circle-orange {
   margin: 0 0.4rem;
   background: #F5BF4F;
 }
-main .container .terminal-header .button-management #circle-grey {
+main .container .terminal-header .button-management .circle-grey {
   width: 12px;
   height: 12px;
   border-radius: 20px;
@@ -380,7 +345,7 @@ main .container .terminal-header #button-switch, main .container .terminal-heade
   border-radius: 7px;
   margin-right: 10rem;
 }
-main .container #terminal {
+main .container .terminal {
   height: auto;
   width: 60vw;
   background: var(--lightTerminalBodyBackground);
@@ -389,10 +354,10 @@ main .container #terminal {
   border-top: 0;
   padding: 1rem;
 }
-main .container #terminal li {
+main .container .terminal li {
   padding: 0.2rem 0;
 }
-main .container #terminal #terminal-text {
+main .container .terminal #terminal-text {
   mix-blend-mode: hard-light;
   color: var(--lightText);
   cursor: initial !important;
@@ -403,11 +368,11 @@ main .container #terminal #terminal-text {
   font-family: "Source Code Pro", monospace;
   font-size: 14px;
 }
-main .container #terminal #terminal-text #terminal-input {
+main .container .terminal #terminal-text #terminal-input {
   display: flex;
   align-items: center;
 }
-main .container #terminal #terminal-text #terminal-input input {
+main .container .terminal #terminal-text #terminal-input input {
   mix-blend-mode: hard-light;
   color: var(--lightText);
   width: 80%;
@@ -419,12 +384,12 @@ main .container #terminal #terminal-text #terminal-input input {
   border: none;
   outline: none;
 }
-main .container #terminal #terminal-text #terminal-input-new {
+main .container .terminal #terminal-text #terminal-input-new {
   display: flex;
   align-items: center;
   padding: 0.7rem 0;
 }
-main .container #terminal #terminal-text #terminal-input-new #new-input--style {
+main .container .terminal #terminal-text #terminal-input-new #new-input--style {
   mix-blend-mode: hard-light;
   color: var(--lightText);
   padding-left: 0.5rem;
@@ -433,10 +398,19 @@ main .container #terminal #terminal-text #terminal-input-new #new-input--style {
 }
 
 footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-left: 1rem;
   font-size: 14px;
   mix-blend-mode: hard-light;
   color: var(--lightText);
+}
+footer p {
+  margin-top: 3px;
+}
+footer i {
+  margin-left: 0.3rem;
 }
 
 /*# sourceMappingURL=style.css.map */

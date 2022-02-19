@@ -1,5 +1,19 @@
+// Version
+version(0.01);
+// Version
 const textTerminal = document.getElementById('terminal-text');
 let inputValue = document.querySelector('#command');
+
+//
+// Version
+//
+function version(version) {
+   const versionClass = document.getElementsByClassName('version');
+   Array.from(versionClass).forEach(element => {
+      element.innerHTML += 'v' + '[' + version + ']'
+   });
+   return version;
+}
 
 //
 // Display time in header -> HH:MM AM/PM
