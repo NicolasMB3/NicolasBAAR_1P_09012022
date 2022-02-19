@@ -22,7 +22,7 @@ html {
 // 
 // DARK MODE VARIABLES
 //
-html[data-theme='dark'] {
+html[data-theme='light'] {
    background: var(--lightBg);
    --lightWallpaper: url('../images/wallpaper_lite.svg');
    --lightBackground: rgba(123, 129, 137, 0.45);
@@ -157,7 +157,7 @@ main {
    justify-content: center;
    align-items: center;
    flex-wrap: wrap;
-   height: 88vh;
+   height: 91vh;
    .container {
       border-radius: 15px;
       backdrop-filter: blur(15px);

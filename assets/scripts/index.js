@@ -123,6 +123,30 @@ function pressKey() {
             inputToText();
             writeAnwser(`Merci d'écrire une commande (liste disponible avec la commande help)`);
             newInput();
+         } else if (inputValue.value === 'theme light') {
+            if (document.documentElement.getAttribute('data-theme') == 'light') {
+               inputToText();
+               writeAnwser(`Le thème est déjà claire`);
+               newInput();
+            } else {
+               inputToText();
+               document.documentElement.setAttribute('data-theme', 'light')
+               console.log(document.documentElement.getAttribute("data-theme"))
+               writeAnwser(`Le thème est maitenant claire`);
+               newInput();
+            }
+         } else if (inputValue.value === 'theme dark') {
+            if (document.documentElement.getAttribute('data-theme') == 'dark') {
+               inputToText();
+               writeAnwser(`Le thème est déjà sombre`);
+               newInput();
+            } else {
+               inputToText();
+               document.documentElement.setAttribute('data-theme', 'dark')
+               console.log(document.documentElement.getAttribute("data-theme"))
+               writeAnwser(`Le thème est maitenant sombre`);
+               newInput();
+            }
          } else {
             inputToText();
             writeAnwser(`La commande ` + inputValue.value + ` est introuvable, tapez 'help' pour plus d'informations ..`);

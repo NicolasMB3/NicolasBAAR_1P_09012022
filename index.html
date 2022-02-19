@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-theme="light">
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,8 +9,8 @@
    <title class="version">CMD \> Nicolas BAAR </title>
    <link rel="icon" href="assets/images/favicon.png" />
    <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
-   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-   <script type="text/javascript">
+   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+   <script>
       (function() {
          emailjs.init("user_e4MVLTTonZoL69En0byMU");
       })();
@@ -84,11 +84,6 @@
                <p>(c)Nicolas BAAR. Tous droits réservés.</p>
                <p><span class="text--bold">C:\Users\Nicolas></span> npm run server</p>
                <p>[NBos] : Démarrage du serveur ...</p>
-               <p>[NBos] : Erreur Xv5ED -> Veuillez choisir un thème avant de commencer la configuration</p>
-               <ul>
-                  <li>Dark Mode</li>
-                  <li>Light Mode</li>
-               </ul>
                <p>[NBos] : État du serveur : <span class="text--green text--bold">ON</span></p>
                <p>[NBos] : Liste des commandes disponibles</p>
                <ul>
@@ -159,7 +154,7 @@
             <div class="terminal-folder" id="contactform">
                <h2>Me contacter<i class="fa-solid fa-reply"></i></h2>
                <hr style="width:40%; margin-bottom: 1rem;">
-               <form action="" id="form-contact" class="form-example">
+               <form action="#" id="form-contact" class="form-example">
                   <div class="form-example">
                     <label for="name"><i class="fa-solid fa-signature"></i>Votre prénom : </label>
                     <input type="text" name="name" id="name" class="contactme-input" autocomplete="off" required>
