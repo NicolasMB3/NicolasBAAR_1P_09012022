@@ -1,6 +1,9 @@
 const textTerminal = document.getElementById('terminal-text');
 let inputValue = document.querySelector('#command');
 
+//
+// Display time in header -> HH:MM AM/PM
+//
 function time() {
    setInterval(() => {
       let getTime = new Date();
@@ -14,6 +17,9 @@ function time() {
    }, 1000);
 }
 
+//
+// Display date in header -> DD/MM/YY
+//
 function date() {
    let getDate;
    getDate = new Date();
@@ -21,6 +27,9 @@ function date() {
    document.getElementById('date').innerHTML = date;;
 }
 
+//
+// Replace input's value to text and place value in text
+//
 function inputToText() {
    // Stockage de la valeur écrite
    const tempDataInput = inputValue.value;
@@ -32,11 +41,17 @@ function inputToText() {
    </div>`;
 }
 
+//
+// Remove old input
+//
 function removeInput() {
    let inputValue2 = document.querySelector('#terminal-input');
    inputValue2.remove();
 }
 
+//
+// Create new input
+//
 function newInput() {
    textTerminal.innerHTML += 
       `<div id="terminal-input">
@@ -48,6 +63,9 @@ function newInput() {
    pressKey();
 }
 
+//
+// Create new text
+//
 function writeAnwser(text) {
    const newDiv = document.createElement('div');
    const newContent = document.createTextNode(`Information : ` + text);
@@ -56,6 +74,9 @@ function writeAnwser(text) {
    inputValue.disabled = true;
 }
 
+//
+// Write awnser when words/sentences are pressed
+//
 function pressKey() {
    inputValue.addEventListener("keypress", (e) => {
       if (e.key === 'Enter') {
@@ -97,9 +118,12 @@ function pressKey() {
    });
 }
 
+//
+// Drag and drop system -> InteractJS
+//
 function dragAndDrop() {
    // target elements with the "draggable" class
-   interact('.container').styleCursor(false)
+   interact('.drag').styleCursor(false)
    .draggable({
    // enable inertial throwing
    inertia: true,
@@ -137,43 +161,9 @@ function dragAndDrop() {
    window.dragMoveListener = dragMoveListener
 }
 
-function snapping() {
-   const onClick = function() {
-
-      var element = document.getElementById(this.id);
-      var x = 0; var y = 0
-      
-      interact(element).styleCursor(false)
-      .draggable({
-         modifiers: [
-            interact.modifiers.snap({
-            targets: [
-               interact.snappers.grid({ x: 25, y: 25 })
-            ],
-            range: Infinity,
-            relativePoints: [ { x: 0, y: 0 } ]
-            }),
-            interact.modifiers.restrict({
-            restriction: element.parentNode,
-            elementRect: { top: 0, left: 0, bottom: 1, right: 1 },
-            endOnly: true
-            })
-         ],
-         inertia: true
-      })
-      .on('dragmove', function (event) {
-         x += event.dx
-         y += event.dy
-      
-         event.target.style.transform = 'translate(' + x + 'px, ' + y + 'px)'
-      })
-   }
-   document.getElementById('image-desktop-google').onclick = onClick;
-   document.getElementById('image-desktop-vsc').onclick = onClick;
-   document.getElementById('image-desktop-folder').onclick = onClick;
-   document.getElementById('image-desktop-terminal').onclick = onClick;
-}
-
+//
+// Open and close terminal when doublie click on icon or button close is pressed
+//
 function closeOpenTerminal() {
    const buttonClose = document.getElementById('circle-red');
    const buttonCloseFile = document.getElementById('circle-red-file');
@@ -207,6 +197,9 @@ function closeOpenTerminal() {
    });
 }
 
+//
+// Resize window on right and bottom corner
+//
 function resize() {
    interact('.resize-drag')
   .resizable({
@@ -259,7 +252,9 @@ function resize() {
   })
 }
 
-// Dark Mode 
+//
+// Dark mode and light mode
+//
 function darkMode() {
    var checkbox = document.getElementById('button-switch');
    var checkboxFile = document.getElementById('button-switch-file');
@@ -281,10 +276,12 @@ function darkMode() {
    })
 }
 
+//
+// Run functions
+//
 darkMode();
 closeOpenTerminal();
 resize();
-snapping();
 dragAndDrop();
 time();
 date();

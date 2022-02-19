@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300;400;500;600;800&display=swap');
 
 // 
-// LITE MODE VARIABLES
+// LIGHT MODE VARIABLES
 //
 html {
    --lightWallpaper: url('../images/wallpaper_dark.svg');
@@ -16,6 +16,7 @@ html {
    --lightPlaceholder: rgb(241, 237, 237);
    --lightBtn: #FFFFFF;
    --lightTransBorder: rgba(241, 237, 237, 0);
+   --lightScroll: rgba(33, 33, 33, 0.70);
 }
 
 // 
@@ -24,7 +25,6 @@ html {
 html[data-theme='dark'] {
    background: var(--lightBg);
    --lightWallpaper: url('../images/wallpaper_lite.svg');
-   --lightText: #ffffff;
    --lightBackground: rgba(123, 129, 137, 0.45);
    --lightBorder: rgba(255, 255, 255, 0.125);
    --lightTerminalHeaderBackground: rgba(123, 129, 137, 0.50);
@@ -32,6 +32,7 @@ html[data-theme='dark'] {
    --lightTerminalBar: rgba(131, 144, 158, 0.3);
    --lightPlaceholder: rgb(255, 255, 255);
    --lightBtn: #FFBD07;
+   --lightScroll: rgba(216, 216, 216, 0.7);
 }
 
 //
@@ -53,191 +54,49 @@ body {
 }
 
 //
+// Desktop icons
+//
+#image-desktop-google {
+   @include desktop-icons;
+   top: 75px;
+   left: 30px;
+}
+
+#image-desktop-vsc {
+   @include desktop-icons;
+   top: 190px;
+   left: 30px;
+}
+
+#image-desktop-terminal {
+   @include desktop-icons;
+   top: 305px;
+   left: 30px;
+}
+
+#image-desktop-folder {
+   @include desktop-icons;
+   bottom: 15px;
+   right: 30px;
+}
+
+#image-desktop-google {
+   @include desktop-icons;
+   top: 75px;
+   left: 30px;
+}
+
+//
 // General stylist class for bold text
 //
 .text--bold {
    font-weight: bold;
 }
 
-// A MODIFIER POUR OPTIMISER //
-// A MODIFIER POUR OPTIMISER //
-
-#image-desktop-google {
-   position: absolute;
-   align-items: center;
-   top: 75px;
-   left: 30px;
-   display: flex;
-   width: 2rem;
-   flex-wrap: wrap;
-   justify-content: center;
-   text-align: center;
-   width: 100px;
-   height: 100px;
-   border-radius: 5px;
-   @include text;
-   color: var(--lightText);
-   -moz-user-select: none;
-   -khtml-user-select: none;
-   -webkit-user-select: none;
-   user-select: none;
-   border: 1px solid var(--lightTransBorder);
-   &:hover {
-      background-color: var(--lightBackground);
-      border: 1px solid var(--lightBorder);
-      cursor: pointer;
-      backdrop-filter: blur(15px);
-   }
-   img, p{
-      margin-top: 0.4rem;
-      margin-left: auto;
-      margin-right: auto;
-      justify-content: center;
-   }
-}
-
-#image-desktop-vsc {
-   position: absolute;
-   align-items: center;
-   top: 190px;
-   left: 30px;
-   display: flex;
-   width: 2rem;
-   flex-wrap: wrap;
-   justify-content: center;
-   text-align: center;
-   width: 100px;
-   height: 100px;
-   border-radius: 5px;
-   -moz-user-select: none;
-   -khtml-user-select: none;
-   -webkit-user-select: none;
-   user-select: none;
-   border: 1px solid var(--lightTransBorder);
-   @include text;
-   color: var(--lightText);
-   &:hover {
-      background-color: var(--lightBackground);
-      border: 1px solid var(--lightBorder);
-      cursor: pointer;
-      backdrop-filter: blur(15px);
-   }
-   img, p{
-      margin-top: 0.4rem;
-      margin-left: auto;
-      margin-right: auto;
-      justify-content: center;
-   }
-}
-
-#image-desktop-terminal {
-   position: absolute;
-   align-items: center;
-   top: 305px;
-   left: 30px;
-   display: flex;
-   width: 2rem;
-   flex-wrap: wrap;
-   justify-content: center;
-   text-align: center;
-   width: 100px;
-   height: 100px;
-   border-radius: 5px;
-   -moz-user-select: none;
-   -khtml-user-select: none;
-   -webkit-user-select: none;
-   user-select: none;
-   border: 1px solid var(--lightTransBorder);
-   @include text;
-   color: var(--lightText);
-   &:hover {
-      background-color: var(--lightBackground);
-      border: 1px solid var(--lightBorder);
-      cursor: pointer;
-      backdrop-filter: blur(15px);
-   }
-   img, p{
-      margin-top: 0.4rem;
-      margin-left: auto;
-      margin-right: auto;
-      justify-content: center;
-   }
-}
-
-#image-desktop-folder {
-   position: absolute;
-   align-items: center;
-   bottom: 15px;
-   right: 30px;
-   display: flex;
-   width: 2rem;
-   flex-wrap: wrap;
-   justify-content: center;
-   text-align: center;
-   width: 100px;
-   height: 100px;
-   border-radius: 5px;
-   -moz-user-select: none;
-   -khtml-user-select: none;
-   -webkit-user-select: none;
-   user-select: none;
-   border: 1px solid var(--lightTransBorder);
-   @include text;
-   color: var(--lightText);
-   &:hover {
-      background-color: var(--lightBackground);
-      border: 1px solid var(--lightBorder);
-      cursor: pointer;
-      backdrop-filter: blur(15px);
-   }
-   img, p{
-      margin-top: 0.4rem;
-      margin-left: auto;
-      margin-right: auto;
-      justify-content: center;
-   }
-}
-
-#image-desktop-google {
-   position: absolute;
-   align-items: center;
-   top: 75px;
-   left: 30px;
-   display: flex;
-   width: 2rem;
-   flex-wrap: wrap;
-   justify-content: center;
-   text-align: center;
-   width: 100px;
-   height: 100px;
-   border-radius: 5px;
-   @include text;
-   color: var(--lightText);
-   -moz-user-select: none;
-   -khtml-user-select: none;
-   -webkit-user-select: none;
-   user-select: none;
-   border: 1px solid var(--lightTransBorder);
-   &:hover {
-      background-color: var(--lightBackground);
-      border: 1px solid var(--lightBorder);
-      cursor: pointer;
-      backdrop-filter: blur(15px);
-   }
-   img, p{
-      margin-top: 0.4rem;
-      margin-left: auto;
-      margin-right: auto;
-      justify-content: center;
-   }
-}
-
 .absolute {
    position: absolute;
    visibility: hidden;
 }
-// A MODIFIER POUR OPTIMISER //
-// A MODIFIER POUR OPTIMISER //
 
 .text--warning {
    font-weight: bold;
@@ -251,7 +110,6 @@ body {
 a {
    text-decoration: none;
    @include text;
-   color: var(--lightText);
    &:visited {
       text-decoration: none;
    }
@@ -263,6 +121,19 @@ a {
 
 .text--green {
    color: $green;
+}
+
+//
+// Scroll bar custom
+//
+#terminal-text::-webkit-scrollbar {
+   width: 0.4em;
+   position: absolute;
+}
+#terminal-text::-webkit-scrollbar-thumb {
+   background: var(--lightScroll);
+   border-radius: 20px;
+   outline: 1px solid var(--lightBorder);
 }
 
 //
@@ -288,13 +159,13 @@ header {
          li {
             display: inline;
             @include text;
-            color: var(--lightText);
             padding: 0.5rem 0.5rem;
             font-size: 14px;
          }
       }
    }
 }
+
 //
 // Terminal box here head and box text are modified
 //
@@ -308,10 +179,12 @@ main {
       border-radius: 15px;
       backdrop-filter: blur(15px);
       @include box-gradiant;
+
       //
       // Terminal head modifications here
       //
       .terminal-header {
+         @include text;
          width: auto;
          background-color: var(--lightTerminalHeaderBackground);
          border: 1px solid var(--lightBorder);
@@ -323,8 +196,6 @@ main {
          backdrop-filter: blur(15px) saturate(120%);
          -webkit-backdrop-filter: blur(15px) saturate(121%);
          cursor: grab;
-         @include text;
-         color: var(--lightText);
          .left-right {
             margin-left: 2rem;
             .fa-chevron-left {
@@ -347,6 +218,7 @@ main {
                }
             }
          }
+
          //
          // Close/Reduce... from MacOS button
          //
@@ -381,6 +253,7 @@ main {
             margin-right: 10rem;
          }
       }
+
       //
       // Terminal text modifications here
       //
@@ -396,29 +269,27 @@ main {
             padding: 0.2rem 0;
          }
          #terminal-text {
+            @include text;
             cursor: initial !important;
             height: 600px;
             width: auto;
             overflow: scroll;
             overflow-x: hidden;
-            @include text;
-            color: var(--lightText);
             font-family: 'Source Code Pro', monospace;
             font-size: 14px;
             #terminal-input {
                display: flex;
                align-items: center;
                input {
+                  @include text;
                   width: 80%;
                   font-size: 14px;
                   margin-left: 0.5rem;
                   height: 20px;
                   font-family: 'Source Code Pro', monospace;
-                  @include text;
                   background-color: #f5be4f00;
                   border: none;
                   outline: none;
-                  color: var(--lightText);
                }
             }
             #terminal-input-new {
@@ -426,11 +297,10 @@ main {
                align-items: center;
                padding: 0.7rem 0;
                #new-input--style {
+                  @include text;
                   padding-left: 0.5rem;
                   font-size: 14px;
                   font-family: 'Source Code Pro', monospace;
-                  @include text;
-                  color: var(--lightText);
                }
             }
          }
@@ -439,24 +309,10 @@ main {
 }
 
 //
-// Little ad (and contact text) with random sentences
+// Link (and contact text) with random sentences(?)
 //
 footer {
    margin-left: 1rem;
    font-size: 14px;
    @include text;
-   color: var(--lightText);
-}
-
-//
-// Scroll bar custom
-//
-#terminal-text::-webkit-scrollbar {
-   width: 0.4em;
-   position: absolute;
-}
-#terminal-text::-webkit-scrollbar-thumb {
-   background: rgba(33, 33, 33, 0.70);
-   border-radius: 20px;
-   outline: 1px solid rgb(33, 33, 33, 0.50);
 }

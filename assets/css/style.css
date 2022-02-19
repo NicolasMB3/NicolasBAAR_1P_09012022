@@ -11,12 +11,12 @@ html {
   --lightPlaceholder: rgb(241, 237, 237);
   --lightBtn: #FFFFFF;
   --lightTransBorder: rgba(241, 237, 237, 0);
+  --lightScroll: rgba(33, 33, 33, 0.70);
 }
 
 html[data-theme=dark] {
   background: var(--lightBg);
   --lightWallpaper: url("../images/wallpaper_lite.svg");
-  --lightText: #ffffff;
   --lightBackground: rgba(123, 129, 137, 0.45);
   --lightBorder: rgba(255, 255, 255, 0.125);
   --lightTerminalHeaderBackground: rgba(123, 129, 137, 0.50);
@@ -24,6 +24,7 @@ html[data-theme=dark] {
   --lightTerminalBar: rgba(131, 144, 158, 0.3);
   --lightPlaceholder: rgb(255, 255, 255);
   --lightBtn: #FFBD07;
+  --lightScroll: rgba(216, 216, 216, 0.7);
 }
 
 body {
@@ -41,15 +42,9 @@ body {
   height: 100vh;
 }
 
-.text--bold {
-  font-weight: bold;
-}
-
 #image-desktop-google {
   position: absolute;
   align-items: center;
-  top: 75px;
-  left: 30px;
   display: flex;
   width: 2rem;
   flex-wrap: wrap;
@@ -58,13 +53,16 @@ body {
   width: 100px;
   height: 100px;
   border-radius: 5px;
-  mix-blend-mode: hard-light;
-  color: var(--lightText);
   -moz-user-select: none;
   -khtml-user-select: none;
   -webkit-user-select: none;
   user-select: none;
   border: 1px solid var(--lightTransBorder);
+  mix-blend-mode: hard-light;
+  color: var(--lightText);
+  color: var(--lightText);
+  top: 75px;
+  left: 30px;
 }
 #image-desktop-google:hover {
   background-color: var(--lightBackground);
@@ -82,8 +80,6 @@ body {
 #image-desktop-vsc {
   position: absolute;
   align-items: center;
-  top: 190px;
-  left: 30px;
   display: flex;
   width: 2rem;
   flex-wrap: wrap;
@@ -99,6 +95,9 @@ body {
   border: 1px solid var(--lightTransBorder);
   mix-blend-mode: hard-light;
   color: var(--lightText);
+  color: var(--lightText);
+  top: 190px;
+  left: 30px;
 }
 #image-desktop-vsc:hover {
   background-color: var(--lightBackground);
@@ -116,8 +115,6 @@ body {
 #image-desktop-terminal {
   position: absolute;
   align-items: center;
-  top: 305px;
-  left: 30px;
   display: flex;
   width: 2rem;
   flex-wrap: wrap;
@@ -133,6 +130,9 @@ body {
   border: 1px solid var(--lightTransBorder);
   mix-blend-mode: hard-light;
   color: var(--lightText);
+  color: var(--lightText);
+  top: 305px;
+  left: 30px;
 }
 #image-desktop-terminal:hover {
   background-color: var(--lightBackground);
@@ -150,8 +150,6 @@ body {
 #image-desktop-folder {
   position: absolute;
   align-items: center;
-  bottom: 15px;
-  right: 30px;
   display: flex;
   width: 2rem;
   flex-wrap: wrap;
@@ -167,6 +165,9 @@ body {
   border: 1px solid var(--lightTransBorder);
   mix-blend-mode: hard-light;
   color: var(--lightText);
+  color: var(--lightText);
+  bottom: 15px;
+  right: 30px;
 }
 #image-desktop-folder:hover {
   background-color: var(--lightBackground);
@@ -184,8 +185,6 @@ body {
 #image-desktop-google {
   position: absolute;
   align-items: center;
-  top: 75px;
-  left: 30px;
   display: flex;
   width: 2rem;
   flex-wrap: wrap;
@@ -194,13 +193,16 @@ body {
   width: 100px;
   height: 100px;
   border-radius: 5px;
-  mix-blend-mode: hard-light;
-  color: var(--lightText);
   -moz-user-select: none;
   -khtml-user-select: none;
   -webkit-user-select: none;
   user-select: none;
   border: 1px solid var(--lightTransBorder);
+  mix-blend-mode: hard-light;
+  color: var(--lightText);
+  color: var(--lightText);
+  top: 75px;
+  left: 30px;
 }
 #image-desktop-google:hover {
   background-color: var(--lightBackground);
@@ -213,6 +215,10 @@ body {
   margin-left: auto;
   margin-right: auto;
   justify-content: center;
+}
+
+.text--bold {
+  font-weight: bold;
 }
 
 .absolute {
@@ -244,6 +250,17 @@ a:visited {
 
 .text--green {
   color: #57B40F;
+}
+
+#terminal-text::-webkit-scrollbar {
+  width: 0.4em;
+  position: absolute;
+}
+
+#terminal-text::-webkit-scrollbar-thumb {
+  background: var(--lightScroll);
+  border-radius: 20px;
+  outline: 1px solid var(--lightBorder);
 }
 
 header {
@@ -285,6 +302,8 @@ main .container {
   box-shadow: 0px 0px 7.3px rgba(0, 0, 0, 0.035), 0px 0px 58px rgba(0, 0, 0, 0.07);
 }
 main .container .terminal-header {
+  mix-blend-mode: hard-light;
+  color: var(--lightText);
   width: auto;
   background-color: var(--lightTerminalHeaderBackground);
   border: 1px solid var(--lightBorder);
@@ -296,8 +315,6 @@ main .container .terminal-header {
   backdrop-filter: blur(15px) saturate(120%);
   -webkit-backdrop-filter: blur(15px) saturate(121%);
   cursor: grab;
-  mix-blend-mode: hard-light;
-  color: var(--lightText);
 }
 main .container .terminal-header .left-right {
   margin-left: 2rem;
@@ -376,13 +393,13 @@ main .container #terminal li {
   padding: 0.2rem 0;
 }
 main .container #terminal #terminal-text {
+  mix-blend-mode: hard-light;
+  color: var(--lightText);
   cursor: initial !important;
   height: 600px;
   width: auto;
   overflow: scroll;
   overflow-x: hidden;
-  mix-blend-mode: hard-light;
-  color: var(--lightText);
   font-family: "Source Code Pro", monospace;
   font-size: 14px;
 }
@@ -391,16 +408,16 @@ main .container #terminal #terminal-text #terminal-input {
   align-items: center;
 }
 main .container #terminal #terminal-text #terminal-input input {
+  mix-blend-mode: hard-light;
+  color: var(--lightText);
   width: 80%;
   font-size: 14px;
   margin-left: 0.5rem;
   height: 20px;
   font-family: "Source Code Pro", monospace;
-  mix-blend-mode: hard-light;
   background-color: #f5be4f00;
   border: none;
   outline: none;
-  color: var(--lightText);
 }
 main .container #terminal #terminal-text #terminal-input-new {
   display: flex;
@@ -408,11 +425,11 @@ main .container #terminal #terminal-text #terminal-input-new {
   padding: 0.7rem 0;
 }
 main .container #terminal #terminal-text #terminal-input-new #new-input--style {
+  mix-blend-mode: hard-light;
+  color: var(--lightText);
   padding-left: 0.5rem;
   font-size: 14px;
   font-family: "Source Code Pro", monospace;
-  mix-blend-mode: hard-light;
-  color: var(--lightText);
 }
 
 footer {
@@ -420,17 +437,6 @@ footer {
   font-size: 14px;
   mix-blend-mode: hard-light;
   color: var(--lightText);
-}
-
-#terminal-text::-webkit-scrollbar {
-  width: 0.4em;
-  position: absolute;
-}
-
-#terminal-text::-webkit-scrollbar-thumb {
-  background: rgba(33, 33, 33, 0.7);
-  border-radius: 20px;
-  outline: 1px solid rgba(33, 33, 33, 0.5);
 }
 
 /*# sourceMappingURL=style.css.map */
