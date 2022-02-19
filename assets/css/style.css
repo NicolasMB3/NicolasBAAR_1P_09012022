@@ -259,7 +259,7 @@ main {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  height: 90vh;
+  height: 88vh;
 }
 main .container {
   border-radius: 15px;
@@ -344,6 +344,10 @@ main .container .terminal-header #button-switch, main .container .terminal-heade
   padding: 0.3rem 0.7rem;
   border-radius: 7px;
   margin-right: 10rem;
+  cursor: pointer;
+}
+main .container .terminal-header #button-switch:hover, main .container .terminal-header #button-switch-file:hover {
+  background: var(--lightTerminalBodyBackground);
 }
 main .container .terminal {
   height: auto;
@@ -360,7 +364,7 @@ main .container .terminal li {
 main .container .terminal #terminal-text {
   mix-blend-mode: hard-light;
   color: var(--lightText);
-  cursor: initial !important;
+  cursor: initial;
   height: 600px;
   width: auto;
   overflow: scroll;
