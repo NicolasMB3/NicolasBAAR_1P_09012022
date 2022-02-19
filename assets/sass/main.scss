@@ -210,7 +210,7 @@ main {
             display: flex;
             align-items: center;
             margin: 1rem;
-            #circle-red, #circle-red-file {
+            #circle-red, #circle-red-file, #circle-red-contact {
                @include button-management;
                background: #EC6A5E;
                &:hover {

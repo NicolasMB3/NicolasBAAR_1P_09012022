@@ -207,7 +207,7 @@ main .container .terminal-header .button-management {
   align-items: center;
   margin: 1rem;
 }
-main .container .terminal-header .button-management #circle-red, main .container .terminal-header .button-management #circle-red-file {
+main .container .terminal-header .button-management #circle-red, main .container .terminal-header .button-management #circle-red-file, main .container .terminal-header .button-management #circle-red-contact {
   width: 12px;
   height: 12px;
   border-radius: 20px;
@@ -215,7 +215,7 @@ main .container .terminal-header .button-management #circle-red, main .container
   margin: 0 0.4rem;
   background: #EC6A5E;
 }
-main .container .terminal-header .button-management #circle-red:hover, main .container .terminal-header .button-management #circle-red-file:hover {
+main .container .terminal-header .button-management #circle-red:hover, main .container .terminal-header .button-management #circle-red-file:hover, main .container .terminal-header .button-management #circle-red-contact:hover {
   background: #973c34;
 }
 main .container .terminal-header .button-management .circle-orange {

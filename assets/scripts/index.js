@@ -177,6 +177,7 @@ function dragAndDrop() {
 
 //
 // Open and close terminal when doublie click on icon or button close is pressed
+// need optimization haha (its weird now)
 //
 function closeOpenTerminal() {
    const buttonClose = document.getElementById('circle-red');
@@ -185,6 +186,9 @@ function closeOpenTerminal() {
    const containerFile = document.getElementById('close-open-file');
    const terminalIcon = document.getElementById('image-desktop-terminal');
    const CVIcon = document.getElementById('image-desktop-google');
+   const buttonCloseContact = document.getElementById('circle-red-contact');
+   const containerContact = document.getElementById('close-open-contact');
+   const contactIcon = document.getElementById('image-desktop-contact');
 
    buttonClose.addEventListener('click', function(e) {
       container.style.visibility = 'hidden';
@@ -207,6 +211,18 @@ function closeOpenTerminal() {
          containerFile.style.visibility = 'hidden';
       } else {
          containerFile.style.visibility = 'visible';
+      }
+   });
+
+   buttonCloseContact.addEventListener('click', function(e) {
+      containerContact.style.visibility = 'hidden';
+   });
+
+   contactIcon.addEventListener('dblclick', function(e) {
+      if (containerContact.style.visibility === 'visible') {
+         containerContact.style.visibility = 'hidden';
+      } else {
+         containerContact.style.visibility = 'visible';
       }
    });
 }
@@ -291,13 +307,11 @@ function darkMode() {
 }
 
 function sendEmail() {
-
    const getFormButton = document.getElementById('form-button');
    const formOk = document.getElementById('form-ok');
    const formProblem = document.getElementById('form-problem');
 
    getFormButton.addEventListener('click', function() {
-
       var templateParams = {
          name: document.getElementById('name').value,
          entreprise: document.getElementById('entreprise').value,
