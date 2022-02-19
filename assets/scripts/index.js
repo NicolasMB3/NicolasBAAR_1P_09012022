@@ -1,5 +1,5 @@
 // Version
-version(0.01);
+version(0.04);
 // Version
 const textTerminal = document.getElementById('terminal-text');
 let inputValue = document.querySelector('#command');
