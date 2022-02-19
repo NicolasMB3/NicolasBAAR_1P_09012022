@@ -63,7 +63,6 @@ body {
   -webkit-user-select: none;
   user-select: none;
   border: 1px solid var(--lightTransBorder);
-  mix-blend-mode: hard-light;
   color: var(--lightText);
   color: var(--lightText);
 }
@@ -103,7 +102,6 @@ body {
 
 a {
   text-decoration: none;
-  mix-blend-mode: hard-light;
   color: var(--lightText);
 }
 a:visited {
@@ -149,7 +147,6 @@ header #title-left ul, header #title-right ul {
 }
 header #title-left ul li, header #title-right ul li {
   display: inline;
-  mix-blend-mode: hard-light;
   color: var(--lightText);
   padding: 0.5rem 0.5rem;
   font-size: 14px;
@@ -168,7 +165,6 @@ main .container {
   box-shadow: 0px 0px 7.3px rgba(0, 0, 0, 0.035), 0px 0px 58px rgba(0, 0, 0, 0.07);
 }
 main .container .terminal-header {
-  mix-blend-mode: hard-light;
   color: var(--lightText);
   width: auto;
   background-color: var(--lightTerminalHeaderBackground);
@@ -262,15 +258,13 @@ main .container .terminal {
 main .container .terminal li {
   padding: 0.2rem 0;
 }
-main .container .terminal #terminal-folder {
-  mix-blend-mode: hard-light;
+main .container .terminal .terminal-folder {
   color: var(--lightText);
   cursor: initial;
   height: 600px;
   width: auto;
 }
 main .container .terminal #terminal-text {
-  mix-blend-mode: hard-light;
   color: var(--lightText);
   cursor: initial;
   height: 600px;
@@ -285,7 +279,6 @@ main .container .terminal #terminal-text #terminal-input {
   align-items: center;
 }
 main .container .terminal #terminal-text #terminal-input input {
-  mix-blend-mode: hard-light;
   color: var(--lightText);
   width: 80%;
   font-size: 14px;
@@ -302,11 +295,19 @@ main .container .terminal #terminal-text #terminal-input-new {
   padding: 0.7rem 0;
 }
 main .container .terminal #terminal-text #terminal-input-new #new-input--style {
-  mix-blend-mode: hard-light;
   color: var(--lightText);
   padding-left: 0.5rem;
   font-size: 14px;
   font-family: "Source Code Pro", monospace;
+}
+main #contactform {
+  display: flex;
+  margin-top: 2%;
+  align-items: center;
+  flex-direction: column;
+}
+main #contactform .fa-reply {
+  margin-left: 1rem;
 }
 
 footer {
@@ -315,7 +316,6 @@ footer {
   align-items: center;
   margin-left: 1rem;
   font-size: 14px;
-  mix-blend-mode: hard-light;
   color: var(--lightText);
 }
 footer p {
@@ -323,6 +323,103 @@ footer p {
 }
 footer i {
   margin-left: 0.3rem;
+}
+
+.fa-file-contract, .fa-signature, .fa-building, .fa-mobile-screen-button, .fa-paper-plane {
+  margin-right: 0.3rem;
+  justify-content: center;
+  width: 1.5rem;
+}
+
+form.form-example {
+  display: table;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  color: var(--lightText);
+}
+
+.button-custom {
+  cursor: pointer;
+  height: 3rem;
+}
+.button-custom:hover {
+  background-color: var(--lightScroll);
+}
+
+.contactme-input, .button-custom {
+  background-color: var(--lightBackground);
+  border: var(--lightBorder);
+}
+
+div.form-example {
+  display: table-row;
+  margin: 0.3rem;
+}
+
+label, input {
+  display: table-cell;
+  width: 100%;
+  height: 30px;
+  border-radius: 5px;
+  color: var(--lightText);
+  outline: none;
+}
+
+.email-send-message {
+  color: var(--lightText);
+  visibility: hidden;
+  position: absolute;
+  top: 70px;
+  right: 40px;
+  border-radius: 5px;
+  padding: 1.4rem;
+  background-color: rgba(12, 128, 12, 0.795);
+}
+.email-send-message .fa-circle-check {
+  margin-right: 0.7rem;
+}
+
+.email-send-message-off {
+  color: var(--lightText);
+  visibility: hidden;
+  position: absolute;
+  top: 70px;
+  right: 40px;
+  border-radius: 5px;
+  padding: 1.4rem;
+  background-color: rgba(128, 12, 12, 0.795);
+}
+.email-send-message-off .fa-xmark {
+  margin-right: 0.7rem;
+}
+
+.ending-animation {
+  animation: ending 5s ease-in both;
+}
+
+@keyframes ending {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  10% {
+    transform: translateY(0);
+    opacity: 0.8;
+  }
+  80% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  90% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: hidden;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

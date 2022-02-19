@@ -254,7 +254,7 @@ main {
          li {
             padding: 0.2rem 0;
          }
-         #terminal-folder {
+         .terminal-folder {
             @include text;
             cursor: initial;
             height: 600px;
@@ -298,6 +298,15 @@ main {
          }
       }
    }
+   #contactform {
+      display: flex;
+      margin-top: 2%;
+      align-items: center;
+      flex-direction: column;
+      .fa-reply {
+         margin-left: 1rem;
+      }
+   }
 }
 
 //
@@ -317,3 +326,110 @@ footer {
       margin-left: 0.3rem;
    }
 }
+
+
+//
+// WIP
+//
+
+.fa-file-contract, .fa-signature, .fa-building, .fa-mobile-screen-button, .fa-paper-plane {
+   margin-right: 0.3rem;
+   justify-content: center;
+   width: 1.5rem;
+}
+
+form.form-example {
+   display: table;
+   display: flex;
+   flex-direction: column;
+   width: 70%;
+   @include text;
+}
+
+.button-custom {
+   cursor: pointer;
+   height: 3rem;
+   &:hover {
+      background-color: var(--lightScroll);
+   }
+}
+
+.contactme-input, .button-custom {
+   background-color: var(--lightBackground);
+   border: var(--lightBorder);
+}
+
+div.form-example {
+   display: table-row;
+   margin: 0.3rem;
+}
+
+label, input {
+   display: table-cell;
+   width: 100%;
+   height: 30px;
+   border-radius: 5px;
+   @include text;
+   outline: none;
+}
+
+.email-send-message {
+   @include text;
+   visibility: hidden;
+   position: absolute;
+   top: 70px;
+   right: 40px;
+   border-radius: 5px;
+   padding: 1.4rem;
+   background-color: rgba(12, 128, 12, 0.795);
+   .fa-circle-check {
+      margin-right: 0.7rem;
+   }
+}
+
+.email-send-message-off {
+   @include text;
+   visibility: hidden;
+   position: absolute;
+   top: 70px;
+   right: 40px;
+   border-radius: 5px;
+   padding: 1.4rem;
+   background-color: rgba(128, 12, 12, 0.795);
+   .fa-xmark {
+      margin-right: 0.7rem;
+   }
+}
+
+.ending-animation {
+   // Animation 
+   animation: ending 5s ease-in both;
+}
+
+@keyframes ending {
+   0% {
+      transform: translateY(-20px);
+      opacity: 0;
+   }
+   10% {
+      transform: translateY(0);
+      opacity: 0.8;
+   }
+   80% {
+      transform: translateY(0);
+      opacity: 1;
+   }
+   90% {
+      transform: translateY(0);
+      opacity: 1;
+   }
+   100% {
+      transform: translateY(0);
+      opacity: 1;
+      visibility: hidden;
+   }
+}
+
+//
+// WIP
+//

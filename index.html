@@ -9,6 +9,12 @@
    <title class="version">CMD \> Nicolas BAAR </title>
    <link rel="icon" href="assets/images/favicon.png" />
    <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+   <script type="text/javascript">
+      (function() {
+         emailjs.init("user_e4MVLTTonZoL69En0byMU");
+      })();
+   </script>
 </head>
 <body>
    <header id="header-section">
@@ -53,6 +59,7 @@
             <p>Corbeille</p>
          </div>
       </div>
+      <!-- Folder : Terminal -->
       <div class="container drag absolute" id="close-open">
          <div class="terminal-header">
             <div class="button-management">
@@ -99,6 +106,7 @@
             </div>
          </div>
       </div>
+      <!-- Folder : CV Numérique -->
       <div class="container drag absolute visibility" id="close-open-file">
          <div class="terminal-header">
             <div class="button-management">
@@ -118,7 +126,7 @@
             </div>
          </div>
          <div class="resize-drag terminal">
-            <div id="terminal-folder">
+            <div class="terminal-folder">
                <div id="image-desktop-folder-infile" class="icons drag">
                   <a href="assets/extras/CV_2022.pdf" target="_blank">
                      <img src="assets/images/file.jpg" alt="Icône pour le dossier CV sur le bureau" width="42"> 
@@ -128,10 +136,68 @@
             </div>
          </div>
       </div>
+      <!-- Folder : Contact Me -->
+      <div class="container drag absolute" id="close-open-file">
+         <div class="terminal-header">
+            <div class="button-management">
+               <div id="circle-red-file"></div>
+               <div class="circle-orange"></div>
+               <div class="circle-grey"></div>
+               <div class="left-right">
+                  <i class="fas fa-chevron-left"></i>
+                  <i class="fas fa-chevron-right"></i>
+               </div>
+            </div>
+            <div class="research-bar">
+               <p class="text--margin0"><i class="fas fa-lock"></i>C:/Users/Nicolas> Me contacter</p>
+            </div>
+            <div id="button-switch-file">
+               <i class="fa-solid fa-bolt"></i>
+            </div>
+         </div>
+         <div class="resize-drag terminal" style="width: 49rem;">
+            <div class="terminal-folder" id="contactform">
+               <h2>Me contacter<i class="fa-solid fa-reply"></i></h2>
+               <hr style="width:40%; margin-bottom: 1rem;">
+               <form action="" id="form-contact" class="form-example">
+                  <div class="form-example">
+                    <label for="name"><i class="fa-solid fa-signature"></i>Votre prénom : </label>
+                    <input type="text" name="name" id="name" class="contactme-input" autocomplete="off" required>
+                  </div>
+                  <div class="form-example">
+                    <label for="entreprise"><i class="fa-solid fa-building"></i>Vous êtes une entreprise : </label>
+                    <input type="text" name="entreprise" id="entreprise" class="contactme-input" autocomplete="off" required>
+                  </div>
+                  <div class="form-example">
+                     <label for="phone"><i class="fa-solid fa-mobile-screen-button"></i>Numéro de téléphone : </label>
+                     <input type="number" name="phone" id="phone" class="contactme-input" autocomplete="off" required>
+                  </div>
+                  <div class="form-example">
+                     <label for="email"><i class="fa-solid fa-paper-plane"></i>Adresse e-mail : </label>
+                     <input type="email" name="email" id="email" class="contactme-input" autocomplete="off" required>
+                  </div>
+                  <div class="form-example">
+                     <label for="description"><i class="fa-solid fa-file-contract"></i>Pourquoi souhaitez-vous me contacter :</label>
+                     <input type="text" name="description" id="description" class="contactme-input" autocomplete="off" required>
+                  </div>
+                  <div class="form-example">
+                    <input id="form-button" class="button-custom" value="Envoyer">
+                  </div>
+                </form>
+            </div>
+         </div>
+      </div>
+      <div id="form-ok" class="email-send-message">
+         <i class="fa-solid fa-circle-check"></i>
+         Votre message s'est correctement envoyé
+      </div>
+      <div id="form-problem" class="email-send-message-off">
+         <i class="fa-solid fa-xmark"></i>
+         Problème lors de l'envoie de l'email
+      </div>
    </main>
    <footer>
       <p><span class="text--bold version"><!-- [version 0.01] --></span> En cours de développement 🧑‍💻</p>
-      <p>Me contacter <i class="fa-solid fa-reply"></i></p>
    </footer>
    <script type="module" src="assets/scripts/index.js"></script>
 </body>

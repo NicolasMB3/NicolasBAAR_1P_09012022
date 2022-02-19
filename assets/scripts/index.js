@@ -290,9 +290,37 @@ function darkMode() {
    })
 }
 
+function sendEmail() {
+
+   const getFormButton = document.getElementById('form-button');
+   const formOk = document.getElementById('form-ok');
+   const formProblem = document.getElementById('form-problem');
+
+   getFormButton.addEventListener('click', function() {
+
+      var templateParams = {
+         name: document.getElementById('name').value,
+         entreprise: document.getElementById('entreprise').value,
+         phone: document.getElementById('phone').value,
+         email: document.getElementById('email').value,
+         description: document.getElementById('description').value
+      };
+
+      emailjs.send('service_a80h2ni', 'template_766uk3r', templateParams)
+      .then(function(response) {
+         formOk.style.visibility = 'visible';
+         formOk.classList.add("ending-animation");
+      }, function(error) {
+         formProblem.style.visibility = 'visible'
+         formProblem.classList.add("ending-animation");
+      });
+   })
+}
+
 //
 // Run functions
 //
+sendEmail();
 darkMode();
 closeOpenTerminal();
 resize();
