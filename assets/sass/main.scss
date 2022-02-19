@@ -54,39 +54,16 @@ body {
 }
 
 //
-// Linkedin icon
+// Desktop icons
 //
-#image-desktop-vsc {
-   @include desktop-icons;
-   top: 190px;
-   left: 30px;
+.grid-icons {
+   padding: 2rem 0 0 2rem;
+   width: 100%;
+   height: 100%;
 }
 
-//
-// Terminal icon
-//
-#image-desktop-terminal {
+.icons {
    @include desktop-icons;
-   top: 305px;
-   left: 30px;
-}
-
-//
-// Bin icon
-//
-#image-desktop-folder {
-   @include desktop-icons;
-   bottom: 100px;
-   right: 30px;
-}
-
-//
-// Portfolio icon
-//
-#image-desktop-google {
-   @include desktop-icons;
-   top: 75px;
-   left: 30px;
 }
 
 //
@@ -98,6 +75,9 @@ body {
 
 .absolute {
    position: absolute;
+}
+
+.visibility {
    visibility: hidden;
 }
 
@@ -182,7 +162,6 @@ main {
       border-radius: 15px;
       backdrop-filter: blur(15px);
       @include box-gradiant;
-
       //
       // Terminal head modifications here
       //
@@ -274,6 +253,12 @@ main {
          padding: 1rem;
          li {
             padding: 0.2rem 0;
+         }
+         #terminal-folder {
+            @include text;
+            cursor: initial;
+            height: 600px;
+            width: auto;
          }
          #terminal-text {
             @include text;

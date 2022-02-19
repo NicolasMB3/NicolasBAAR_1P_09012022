@@ -29,25 +29,31 @@
       </div>
    </header>
    <main>
-      <div id="image-desktop-google" class="drag">
-         <img src="assets/images/folder-full.png" alt="Icône pour le dossier CV sur le bureau" width="42"> 
-         <p>CV Numérique</p>
+      <div class="grid-icons">
+         <div id="image-desktop-google" class="icons drag">
+            <img src="assets/images/folder-full.png" alt="Icône pour le dossier CV sur le bureau" width="42"> 
+            <p>CV Numérique</p>
+         </div>
+         <div id="image-desktop-contact" class="icons drag">
+            <img src="assets/images/folder-full.png" alt="Icône pour le me contacter sur le bureau" width="42"> 
+            <p>Me contacter</p>
+         </div>
+         <div id="image-desktop-vsc" class="icons drag">
+            <a href="https://www.linkedin.com/in/nicolasbaar02/" target="_blank">
+               <img src="assets/images/chrome.png" alt="Icône pour le dossier Linkedin sur le bureau" width="42"> 
+               <p>Page Linkedin</p>
+            </a>
+         </div>
+         <div id="image-desktop-terminal" class="icons drag">
+            <img src="assets/images/terminal.png" alt="Icône pour le terminal sur le bureau" width="42"> 
+            <p>Terminal</p>
+         </div>
+         <div id="image-desktop-folder" class="icons drag">
+            <img id="image-bin" src="assets/images/folder-bin.png" alt="Icône pour le dossier Corbeille sur le bureau" width="42"> 
+            <p>Corbeille</p>
+         </div>
       </div>
-      <div id="image-desktop-vsc" class="drag">
-         <a href="https://www.linkedin.com/in/nicolasbaar02/" target="_blank">
-            <img src="assets/images/chrome.png" alt="Icône pour le dossier Linkedin sur le bureau" width="42"> 
-            <p>Page Linkedin</p>
-         </a>
-      </div>
-      <div id="image-desktop-terminal" class="drag">
-         <img src="assets/images/terminal.png" alt="Icône pour le terminal sur le bureau" width="42"> 
-         <p>Terminal</p>
-      </div>
-      <div id="image-desktop-folder" class="drag">
-         <img id="image-bin" src="assets/images/folder-bin.png" alt="Icône pour le dossier Corbeille sur le bureau" width="42"> 
-         <p>Corbeille</p>
-      </div>
-      <div class="container drag" id="close-open">
+      <div class="container drag absolute" id="close-open">
          <div class="terminal-header">
             <div class="button-management">
                <div id="circle-red"></div>
@@ -93,7 +99,7 @@
             </div>
          </div>
       </div>
-      <div class="container drag absolute" id="close-open-file">
+      <div class="container drag absolute visibility" id="close-open-file">
          <div class="terminal-header">
             <div class="button-management">
                <div id="circle-red-file"></div>
@@ -112,8 +118,8 @@
             </div>
          </div>
          <div class="resize-drag terminal">
-            <div id="terminal-text">
-               <div id="image-desktop-google">
+            <div id="terminal-folder">
+               <div id="image-desktop-folder-infile" class="icons drag">
                   <a href="assets/extras/CV_2022.pdf" target="_blank">
                      <img src="assets/images/file.jpg" alt="Icône pour le dossier CV sur le bureau" width="42"> 
                      <p>CV 2022</p>
