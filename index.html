@@ -36,34 +36,34 @@
    </header>
    <main>
       <div class="grid-icons">
-         <div id="image-desktop-google" class="icons drag">
+         <div class="icons drag openClose" data-id="123">
             <img src="assets/images/folder-full.png" alt="Icône pour le dossier CV sur le bureau" width="42"> 
             <p>CV Numérique</p>
          </div>
-         <div id="image-desktop-contact" class="icons drag">
+         <div class="icons drag openClose" data-id="456">
             <img src="assets/images/folder-full.png" alt="Icône pour le me contacter sur le bureau" width="42"> 
             <p>Me contacter</p>
          </div>
-         <div id="image-desktop-vsc" class="icons drag">
+         <div class="icons drag">
             <a href="https://www.linkedin.com/in/nicolasbaar02/" target="_blank">
                <img src="assets/images/chrome.png" alt="Icône pour le dossier Linkedin sur le bureau" width="42"> 
                <p>Page Linkedin</p>
             </a>
          </div>
-         <div id="image-desktop-terminal" class="icons drag">
+         <div class="icons drag openClose" data-id="789">
             <img src="assets/images/terminal.png" alt="Icône pour le terminal sur le bureau" width="42"> 
             <p>Terminal</p>
          </div>
-         <div id="image-desktop-folder" class="icons drag">
+         <div class="icons drag">
             <img id="image-bin" src="assets/images/folder-bin.png" alt="Icône pour le dossier Corbeille sur le bureau" width="42"> 
             <p>Corbeille</p>
          </div>
       </div>
       <!-- Folder : Terminal -->
-      <div class="container drag absolute" id="close-open">
+      <div class="container drag absolute" id="container-terminal">
          <div class="terminal-header">
             <div class="button-management">
-               <div id="circle-red"></div>
+               <div class="circle-red"></div>
                <div class="circle-orange"></div>
                <div class="circle-grey"></div>
                <div class="left-right">
@@ -102,10 +102,10 @@
          </div>
       </div>
       <!-- Folder : CV Numérique -->
-      <div class="container drag absolute visibility" id="close-open-file">
+      <div class="container drag absolute visibility" id="container-file">
          <div class="terminal-header">
             <div class="button-management">
-               <div id="circle-red-file"></div>
+               <div class="circle-red"></div>
                <div class="circle-orange"></div>
                <div class="circle-grey"></div>
                <div class="left-right">
@@ -132,10 +132,10 @@
          </div>
       </div>
       <!-- Folder : Contact Me -->
-      <div class="container drag absolute visibility" id="close-open-contact">
+      <div class="container drag absolute visibility" id="container-contact">
          <div class="terminal-header">
             <div class="button-management">
-               <div id="circle-red-contact"></div>
+               <div class="circle-red"></div>
                <div class="circle-orange"></div>
                <div class="circle-grey"></div>
                <div class="left-right">

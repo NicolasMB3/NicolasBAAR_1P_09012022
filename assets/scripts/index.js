@@ -201,54 +201,35 @@ function dragAndDrop() {
 
 //
 // Open and close terminal when doublie click on icon or button close is pressed
-// need optimization haha (its weird now)
 //
 function closeOpenTerminal() {
-   const buttonClose = document.getElementById('circle-red');
-   const buttonCloseFile = document.getElementById('circle-red-file');
-   const container = document.getElementById('close-open');
-   const containerFile = document.getElementById('close-open-file');
-   const terminalIcon = document.getElementById('image-desktop-terminal');
-   const CVIcon = document.getElementById('image-desktop-google');
-   const buttonCloseContact = document.getElementById('circle-red-contact');
-   const containerContact = document.getElementById('close-open-contact');
-   const contactIcon = document.getElementById('image-desktop-contact');
+   const buttonClose = document.getElementsByClassName('circle-red');
+   const openAndClose = document.getElementsByClassName('openClose');
+   
+   Array.from(buttonClose).forEach((button) => {
+      button.addEventListener('click', function() {
+         const container = document.getElementsByClassName('container');
+         Array.from(container).forEach((ctn) => {
+            this.closest('.container').style.visibility = 'hidden';
+         });
+      });
+   })
 
-   buttonClose.addEventListener('click', function(e) {
-      container.style.visibility = 'hidden';
-   });
+   Array.from(openAndClose).forEach((icon) => {
+      icon.addEventListener('dblclick', function(e) {
+         const containerTerminal = document.getElementById('container-terminal');
+         const containerFile = document.getElementById('container-file');
+         const containerContact = document.getElementById('container-contact');
 
-   terminalIcon.addEventListener('dblclick', function(e) {
-      if (container.style.visibility === 'visible') {
-         container.style.visibility = 'hidden';
-      } else {
-         container.style.visibility = 'visible';
-      }
-   });
-
-   buttonCloseFile.addEventListener('click', function(e) {
-      containerFile.style.visibility = 'hidden';
-   });
-
-   CVIcon.addEventListener('dblclick', function(e) {
-      if (containerFile.style.visibility === 'visible') {
-         containerFile.style.visibility = 'hidden';
-      } else {
-         containerFile.style.visibility = 'visible';
-      }
-   });
-
-   buttonCloseContact.addEventListener('click', function(e) {
-      containerContact.style.visibility = 'hidden';
-   });
-
-   contactIcon.addEventListener('dblclick', function(e) {
-      if (containerContact.style.visibility === 'visible') {
-         containerContact.style.visibility = 'hidden';
-      } else {
-         containerContact.style.visibility = 'visible';
-      }
-   });
+         if (icon.getAttribute('data-id') == 123) {
+            containerFile.style.visibility = 'visible';
+         } else if (icon.getAttribute('data-id') == 456) {
+            containerContact.style.visibility = 'visible';
+         } else {
+            containerTerminal.style.visibility = 'visible';
+         }
+      });
+   })
 }
 
 //
