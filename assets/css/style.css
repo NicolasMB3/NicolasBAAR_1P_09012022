@@ -116,12 +116,12 @@ a:visited {
   color: #57B40F;
 }
 
-#terminal-text::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 0.4em;
   position: absolute;
 }
 
-#terminal-text::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
   background: var(--lightScroll);
   border-radius: 20px;
   outline: 1px solid var(--lightBorder);
@@ -303,6 +303,9 @@ main .container .terminal #terminal-text #terminal-input-new #new-input--style {
 main #contactform {
   display: flex;
   margin-top: 2%;
+  height: 90%;
+  overflow: scroll;
+  overflow-x: hidden;
   align-items: center;
   flex-direction: column;
 }
