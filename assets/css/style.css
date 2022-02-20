@@ -240,6 +240,7 @@ main .container .terminal-header #button-switch, main .container .terminal-heade
   font-size: 12px;
   padding: 0.3rem 0.7rem;
   border-radius: 7px;
+  margin-left: 0.5rem;
   margin-right: 10rem;
   cursor: pointer;
 }
@@ -247,7 +248,7 @@ main .container .terminal-header #button-switch:hover, main .container .terminal
   background: var(--lightTerminalBodyBackground);
 }
 main .container .terminal {
-  height: auto;
+  height: 60vh;
   width: 60vw;
   background: var(--lightTerminalBodyBackground);
   border-radius: 0 0 20px 20px;
@@ -261,8 +262,8 @@ main .container .terminal li {
 main .container .terminal .terminal-folder {
   color: var(--lightText);
   cursor: initial;
-  height: 600px;
-  width: auto;
+  height: 100%;
+  width: 100%;
 }
 main .container .terminal #terminal-text {
   color: var(--lightText);
@@ -328,7 +329,7 @@ footer i {
   margin-left: 0.3rem;
 }
 
-.fa-file-contract, .fa-signature, .fa-building, .fa-mobile-screen-button, .fa-paper-plane {
+.fa-file-contract, .fa-signature, .fa-building, .fa-mobile-screen-button, .fa-paper-plane, .fa-discord {
   margin-right: 0.3rem;
   justify-content: center;
   width: 1.5rem;
@@ -395,6 +396,15 @@ label, input {
 }
 .email-send-message-off .fa-xmark {
   margin-right: 0.7rem;
+}
+
+#discord {
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-radius: 5px;
+  padding: 0.3rem;
+}
+#discord:hover {
+  background-color: var(--lightTerminalBar);
 }
 
 .ending-animation {

@@ -232,6 +232,7 @@ main {
             font-size: 12px;
             padding: 0.3rem 0.7rem;
             border-radius: 7px;
+            margin-left: 0.5rem;
             margin-right: 10rem;
             cursor: pointer;
             &:hover {
@@ -244,7 +245,7 @@ main {
       // Terminal text modifications here
       //
       .terminal {
-         height: auto;
+         height: 60vh;
          width: 60vw;
          background: var(--lightTerminalBodyBackground);
          border-radius: 0 0 20px 20px;
@@ -257,8 +258,8 @@ main {
          .terminal-folder {
             @include text;
             cursor: initial;
-            height: 600px;
-            width: auto;
+            height: 100%;
+            width: 100%;
          }
          #terminal-text {
             @include text;
@@ -335,7 +336,7 @@ footer {
 // WIP
 //
 
-.fa-file-contract, .fa-signature, .fa-building, .fa-mobile-screen-button, .fa-paper-plane {
+.fa-file-contract, .fa-signature, .fa-building, .fa-mobile-screen-button, .fa-paper-plane, .fa-discord {
    margin-right: 0.3rem;
    justify-content: center;
    width: 1.5rem;
@@ -385,6 +386,7 @@ label, input {
    border-radius: 5px;
    padding: 1.4rem;
    background-color: rgba(12, 128, 12, 0.795);
+   backdrop-filter: blur(15px);
    .fa-circle-check {
       margin-right: 0.7rem;
    }
@@ -399,8 +401,18 @@ label, input {
    border-radius: 5px;
    padding: 1.4rem;
    background-color: rgba(128, 12, 12, 0.795);
+   backdrop-filter: blur(15px);
    .fa-xmark {
       margin-right: 0.7rem;
+   }
+}
+
+#discord {
+   border: 1px solid rgba(0, 0, 0, 0);
+   border-radius: 5px;
+   padding: 0.3rem;
+   &:hover {
+      background-color: var(--lightTerminalBar);
    }
 }
 

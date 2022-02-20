@@ -168,8 +168,7 @@ function dragAndDrop() {
    // keep the element within the area of it's parent
    modifiers: [
       interact.modifiers.restrictRect({
-         restriction: 'parent',
-         endOnly: false
+         restriction: 'parent'
       })
    ],
    // enable autoScroll
@@ -272,7 +271,7 @@ function resize() {
 
       // minimum size
       interact.modifiers.restrictSize({
-         min: { width: 721, height: 150 },
+         min: { width: 740, height: 150 },
          max: { width: 1800, height: 700 }
       })
     ],
