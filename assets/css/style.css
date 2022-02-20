@@ -267,7 +267,7 @@ main .container .terminal .terminal-folder {
 main .container .terminal #terminal-text {
   color: var(--lightText);
   cursor: initial;
-  height: 600px;
+  height: 100%;
   width: auto;
   overflow: scroll;
   overflow-x: hidden;

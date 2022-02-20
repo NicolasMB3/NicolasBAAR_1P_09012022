@@ -1,5 +1,5 @@
 // Version
-version(0.04);
+version(0.05);
 // Version
 const textTerminal = document.getElementById('terminal-text');
 let inputValue = document.querySelector('#command');
@@ -205,7 +205,7 @@ function dragAndDrop() {
 function closeOpenTerminal() {
    const buttonClose = document.getElementsByClassName('circle-red');
    const openAndClose = document.getElementsByClassName('openClose');
-   
+
    Array.from(buttonClose).forEach((button) => {
       button.addEventListener('click', function() {
          const container = document.getElementsByClassName('container');
@@ -264,12 +264,16 @@ function resize() {
     modifiers: [
       // keep the edges inside the parent
       interact.modifiers.restrictEdges({
-        outer: 'self'
+         inner: {
+            left: 100,  // the left edge must be <= 100
+            right: 200  // the right edge must be >= 200
+         }
       }),
 
       // minimum size
       interact.modifiers.restrictSize({
-        min: { width: 726, height: 600 }
+         min: { width: 721, height: 150 },
+         max: { width: 1800, height: 700 }
       })
     ],
 
