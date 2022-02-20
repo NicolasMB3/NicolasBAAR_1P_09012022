@@ -259,7 +259,7 @@ main .container .terminal-header .button-management .circle-grey {
   margin: 0 0.4rem;
   background: radial-gradient(125% 125% at 50% 50%, #CECDCD 0%, rgba(215, 215, 215, 0.6) 100%);
 }
-main .container .terminal-header #button-switch, main .container .terminal-header #button-switch-file {
+main .container .terminal-header .button-switch {
   background: var(--lightTerminalBar);
   color: var(--lightBtn);
   font-size: 12px;
@@ -269,7 +269,7 @@ main .container .terminal-header #button-switch, main .container .terminal-heade
   margin-right: 10rem;
   cursor: pointer;
 }
-main .container .terminal-header #button-switch:hover, main .container .terminal-header #button-switch-file:hover {
+main .container .terminal-header .button-switch:hover {
   background: var(--lightTerminalBodyBackground);
 }
 main .container .terminal {

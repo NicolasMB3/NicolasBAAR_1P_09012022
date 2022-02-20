@@ -297,8 +297,7 @@ function resize() {
 // Dark mode and light mode
 //
 function darkMode() {
-   var checkbox = document.getElementById('button-switch');
-   var checkboxFile = document.getElementById('button-switch-file');
+   const switchButton = document.getElementsByClassName('button-switch')
    const mode = localStorage.getItem('mode');
 
    if (mode == 'light') {
@@ -307,22 +306,16 @@ function darkMode() {
       document.documentElement.setAttribute('data-theme', 'dark');
    }
 
-   checkbox.addEventListener('click', function() {
-      if(document.documentElement.getAttribute("data-theme") == "dark") {
-         document.documentElement.setAttribute('data-theme', 'light');
-         localStorage.setItem('mode', 'light');
-      } else {
-         document.documentElement.setAttribute('data-theme', 'dark');
-         localStorage.setItem('mode', 'dark');
-      }
-   })
-
-   checkboxFile.addEventListener('click', function() {
-      if(document.documentElement.getAttribute("data-theme") == "dark") {
-         document.documentElement.setAttribute('data-theme', 'light')
-      } else {
-         document.documentElement.setAttribute('data-theme', 'dark')
-      }
+   Array.from(switchButton).forEach((button) => {
+      button.addEventListener('click', function() {
+         if(document.documentElement.getAttribute("data-theme") == "dark") {
+            document.documentElement.setAttribute('data-theme', 'light');
+            localStorage.setItem('mode', 'light');
+         } else {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            localStorage.setItem('mode', 'dark');
+         }
+      });
    })
 }
 
@@ -354,11 +347,11 @@ function sendEmail() {
 //
 // Run functions
 //
+time();
+date();
 darkMode();
 closeOpenTerminal();
 resize();
 dragAndDrop();
-time();
-date();
 pressKey();
 sendEmail();
