@@ -131,7 +131,7 @@ function pressKey() {
             } else {
                inputToText();
                document.documentElement.setAttribute('data-theme', 'light')
-               console.log(document.documentElement.getAttribute("data-theme"))
+               localStorage.setItem('mode', 'light');
                writeAnwser(`Le thème est maitenant claire`);
                newInput();
             }
@@ -142,8 +142,8 @@ function pressKey() {
                newInput();
             } else {
                inputToText();
+               localStorage.setItem('mode', 'dark');
                document.documentElement.setAttribute('data-theme', 'dark')
-               console.log(document.documentElement.getAttribute("data-theme"))
                writeAnwser(`Le thème est maitenant sombre`);
                newInput();
             }
@@ -209,7 +209,7 @@ function closeOpenTerminal() {
       button.addEventListener('click', function() {
          const container = document.getElementsByClassName('container');
          Array.from(container).forEach((ctn) => {
-            this.closest('.container').style.visibility = 'hidden';
+            this.closest('.container').classList.add("close-animation");
          });
       });
    })
@@ -221,10 +221,13 @@ function closeOpenTerminal() {
          const containerContact = document.getElementById('container-contact');
 
          if (icon.getAttribute('data-id') == 123) {
+            containerFile.classList.remove("close-animation");
             containerFile.style.visibility = 'visible';
          } else if (icon.getAttribute('data-id') == 456) {
+            containerContact.classList.remove("close-animation");
             containerContact.style.visibility = 'visible';
          } else {
+            containerTerminal.classList.remove("close-animation");
             containerTerminal.style.visibility = 'visible';
          }
       });
@@ -296,12 +299,21 @@ function resize() {
 function darkMode() {
    var checkbox = document.getElementById('button-switch');
    var checkboxFile = document.getElementById('button-switch-file');
+   const mode = localStorage.getItem('mode');
+
+   if (mode == 'light') {
+      document.documentElement.setAttribute('data-theme', 'light');
+   } else {
+      document.documentElement.setAttribute('data-theme', 'dark');
+   }
 
    checkbox.addEventListener('click', function() {
       if(document.documentElement.getAttribute("data-theme") == "dark") {
-         document.documentElement.setAttribute('data-theme', 'light')
+         document.documentElement.setAttribute('data-theme', 'light');
+         localStorage.setItem('mode', 'light');
       } else {
-         document.documentElement.setAttribute('data-theme', 'dark')
+         document.documentElement.setAttribute('data-theme', 'dark');
+         localStorage.setItem('mode', 'dark');
       }
    })
 
@@ -342,7 +354,6 @@ function sendEmail() {
 //
 // Run functions
 //
-sendEmail();
 darkMode();
 closeOpenTerminal();
 resize();
@@ -350,3 +361,4 @@ dragAndDrop();
 time();
 date();
 pressKey();
+sendEmail();

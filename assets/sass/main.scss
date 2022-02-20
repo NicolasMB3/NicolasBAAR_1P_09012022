@@ -81,6 +81,32 @@ body {
    visibility: hidden;
 }
 
+.visibilityOn {
+   visibility: visible;
+}
+
+.close-animation {
+   animation: close 0.3s ease-in both;
+}
+
+@keyframes close {
+   0% {
+      opacity: 1;
+   }
+   10% {
+      transform: translateX(-20px);
+   }
+   80% {
+      opacity: 0.2;
+      transform: translateX(-500px);
+   }
+   100% {
+      transform: translateX(-1000px);
+      visibility: hidden;
+      opacity: 0;
+   }
+}
+
 .text--warning {
    font-weight: bold;
    color: #EC6A5E;
@@ -426,20 +452,11 @@ label, input {
       transform: translateY(-20px);
       opacity: 0;
    }
-   10% {
+   20% {
       transform: translateY(0);
       opacity: 0.8;
    }
-   80% {
-      transform: translateY(0);
-      opacity: 1;
-   }
-   90% {
-      transform: translateY(0);
-      opacity: 1;
-   }
    100% {
-      transform: translateY(0);
       opacity: 1;
       visibility: hidden;
    }
