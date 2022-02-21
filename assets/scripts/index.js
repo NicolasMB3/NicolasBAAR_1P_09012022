@@ -3,6 +3,7 @@ version(0.05);
 // Version
 const textTerminal = document.getElementById('terminal-text');
 let inputValue = document.querySelector('#command');
+const binImage = document.getElementById('image-bin');
 
 //
 // Version
@@ -97,12 +98,14 @@ function pressKey() {
          switch (inputValue.value) {
             case 'status':
                inputToText();
-               writeAnwser(`Oui ! Je suis toujours à la recherche d'une alternance pour Janvier 2022 🧑‍💻`);
+               writeAnwser(`Je recherche activement une alternance pour Janvier 2022 🧑‍💻 ! Pour plus d'information tapez dans la console [alternance]`);
                newInput();
+               break;
             case 'clear':
-               const binImage = document.getElementById('image-bin');
                binImage.src = "assets/images/folder-bin-not-empty.png";
-               textTerminal.innerHTML = ``;
+               textTerminal.innerHTML = '';
+               newInput();
+               break;
             case 'clear bin':
                inputToText();
                writeAnwser(`La corbeille a été vidée.`);

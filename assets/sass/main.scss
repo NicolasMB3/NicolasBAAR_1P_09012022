@@ -1,4 +1,7 @@
 @use 'utils' as *;
+@use 'layouts/animation';
+@use 'layouts/window';
+@use 'layouts/notifications';
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300;400;500;600;800&display=swap');
 
@@ -85,28 +88,6 @@ body {
    visibility: visible;
 }
 
-.close-animation {
-   animation: close 0.3s ease-in both;
-}
-
-@keyframes close {
-   0% {
-      opacity: 1;
-   }
-   10% {
-      transform: translateX(-20px);
-   }
-   80% {
-      opacity: 0.2;
-      transform: translateX(-500px);
-   }
-   100% {
-      transform: translateX(-1000px);
-      visibility: hidden;
-      opacity: 0;
-   }
-}
-
 .text--warning {
    font-weight: bold;
    color: #EC6A5E;
@@ -129,12 +110,15 @@ a {
 }
 
 .text--green {
-   color: $green;
+   color: #57B40F;
 }
 
-//
-// Scroll bar custom
-//
+.fa-file-contract, .fa-signature, .fa-building, .fa-mobile-screen-button, .fa-paper-plane, .fa-discord {
+   margin-right: 0.3rem;
+   justify-content: center;
+   width: 1.5rem;
+}
+
 ::-webkit-scrollbar {
    width: 0.4em;
    position: absolute;
@@ -149,6 +133,7 @@ a {
 // Informations about me and display date and time
 //
 header {
+   @include box-gradiant;
    display: flex;
    justify-content: space-between;
    align-items: center;
@@ -159,7 +144,14 @@ header {
    -khtml-user-select: none;
    -webkit-user-select: none;
    user-select: none;
-   @include box-gradiant;
+   #discord {
+      border: 1px solid rgba(0, 0, 0, 0);
+      border-radius: 5px;
+      padding: 0.3rem;
+      &:hover {
+         background-color: var(--lightTerminalBar);
+      }
+   }
    #title-left, #title-right {
       ul {
          list-style-type: none;
@@ -184,159 +176,6 @@ main {
    align-items: center;
    flex-wrap: wrap;
    height: 91vh;
-   .container {
-      border-radius: 15px;
-      backdrop-filter: blur(15px);
-      @include box-gradiant;
-      //
-      // Terminal head modifications here
-      //
-      .terminal-header {
-         @include text;
-         width: auto;
-         background-color: var(--lightTerminalHeaderBackground);
-         border: 1px solid var(--lightBorder);
-         border-radius: 15px 15px 0 0;
-         height: 45px;
-         display: flex;
-         justify-content: space-between;
-         align-items: center;
-         backdrop-filter: blur(15px) saturate(120%);
-         -webkit-backdrop-filter: blur(15px) saturate(121%);
-         cursor: grab;
-         .left-right {
-            margin-left: 2rem;
-            .fa-chevron-left {
-               margin-right: 1rem;
-            }
-         }
-         .research-bar {
-            background: var(--lightTerminalBar);
-            border-radius: 7px;
-            width: 40%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 14px;
-            .text--margin0 {
-               margin: 0;
-               padding: 0.3rem;
-               i {
-                  margin: 0 0.5rem;
-               }
-            }
-         }
-
-         //
-         // Close/Reduce... from MacOS button
-         //
-         .button-management {
-            cursor: pointer;
-            z-index: 2;
-            display: flex;
-            align-items: center;
-            margin: 1rem;
-            .circle-red {
-               @include button-management;
-               background: #EC6A5E;
-               &:hover {
-                  background: #973c34;
-               }
-            }
-            .circle-orange {
-               @include button-management;
-               background: #F5BF4F;
-            }
-            .circle-grey {
-               @include button-management;
-               background: radial-gradient(125% 125% at 50% 50%, #CECDCD 0%, rgba(215, 215, 215, 0.6) 100%);
-            }
-         }
-         .button-switch {
-            background: var(--lightTerminalBar);
-            color: var(--lightBtn);
-            font-size: 12px;
-            padding: 0.3rem 0.7rem;
-            border-radius: 7px;
-            margin-left: 0.5rem;
-            margin-right: 10rem;
-            cursor: pointer;
-            &:hover {
-               background: var(--lightTerminalBodyBackground);
-            }
-         }
-      }
-
-      //
-      // Terminal text modifications here
-      //
-      .terminal {
-         height: 60vh;
-         width: 60vw;
-         background: var(--lightTerminalBodyBackground);
-         border-radius: 0 0 20px 20px;
-         border: 1px solid var(--lightBorder);
-         border-top: 0;
-         padding: 1rem;
-         li {
-            padding: 0.2rem 0;
-         }
-         .terminal-folder {
-            @include text;
-            cursor: initial;
-            height: 100%;
-            width: 100%;
-         }
-         #terminal-text {
-            @include text;
-            cursor: initial;
-            height: 100%;
-            width: auto;
-            overflow: scroll;
-            overflow-x: hidden;
-            font-family: 'Source Code Pro', monospace;
-            font-size: 14px;
-            #terminal-input {
-               display: flex;
-               align-items: center;
-               input {
-                  @include text;
-                  width: 80%;
-                  font-size: 14px;
-                  margin-left: 0.5rem;
-                  height: 20px;
-                  font-family: 'Source Code Pro', monospace;
-                  background-color: #f5be4f00;
-                  border: none;
-                  outline: none;
-               }
-            }
-            #terminal-input-new {
-               display: flex;
-               align-items: center;
-               padding: 0.7rem 0;
-               #new-input--style {
-                  @include text;
-                  padding-left: 0.5rem;
-                  font-size: 14px;
-                  font-family: 'Source Code Pro', monospace;
-               }
-            }
-         }
-      }
-   }
-   #contactform {
-      display: flex;
-      margin-top: 2%;
-      height: 90%;
-      overflow: scroll;
-      overflow-x: hidden;
-      align-items: center;
-      flex-direction: column;
-      .fa-reply {
-         margin-left: 1rem;
-      }
-   }
 }
 
 //
@@ -356,112 +195,3 @@ footer {
       margin-left: 0.3rem;
    }
 }
-
-
-//
-// WIP
-//
-
-.fa-file-contract, .fa-signature, .fa-building, .fa-mobile-screen-button, .fa-paper-plane, .fa-discord {
-   margin-right: 0.3rem;
-   justify-content: center;
-   width: 1.5rem;
-}
-
-form.form-example {
-   display: table;
-   display: flex;
-   flex-direction: column;
-   width: 70%;
-   @include text;
-}
-
-.button-custom {
-   cursor: pointer;
-   height: 3rem;
-   &:hover {
-      background-color: var(--lightScroll);
-   }
-}
-
-.contactme-input, .button-custom {
-   background-color: var(--lightBackground);
-   border: var(--lightBorder);
-}
-
-div.form-example {
-   display: table-row;
-   margin: 0.3rem;
-}
-
-label, input {
-   display: table-cell;
-   width: 100%;
-   height: 30px;
-   border-radius: 5px;
-   @include text;
-   outline: none;
-}
-
-.email-send-message {
-   @include text;
-   visibility: hidden;
-   position: absolute;
-   top: 70px;
-   right: 40px;
-   border-radius: 5px;
-   padding: 1.4rem;
-   background-color: rgba(12, 128, 12, 0.795);
-   backdrop-filter: blur(15px);
-   .fa-circle-check {
-      margin-right: 0.7rem;
-   }
-}
-
-.email-send-message-off {
-   @include text;
-   visibility: hidden;
-   position: absolute;
-   top: 70px;
-   right: 40px;
-   border-radius: 5px;
-   padding: 1.4rem;
-   background-color: rgba(128, 12, 12, 0.795);
-   backdrop-filter: blur(15px);
-   .fa-xmark {
-      margin-right: 0.7rem;
-   }
-}
-
-#discord {
-   border: 1px solid rgba(0, 0, 0, 0);
-   border-radius: 5px;
-   padding: 0.3rem;
-   &:hover {
-      background-color: var(--lightTerminalBar);
-   }
-}
-
-.ending-animation {
-   // Animation 
-   animation: ending 5s ease-in both;
-}
-
-@keyframes ending {
-   0% {
-      transform: translateY(-20px);
-      opacity: 0;
-   }
-   20% {
-      transform: translateY(0);
-      opacity: 0.8;
-   }
-   100% {
-      opacity: 1;
-      visibility: hidden;
-   }
-}
-
-//
-// WIP
-//

@@ -1,0 +1,40 @@
+.close-animation {
+   animation: close 0.3s ease-in both;
+}
+
+@keyframes close {
+   0% {
+      opacity: 1;
+   }
+   10% {
+      transform: translateX(-20px);
+   }
+   80% {
+      opacity: 0.2;
+      transform: translateX(-500px);
+   }
+   100% {
+      transform: translateX(-1000px);
+      visibility: hidden;
+      opacity: 0;
+   }
+}
+
+.ending-animation {
+   animation: ending 5s ease-in both;
+}
+
+@keyframes ending {
+   0% {
+      transform: translateY(-20px);
+      opacity: 0;
+   }
+   20% {
+      transform: translateY(0);
+      opacity: 0.8;
+   }
+   100% {
+      opacity: 1;
+      visibility: hidden;
+   }
+}
