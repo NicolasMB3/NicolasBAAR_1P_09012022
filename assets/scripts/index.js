@@ -94,65 +94,58 @@ function writeAnwser(text) {
 function pressKey() {
    inputValue.addEventListener("keypress", (e) => {
       if (e.key === 'Enter') {
-         if(inputValue.value === 'nicolas') {
-            inputToText();
-            writeAnwser(`Développeur web full-stack. Mordu d’informatique, j’ai appris à programmer dès mon plus jeune âge dans divers langages informatiques comme JavaScript, PHP ... 
-            Polyvalent, je maîtrise les différentes étapes techniques de la création d’un site web ; de la compréhension des besoins utilisateurs, à la conception des maquettes jusqu’au 
-            développement front-end et back-end.`);
-            newInput();
-         }  else if (inputValue.value === 'status') {
-            inputToText();
-            writeAnwser(`Oui ! Je suis toujours à la recherche d'une alternance pour Janvier 2022 🧑‍💻`);
-            newInput();
-         } else if (inputValue.value == 'clear') {
-            const binImage = document.getElementById('image-bin');
-            binImage.src = "assets/images/folder-bin-not-empty.png";
-            textTerminal.innerHTML = ``;
-            newInput();
-         } else if (inputValue.value == 'clear bin') {
-            inputToText();
-            const binImage = document.getElementById('image-bin');
-            writeAnwser(`La corbeille a été vidée.`);
-            binImage.src = "assets/images/folder-bin.png";
-            newInput();
-         } else if (inputValue.value == 'help') {
-            inputToText();
-            writeAnwser(`En cours de création`);
-            newInput();
-         } else if (inputValue.value === '') {
-            inputToText();
-            writeAnwser(`Merci d'écrire une commande (liste disponible avec la commande help)`);
-            newInput();
-         } else if (inputValue.value === 'theme light') {
-            if (document.documentElement.getAttribute('data-theme') == 'light') {
+         switch (inputValue.value) {
+            case 'status':
                inputToText();
-               writeAnwser(`Le thème est déjà claire`);
+               writeAnwser(`Oui ! Je suis toujours à la recherche d'une alternance pour Janvier 2022 🧑‍💻`);
                newInput();
-            } else {
+            case 'clear':
+               const binImage = document.getElementById('image-bin');
+               binImage.src = "assets/images/folder-bin-not-empty.png";
+               textTerminal.innerHTML = ``;
+            case 'clear bin':
                inputToText();
-               document.documentElement.setAttribute('data-theme', 'light')
-               localStorage.setItem('mode', 'light');
-               writeAnwser(`Le thème est maitenant claire`);
+               writeAnwser(`La corbeille a été vidée.`);
+               binImage.src = "assets/images/folder-bin.png";
                newInput();
-            }
-         } else if (inputValue.value === 'theme dark') {
-            if (document.documentElement.getAttribute('data-theme') == 'dark') {
+              break;
+            case 'help':
                inputToText();
-               writeAnwser(`Le thème est déjà sombre`);
+               writeAnwser(`En cours de création`);
                newInput();
-            } else {
+              break;
+            case 'theme light':
+               if (document.documentElement.getAttribute('data-theme') == 'light') {
+                  inputToText();
+                  writeAnwser(`Le thème est déjà claire`);
+                  newInput();
+               } else {
+                  inputToText();
+                  document.documentElement.setAttribute('data-theme', 'light')
+                  localStorage.setItem('mode', 'light');
+                  writeAnwser(`Le thème est maitenant claire`);
+                  newInput();
+               }
+               break;
+            case 'theme dark':
+               if (document.documentElement.getAttribute('data-theme') == 'dark') {
+                  inputToText();
+                  writeAnwser(`Le thème est déjà sombre`);
+                  newInput();
+               } else {
+                  inputToText();
+                  document.documentElement.setAttribute('data-theme', 'dark')
+                  localStorage.setItem('mode', 'dark');
+                  writeAnwser(`Le thème est maitenant sombre`);
+                  newInput();
+               }
+               break;
+            default:
                inputToText();
-               localStorage.setItem('mode', 'dark');
-               document.documentElement.setAttribute('data-theme', 'dark')
-               writeAnwser(`Le thème est maitenant sombre`);
+               writeAnwser(`Merci d'écrire une commande (liste disponible avec la commande help)`);
                newInput();
-            }
-         } else {
-            inputToText();
-            writeAnwser(`La commande ` + inputValue.value + ` est introuvable, tapez 'help' pour plus d'informations ..`);
-            newInput();
-         }
-      }
+         };
+      };
    });
 }
 

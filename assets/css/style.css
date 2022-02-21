@@ -212,7 +212,7 @@ main .container .terminal-header .left-right .fa-chevron-left {
 main .container .terminal-header .research-bar {
   background: var(--lightTerminalBar);
   border-radius: 7px;
-  width: 50%;
+  width: 40%;
   display: flex;
   align-items: center;
   justify-content: center;
