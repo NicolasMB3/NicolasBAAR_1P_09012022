@@ -451,36 +451,81 @@ footer i {
 #notAllowed {
   color: var(--lightText);
   position: absolute;
-  display: none;
+  visibility: hidden;
   z-index: 100;
   width: 100vw;
   height: 100vh;
-  backdrop-filter: blur(18px) saturate(45%);
-  -webkit-backdrop-filter: blur(18px) saturate(45%);
-}
-#notAllowed #notAllowed-center {
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+  backdrop-filter: blur(18px) saturate(45%);
+  -webkit-backdrop-filter: blur(18px) saturate(45%);
 }
-#notAllowed #notAllowed-center #message-text {
-  width: 14rem;
+#notAllowed #notAllowed-center {
+  box-shadow: 0px 0px 7.3px rgba(0, 0, 0, 0.035), 0px 0px 58px rgba(0, 0, 0, 0.07);
+  padding: 3rem;
+  border-radius: 10px;
+  background-color: var(--lightTerminalBodyBackground);
+}
+#notAllowed #notAllowed-center .fa-xmark {
+  position: relative;
+  top: -35px;
+  right: -120px;
 }
 #notAllowed #input-wrongPassword {
   display: flex;
-  align-items: center;
-  width: 15rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
   height: 2rem;
+  width: 100%;
   background-color: var(--lightTerminalBar);
   border-radius: 5px;
 }
 #notAllowed #input-wrongPassword p {
-  vertical-align: baseline;
-  margin: 0;
+  margin: auto 0;
+  padding: 2.5% 0 0 4%;
   color: var(--lightText);
+}
+#notAllowed #message-text {
+  text-align: center;
+  width: 12rem;
+}
+
+.button-management-notAllowed {
+  display: flex;
+  position: relative;
+  top: -35px;
+  left: -40px;
+}
+.button-management-notAllowed .circle-red {
+  width: 12px;
+  height: 12px;
+  border-radius: 20px;
+  border: 0.5px solid rgba(0, 0, 0, 0.12);
+  margin: 0 0.4rem;
+  background: #EC6A5E;
+}
+.button-management-notAllowed .circle-red:hover {
+  background: #973c34;
+}
+.button-management-notAllowed .circle-orange {
+  width: 12px;
+  height: 12px;
+  border-radius: 20px;
+  border: 0.5px solid rgba(0, 0, 0, 0.12);
+  margin: 0 0.4rem;
+  background: #F5BF4F;
+}
+.button-management-notAllowed .circle-grey {
+  width: 12px;
+  height: 12px;
+  border-radius: 20px;
+  border: 0.5px solid rgba(0, 0, 0, 0.12);
+  margin: 0 0.4rem;
+  background: radial-gradient(125% 125% at 50% 50%, #CECDCD 0%, rgba(215, 215, 215, 0.6) 100%);
 }
 
 @media (max-width: 992px) {
@@ -489,7 +534,7 @@ footer i {
   }
 
   #notAllowed {
-    display: block;
+    visibility: visible;
   }
 
   .container, header {

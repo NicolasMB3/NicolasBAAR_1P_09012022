@@ -199,35 +199,67 @@ footer {
 #notAllowed {
    @include text;
    position: absolute;
-   display: none;
+   visibility: hidden;
    z-index: 100;
    width: 100vw;
    height: 100vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
    backdrop-filter: blur(18px) saturate(45%);
    -webkit-backdrop-filter: blur(18px) saturate(45%);
    #notAllowed-center {
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      #message-text {
-         width: 14rem;
+      @include box-gradiant;
+      padding: 3rem;
+      border-radius: 10px;
+      background-color: var(--lightTerminalBodyBackground);
+      .fa-xmark {
+         position: relative;
+         top: -35px;
+         right: -120px;
       }
    }
    #input-wrongPassword {
       display: flex;
-      align-items: center;
-      width: 15rem;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
       height: 2rem;
+      width: 100%;
       background-color: var(--lightTerminalBar);
       border-radius: 5px;
       p {
-         vertical-align: baseline;
-         margin: 0;
+         margin: auto 0;
+         padding: 2.5% 0 0 4%;
          color: var(--lightText);
       }
+   }
+   #message-text {
+      text-align: center;
+      width: 12rem;
+   }
+}
+.button-management-notAllowed {
+   display: flex;
+   position: relative;
+   top: -35px;
+   left: -40px;
+   .circle-red {
+      @include button-management;
+      background: #EC6A5E;
+      &:hover {
+         background: #973c34;
+      }
+   }
+   .circle-orange {
+      @include button-management;
+      background: #F5BF4F;
+   }
+   .circle-grey {
+      @include button-management;
+      background: radial-gradient(125% 125% at 50% 50%, #CECDCD 0%, rgba(215, 215, 215, 0.6) 100%);
    }
 }
 
@@ -237,7 +269,7 @@ footer {
    }
 
    #notAllowed {
-      display: block;
+      visibility: visible;
    }
 
    .container, header {
