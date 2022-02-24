@@ -294,7 +294,7 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .grid-icons {
@@ -430,7 +430,7 @@ main {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  height: 89vh;
+  height: 92vh;
 }
 
 footer {
@@ -454,7 +454,7 @@ footer i {
   visibility: hidden;
   z-index: 100;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
