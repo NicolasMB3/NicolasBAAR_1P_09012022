@@ -2,6 +2,7 @@
 @use 'layouts/animation';
 @use 'layouts/window';
 @use 'layouts/notifications';
+@use 'layouts/context';
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300;400;500;600;800&display=swap');
 
@@ -98,8 +99,8 @@ body {
 }
 
 a {
-   text-decoration: none;
    @include text;
+   text-decoration: none;
    &:visited {
       text-decoration: none;
    }
@@ -201,7 +202,7 @@ footer {
    position: absolute;
    visibility: hidden;
    z-index: 100;
-   width: 100vw;
+   width: 100%;
    min-height: 100vh;
    display: flex;
    flex-direction: column;

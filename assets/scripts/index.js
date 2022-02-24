@@ -39,7 +39,7 @@ function date() {
    let getDate;
    getDate = new Date();
    let date = getDate.getDate() + '/' + ("0" + (getDate.getMonth() + 1)).slice(-2) + '/' + getDate.getFullYear();
-   document.getElementById('date').innerHTML = date;;
+   document.getElementById('date').innerHTML = date;
 }
 
 //
@@ -340,7 +340,17 @@ function sendEmail() {
    })
 }
 
-
+// window.onload = function(){ 
+//    document.addEventListener('contextmenu', e => {
+//       e.preventDefault()
+//       // Suivi de la position de la souris dans la console
+//       const context = document.getElementById('context-menu');
+//       context.style.visibility = 'visible';
+//       context.style.top = `${e.clientY}px`;
+//       context.style.left = `${e.clientX}px`;
+//       console.log(`Position de la souris : X = ${e.clientX} | Y = ${e.clientY}`);
+//    });
+// };
 
 //
 // Run functions

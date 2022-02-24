@@ -8,15 +8,23 @@
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
    <title class="version">CMD \> Nicolas BAAR </title>
    <link rel="icon" href="assets/images/favicon.png" />
-   <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
-   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-   <script>
-      (function() {
-         emailjs.init("user_e4MVLTTonZoL69En0byMU");
-      })();
-   </script>
 </head>
 <body>
+   <!-- Need improvement (too large in some resolution) -->
+   <div id="context-menu">
+      <div id="first-menu">
+         <i class="fa-solid fa-file"></i>
+         Créer un fichier texte
+      </div>
+      <div id="first-menu">
+         <i class="fa-solid fa-file"></i>
+         Créer un fichier texte
+      </div>
+      <div id="first-menu">
+         <i class="fa-solid fa-file"></i>
+         Créer un fichier texte
+      </div>
+   </div>
    <div id="notAllowed">
       <div id="notAllowed-center" class="drag">
          <div class="button-management-notAllowed">
@@ -210,6 +218,14 @@
    <footer>
       <p><span class="text--bold version"><!-- [version 0.01] --></span> En cours de développement 🧑‍💻</p>
    </footer>
+   <!-- Scripts initialize -->
+   <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+   <script>
+      (function() {
+         emailjs.init("user_e4MVLTTonZoL69En0byMU");
+      })();
+   </script>
    <script type="module" src="assets/scripts/index.js"></script>
 </body>
 </html>
