@@ -1,2 +1,49 @@
-# Nicolas_portfolio_first
-🗂️ Private portfolio for work-study research 
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+
+<div id="top"></div>
+
+<div align="center">
+
+  ### 🌍 CV - Nicolas BAAR
+
+<img align="center" src="./assets/images/github-header.png" alt="Présentation en image du projet"/>
+</div>
+
+## À propos :
+
+Le portfolio terminal est un projet produit par Nicolas pour ma recherche d'alternance qui commence en Janvier 2022.
+
+Contenance du site :
+* Commandes via un terminal pour en savoir plus sur mon profil,
+* Fenêtres et icônes déplaçable avec la souris,
+* Ouverture des dossiers pour accéder à du contenu supplémentaire,
+* Activation/Désactivation du mode sombre.
+
+## Développer avec :
+
+Liste de tous les languages utilisés pour la création du site :
+
+* [HTML](https://developer.mozilla.org/fr/docs/Web/HTML)
+* [CSS](https://developer.mozilla.org/fr/docs/Web/CSS)
+* [Sass](https://sass-lang.com/)
+* [JS](https://developer.mozilla.org/fr/docs/Web/JavaScript)
+
+## Contacts
+
+Nicolas BAAR - [@MeesN](https://nicolasbaar.fr/) - nicolasbaar@outlook.fr
+
+Lien du projet : [https://github.com/NicolasMB3/NicolasBAAR_1P_09012022](https://github.com/NicolasMB3/NicolasBAAR_1P_09012022)
+
+<p align="right">(<a href="#top">Revenir en haut de la page</a>)</p>
+
+[contributors-shield]: https://img.shields.io/github/contributors/NicolasMB3/NicolasBAAR_1P_09012022.svg?style=for-the-badge
+[contributors-url]: https://github.com/NicolasMB3/NicolasBAAR_1P_09012022/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/NicolasMB3/NicolasBAAR_1P_09012022.svg?style=for-the-badge
+[forks-url]: https://github.com/NicolasMB3/NicolasBAAR_1P_09012022/pulse
+[stars-shield]: https://img.shields.io/github/stars/NicolasMB3/NicolasBAAR_1P_09012022.svg?style=for-the-badge
+[stars-url]: https://github.com/NicolasMB3/NicolasBAAR_1P_09012022/stargazers
+[issues-shield]: https://img.shields.io/github/issues/NicolasMB3/NicolasBAAR_1P_09012022.svg?style=for-the-badge
+[issues-url]: https://github.com/NicolasMB3/NicolasBAAR_1P_09012022/issues
