@@ -14,7 +14,7 @@
 
 ## À propos :
 
-Le portfolio terminal est un projet produit par Nicolas pour ma recherche d'alternance qui commence en Janvier 2022.
+Hello World ! 👋 Mon portfolio est un projet qui me tient à cœur et qui a pour but principal d'être un exemple de création pour ma rechercher d'alternance qui commencerait en janvier 2022. Titulaire d'un BAC+2 en Développement web, j'ai décidé de rejoindre Epitech pour élargir mes connaissances tout en restant autodidacte. Si vous souhaitez plus d'informations sur moi ou sur mon parcours, n'hésitez pas à tester le site et à découvrir les nombreuses interactions.
 
 Contenance du site :
 * Commandes via un terminal pour en savoir plus sur mon profil,
