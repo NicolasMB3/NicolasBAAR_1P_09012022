@@ -36,8 +36,7 @@ function time() {
 // Display date in header -> DD/MM/YY
 //
 function date() {
-   let getDate;
-   getDate = new Date();
+   let getDate = new Date();
    let date = getDate.getDate() + '/' + ("0" + (getDate.getMonth() + 1)).slice(-2) + '/' + getDate.getFullYear();
    document.getElementById('date').innerHTML = date;
 }
@@ -50,18 +49,18 @@ function inputToText() {
    const tempDataInput = inputValue.value;
    removeInput();
    textTerminal.innerHTML +=  `
-   <div id="terminal-input-new">
-      <span class="text--bold" id="terminal-title">C:\\Users\\Nicolas></span>
-      <span id="new-input--style">` + tempDataInput + `</span>
-   </div>`;
+      <div id="terminal-input-new">
+         <span class="text--bold" id="terminal-title">C:\\Users\\Nicolas></span>
+         <span id="new-input--style">` + tempDataInput + `</span>
+      </div>`;
 }
 
 //
 // Remove old input
 //
 function removeInput() {
-   let inputValue2 = document.querySelector('#terminal-input');
-   inputValue2.remove();
+   let removedInput = document.querySelector('#terminal-input');
+   removedInput.remove();
 }
 
 //

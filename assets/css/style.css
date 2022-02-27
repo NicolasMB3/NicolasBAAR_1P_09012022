@@ -39,6 +39,27 @@
     visibility: hidden;
   }
 }
+.fa-wifi:hover {
+  animation: wiggle 1000ms ease-in both;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(10deg);
+  }
+  25% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(20deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
 .container {
   border-radius: 15px;
   backdrop-filter: blur(15px);
@@ -225,7 +246,11 @@
   outline: none;
 }
 
-.email-send-message {
+.fa-circle-check, .fa-xmark {
+  margin-right: 0.7rem;
+}
+
+.email-send-message-on {
   color: var(--lightText);
   visibility: hidden;
   position: absolute;
@@ -233,11 +258,8 @@
   right: 40px;
   border-radius: 5px;
   padding: 1.4rem;
-  background-color: rgba(12, 128, 12, 0.795);
   backdrop-filter: blur(15px);
-}
-.email-send-message .fa-circle-check {
-  margin-right: 0.7rem;
+  background-color: rgba(12, 128, 12, 0.795);
 }
 
 .email-send-message-off {
@@ -248,11 +270,8 @@
   right: 40px;
   border-radius: 5px;
   padding: 1.4rem;
-  background-color: rgba(128, 12, 12, 0.795);
   backdrop-filter: blur(15px);
-}
-.email-send-message-off .fa-xmark {
-  margin-right: 0.7rem;
+  background-color: rgba(128, 12, 12, 0.795);
 }
 
 html {

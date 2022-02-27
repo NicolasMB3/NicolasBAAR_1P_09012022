@@ -1,31 +1,17 @@
 @use '../utils' as *;
 
-.email-send-message {
+.fa-circle-check, .fa-xmark {
+   margin-right: 0.7rem;
+}
+
+.email-send-message-on {
    @include text;
-   visibility: hidden;
-   position: absolute;
-   top: 70px;
-   right: 40px;
-   border-radius: 5px;
-   padding: 1.4rem;
+   @include alert-message;
    background-color: rgba(12, 128, 12, 0.795);
-   backdrop-filter: blur(15px);
-   .fa-circle-check {
-      margin-right: 0.7rem;
-   }
 }
 
 .email-send-message-off {
    @include text;
-   visibility: hidden;
-   position: absolute;
-   top: 70px;
-   right: 40px;
-   border-radius: 5px;
-   padding: 1.4rem;
+   @include alert-message;
    background-color: rgba(128, 12, 12, 0.795);
-   backdrop-filter: blur(15px);
-   .fa-xmark {
-      margin-right: 0.7rem;
-   }
 }

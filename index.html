@@ -8,6 +8,15 @@
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
    <title class="version">CMD \> Nicolas BAAR </title>
    <link rel="icon" href="assets/images/favicon.png" />
+   <!-- Scripts initialize -->
+   <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js" defer></script>
+   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+   <script>
+      (function() {
+         emailjs.init("user_e4MVLTTonZoL69En0byMU");
+      })();
+   </script>
+   <script type="module" src="assets/scripts/index.js" defer></script>
 </head>
 <body>
    <div id="notAllowed">
@@ -23,7 +32,7 @@
             <p>*********</p>
          </div>
          <p><span class="text--warning">Mot de passe erroné</span></p>
-         <p id="message-text">Le site n'est pas disponible pour les petites résolution pour le moment ...</p>
+         <p id="message-text">Le site n'est pas disponible pour les petites résolutions pour le moment ...</p>
       </div>
    </div>
    <header id="header-section">
@@ -191,7 +200,7 @@
             </div>
          </div>
       </div>
-      <div id="form-ok" class="email-send-message">
+      <div id="form-ok" class="email-send-message-on">
          <i class="fa-solid fa-circle-check"></i>
          Votre message s'est correctement envoyé
       </div>
@@ -203,14 +212,5 @@
    <footer>
       <p><span class="text--bold version"><!-- [version 0.01] --></span> En cours de développement 🧑‍💻</p>
    </footer>
-   <!-- Scripts initialize -->
-   <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
-   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-   <script>
-      (function() {
-         emailjs.init("user_e4MVLTTonZoL69En0byMU");
-      })();
-   </script>
-   <script type="module" src="assets/scripts/index.js"></script>
 </body>
 </html>

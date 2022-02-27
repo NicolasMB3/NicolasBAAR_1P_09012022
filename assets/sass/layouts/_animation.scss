@@ -38,3 +38,15 @@
       visibility: hidden;
    }
 }
+
+.fa-wifi:hover {
+   animation: wiggle 1000ms ease-in both;
+}
+
+@keyframes wiggle {
+   0% {transform: rotate(10deg);}
+   25% {transform: rotate(-10deg);}
+   50% {transform: rotate(20deg);}
+   75% {transform: rotate(-5deg);}
+   100% {transform: rotate(0deg);}
+ }
