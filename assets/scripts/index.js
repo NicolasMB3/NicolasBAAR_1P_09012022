@@ -119,13 +119,13 @@ function pressKey() {
             case 'theme light':
                if (document.documentElement.getAttribute('data-theme') == 'light') {
                   inputToText();
-                  writeAnwser(`Le thème est déjà claire`);
+                  writeAnwser(`Le thème est déjà clair`);
                   newInput();
                } else {
                   inputToText();
                   document.documentElement.setAttribute('data-theme', 'light')
                   localStorage.setItem('mode', 'light');
-                  writeAnwser(`Le thème est maitenant claire`);
+                  writeAnwser(`Le thème est maitenant clair`);
                   newInput();
                }
                break;
