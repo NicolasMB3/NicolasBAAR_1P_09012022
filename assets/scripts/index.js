@@ -341,7 +341,7 @@ function sendEmail() {
 
 function displayWindows() {
    const allWindows = [...document.getElementsByClassName('container')];
-   let dataActive = '50';
+   let dataActive = '10';
    allWindows.forEach((item) => {
       item.addEventListener('click', () => {
          item.style.zIndex = dataActive; 
