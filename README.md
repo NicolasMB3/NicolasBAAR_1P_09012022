@@ -18,7 +18,7 @@ Hello World ! 👋 Mon portfolio est un projet qui me tient à cœur et qui a po
 
 Contenance du site :
 * Commandes via un terminal pour en savoir plus sur mon profil,
-* Fenêtres et icônes déplaçable avec la souris,
+* Fenêtres et icônes déplaçables avec la souris (touchScreen à voir),
 * Ouverture des dossiers pour accéder à du contenu supplémentaire,
 * Activation/Désactivation du mode sombre.
 
