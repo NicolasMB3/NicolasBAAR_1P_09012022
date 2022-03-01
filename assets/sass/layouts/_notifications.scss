@@ -7,11 +7,13 @@
 .email-send-message-on {
    @include text;
    @include alert-message;
+   z-index: 600;
    background-color: rgba(12, 128, 12, 0.795);
 }
 
 .email-send-message-off {
    @include text;
    @include alert-message;
+   z-index: 600;
    background-color: rgba(128, 12, 12, 0.795);
 }

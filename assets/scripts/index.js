@@ -1,5 +1,5 @@
 // Version
-version(0.05);
+version(0.06);
 // Version
 const textTerminal = document.getElementById('terminal-text');
 let inputValue = document.querySelector('#command');
@@ -350,11 +350,10 @@ function displayWindows() {
    });
 };
 
-displayWindows();
-
 //
 // Run functions
 //
+displayWindows();
 time();
 date();
 darkMode();
