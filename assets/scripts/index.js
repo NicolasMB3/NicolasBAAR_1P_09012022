@@ -37,7 +37,7 @@ function time() {
 //
 function date() {
    let getDate = new Date();
-   let date = getDate.getDate() + '/' + ("0" + (getDate.getMonth() + 1)).slice(-2) + '/' + getDate.getFullYear();
+   let date = ("0" + getDate.getDate()).slice(-2) + '/' + ("0" + (getDate.getMonth() + 1)).slice(-2) + '/' + getDate.getFullYear();
    document.getElementById('date').innerHTML = date;
 }
 
@@ -94,7 +94,7 @@ function writeAnwser(text) {
 function pressKey() {
    inputValue.addEventListener("keypress", (e) => {
       if (e.key === 'Enter') {
-         switch (inputValue.value) {
+         switch (inputValue.value.toLowerCase()) {
             case 'status':
                inputToText();
                writeAnwser(`Je recherche activement une alternance pour Janvier 2022 🧑‍💻 ! Pour plus d'information tapez dans la console [alternance]`);
