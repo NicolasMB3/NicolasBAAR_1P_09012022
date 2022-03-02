@@ -32,6 +32,8 @@ Liste de tous les languages utilisés pour la création du site :
 * [JS](https://developer.mozilla.org/fr/docs/Web/JavaScript)
 * [InteractJS](https://interactjs.io/)
 
+Curseurs de souris customisés par [Tobias](https://tobiasahlin.com/blog/common-mac-os-x-lion-cursors/) 👋
+
 ## Contacts
 
 Nicolas BAAR - [@MeesN](https://nicolasbaar.fr/) - nicolasbaar@outlook.fr
