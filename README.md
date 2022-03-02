@@ -14,7 +14,7 @@
 
 ## À propos :
 
-Hello World ! 👋 Mon portfolio est un projet qui me tient à cœur et qui a pour but principal d'être un exemple de création pour ma rechercher d'alternance qui commencerait en janvier 2022. Titulaire d'un BAC+2 en Développement web, j'ai décidé de rejoindre Epitech pour élargir mes connaissances tout en restant autodidacte. Si vous souhaitez plus d'informations sur moi ou sur mon parcours, n'hésitez pas à tester le site et à découvrir les nombreuses interactions.
+Hello World ! 👋 Mon portfolio est un projet qui me tient à cœur et qui a pour but principal d'être un exemple de création pour ma recherche d'alternance qui commencerait en janvier 2022. Titulaire d'un BAC+2 en Développement web, j'ai décidé de rejoindre Epitech pour élargir mes connaissances tout en restant autodidacte. Si vous souhaitez plus d'informations sur moi ou sur mon parcours, n'hésitez pas à tester le site et à découvrir les nombreuses interactions.
 
 Contenance du site :
 * Commandes via un terminal pour en savoir plus sur mon profil,
@@ -22,9 +22,9 @@ Contenance du site :
 * Ouverture des dossiers pour accéder à du contenu supplémentaire,
 * Activation/Désactivation du mode sombre.
 
-## Développer avec :
+## Développé avec :
 
-Liste de tous les languages utilisés pour la création du site :
+Liste de tous les langages utilisés pour la création du site :
 
 * [HTML](https://developer.mozilla.org/fr/docs/Web/HTML)
 * [CSS](https://developer.mozilla.org/fr/docs/Web/CSS)
