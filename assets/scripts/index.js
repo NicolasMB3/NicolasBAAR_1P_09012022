@@ -8,8 +8,8 @@ const commands = {
    status: `Je recherche activement une alternance pour Janvier 2022 🧑‍💻 ! Pour plus d'information tapez dans la console [alternance]`,
    nicolas: `Développeur web full-stack. Mordu d informatique, j’ai appris à programmer dès mon plus jeune âge dans divers langages informatiques comme JavaScript, PHP ... 
       Polyvalent, je maîtrise les différentes étapes techniques de la création d un site web ; de la compréhension des besoins utilisateurs, à la conception des 
-      maquettes jusqu au développement front end et back-end.`,
-   contact: `Vous pouvez rentrer en contact avec moi en m'envoyant un e-mail (nicolasbaar@outlook.fr) ou en cliquant sur le dossier Me contacter à gauche de l'écran.`,
+      maquettes jusqu'au développement front-end et back-end.`,
+   contact: `Vous pouvez être en contact avec moi en m'envoyant un e-mail (nicolasbaar@outlook.fr) ou en cliquant sur le dossier Me contacter à gauche de l'écran.`,
    clearbin: `La corbeille a été vidée.`,
    alreadytheme: `Le thème est déjà `,
    theme: `Le thème a correctement été changé.`,
