@@ -318,7 +318,7 @@ function darkMode() {
       document.documentElement.setAttribute('data-theme', 'dark');
    }
 
-   Array.from(switchButton).forEach((button) => {
+   [...switchButton].forEach((button) => {
       button.addEventListener('click', function() {
          if(document.documentElement.getAttribute("data-theme") == "dark") {
             document.documentElement.setAttribute('data-theme', 'light');

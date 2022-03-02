@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NicolasMB3/Nicolas_portfolio_first.git"
+    "url": "git+https://github.com/NicolasMB3/NicolasBAAR_1P_09012022.git"
   },
   "author": "NicolasB",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/NicolasMB3/Nicolas_portfolio_first/issues"
+    "url": "https://github.com/NicolasMB3/NicolasBAAR_1P_09012022/issues"
   },
-  "homepage": "https://github.com/NicolasMB3/Nicolas_portfolio_first#readme",
+  "homepage": "https://github.com/NicolasMB3/NicolasBAAR_1P_09012022#readme",
   "dependencies": {
     "sass": "^1.47.0"
   }
