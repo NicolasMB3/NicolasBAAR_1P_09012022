@@ -429,10 +429,9 @@ header {
   align-items: center;
   background-color: var(--lightBackground);
   border-bottom: 1px solid var(--lightBorder);
-  height: auto;
+  height: 2.2rem;
   -moz-user-select: none;
   -khtml-user-select: none;
-  padding: 0.05rem;
   -webkit-user-select: none;
   user-select: none;
 }
@@ -456,13 +455,13 @@ header #title-left ul #email-copy, header #title-right ul #email-copy {
 header #title-left ul li, header #title-right ul li {
   display: inline;
   color: var(--lightText);
-  padding: 0.5rem 0.5rem;
+  padding: 0.3rem 0.5rem;
   font-size: 14px;
 }
 header #title-left ul #button-terminal--header, header #title-left ul #button-contact--header, header #title-left ul #button-file--header, header #title-right ul #button-terminal--header, header #title-right ul #button-contact--header, header #title-right ul #button-file--header {
   cursor: var(--pointer);
   display: none;
-  padding: 0.4rem;
+  border: 1px solid rgba(0, 0, 0, 0);
   animation: close 200ms reverse;
 }
 header #title-left ul #button-terminal--header:hover, header #title-left ul #button-contact--header:hover, header #title-left ul #button-file--header:hover, header #title-right ul #button-terminal--header:hover, header #title-right ul #button-contact--header:hover, header #title-right ul #button-file--header:hover {
