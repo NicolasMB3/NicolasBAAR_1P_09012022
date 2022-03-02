@@ -445,6 +445,10 @@ header #title-left ul, header #title-right ul {
   margin: 0.5rem 0;
   padding: 0 0.8rem;
 }
+header #title-left ul #email-copy, header #title-right ul #email-copy {
+  cursor: pointer;
+  position: relative;
+}
 header #title-left ul li, header #title-right ul li {
   display: inline;
   color: var(--lightText);

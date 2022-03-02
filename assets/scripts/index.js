@@ -3,14 +3,25 @@ version(0.06);
 // Version
 const textTerminal = document.getElementById('terminal-text');
 let inputValue = document.querySelector('#command');
-const binImage = document.getElementById('image-bin');
+
+const commands = { 
+   status: `Je recherche activement une alternance pour Janvier 2022 🧑‍💻 ! Pour plus d'information tapez dans la console [alternance]`,
+   nicolas: `Développeur web full-stack. Mordu d informatique, j’ai appris à programmer dès mon plus jeune âge dans divers langages informatiques comme JavaScript, PHP ... 
+      Polyvalent, je maîtrise les différentes étapes techniques de la création d un site web ; de la compréhension des besoins utilisateurs, à la conception des 
+      maquettes jusqu au développement front end et back-end.`,
+   contact: `Vous pouvez rentrer en contact avec moi en m'envoyant un e-mail (nicolasbaar@outlook.fr) ou en cliquant sur le dossier Me contacter à gauche de l'écran.`,
+   clearbin: `La corbeille a été vidée.`,
+   alreadytheme: `Le thème est déjà `,
+   theme: `Le thème a correctement été changé.`,
+   unknow: `Merci d'écrire une commande (liste disponible avec la commande help)`
+};
 
 //
 // Version
 //
 function version(version) {
    const versionClass = document.getElementsByClassName('version');
-   Array.from(versionClass).forEach(element => {
+   [...versionClass].forEach(element => {
       element.innerHTML += 'v' + '[' + version + ']'
    });
    return version;
@@ -42,6 +53,14 @@ function date() {
 }
 
 //
+// Remove old input
+//
+function removeInput() {
+   let removedInput = document.querySelector('#terminal-input');
+   removedInput.remove();
+}
+
+//
 // Replace input's value to text and place value in text
 //
 function inputToText() {
@@ -53,14 +72,6 @@ function inputToText() {
          <span class="text--bold" id="terminal-title">C:\\Users\\Nicolas></span>
          <span id="new-input--style">` + tempDataInput + `</span>
       </div>`;
-}
-
-//
-// Remove old input
-//
-function removeInput() {
-   let removedInput = document.querySelector('#terminal-input');
-   removedInput.remove();
 }
 
 //
@@ -82,7 +93,7 @@ function newInput() {
 //
 function writeAnwser(text) {
    const newDiv = document.createElement('div');
-   const newContent = document.createTextNode(`Information : ` + text);
+   const newContent = document.createTextNode(`C\ > : ` + text);
    newDiv.append(newContent);
    textTerminal.appendChild(newDiv);
    inputValue.disabled = true;
@@ -94,10 +105,21 @@ function writeAnwser(text) {
 function pressKey() {
    inputValue.addEventListener("keypress", (e) => {
       if (e.key === 'Enter') {
+         const binImage = document.getElementById('image-bin');
          switch (inputValue.value.toLowerCase()) {
             case 'status':
                inputToText();
-               writeAnwser(`Je recherche activement une alternance pour Janvier 2022 🧑‍💻 ! Pour plus d'information tapez dans la console [alternance]`);
+               writeAnwser(commands.status);
+               newInput();
+               break;
+            case 'nicolas':
+               inputToText();
+               writeAnwser(commands.nicolas);
+               newInput();
+               break;
+            case 'contact':
+               inputToText();
+               writeAnwser(commands.contact);
                newInput();
                break;
             case 'clear':
@@ -107,44 +129,39 @@ function pressKey() {
                break;
             case 'clear bin':
                inputToText();
-               writeAnwser(`La corbeille a été vidée.`);
+               writeAnwser(commands.clearbin);
                binImage.src = "assets/images/folder-bin.png";
-               newInput();
-              break;
-            case 'help':
-               inputToText();
-               writeAnwser(`En cours de création`);
                newInput();
               break;
             case 'theme light':
                if (document.documentElement.getAttribute('data-theme') == 'light') {
                   inputToText();
-                  writeAnwser(`Le thème est déjà clair`);
+                  writeAnwser(commands.alreadytheme + 'light.');
                   newInput();
                } else {
                   inputToText();
                   document.documentElement.setAttribute('data-theme', 'light')
                   localStorage.setItem('mode', 'light');
-                  writeAnwser(`Le thème est maitenant clair`);
+                  writeAnwser(commands.theme);
                   newInput();
                }
                break;
             case 'theme dark':
                if (document.documentElement.getAttribute('data-theme') == 'dark') {
                   inputToText();
-                  writeAnwser(`Le thème est déjà sombre`);
+                  writeAnwser(commands.alreadytheme + 'dark.');
                   newInput();
                } else {
                   inputToText();
                   document.documentElement.setAttribute('data-theme', 'dark')
                   localStorage.setItem('mode', 'dark');
-                  writeAnwser(`Le thème est maitenant sombre`);
+                  writeAnwser(commands.theme);
                   newInput();
                }
                break;
             default:
                inputToText();
-               writeAnwser(`Merci d'écrire une commande (liste disponible avec la commande help)`);
+               writeAnwser(commands.unknow);
                newInput();
          };
       };
@@ -349,6 +366,26 @@ function displayWindows() {
       });
    });
 };
+
+function copyTextToClipboard(text) {
+   if (!navigator.clipboard) {
+     fallbackCopyTextToClipboard(text);
+     return;
+   }
+   navigator.clipboard.writeText(text).then(function() {
+      const formOk = document.getElementById('copy-ok');
+      formOk.style.visibility = 'visible';
+      formOk.classList.add("ending-animation");
+   }, function(err) {
+     console.error('Async: Impossible de copier l\'e-mail : ', err);
+   });
+}
+
+var copyBobBtn = document.getElementById('email-copy')
+
+copyBobBtn.addEventListener('click', function() {
+  copyTextToClipboard('nicolasbaar@outlook.fr');
+});
 
 //
 // Run functions

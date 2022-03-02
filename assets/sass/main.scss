@@ -163,6 +163,10 @@ header {
          list-style-type: none;
          margin: 0.5rem 0;
          padding: 0 0.8rem;
+         #email-copy {
+            cursor: pointer;
+            position: relative;
+         }
          li {
             display: inline;
             @include text;
