@@ -432,6 +432,7 @@ header {
   height: auto;
   -moz-user-select: none;
   -khtml-user-select: none;
+  padding: 0.05rem;
   -webkit-user-select: none;
   user-select: none;
 }

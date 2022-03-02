@@ -224,9 +224,9 @@ function closeOpenTerminal() {
             this.closest('.container').classList.add("close-animation");
          });
       });
-   })
+   });
 
-   Array.from(openAndClose).forEach((icon) => {
+   [...openAndClose].forEach((icon) => {
       icon.addEventListener('dblclick', function(e) {
          const containerTerminal = document.getElementById('container-terminal');
          const containerFile = document.getElementById('container-file');
@@ -243,7 +243,7 @@ function closeOpenTerminal() {
             containerTerminal.style.visibility = 'visible';
          }
       });
-   })
+   });
 }
 
 //
