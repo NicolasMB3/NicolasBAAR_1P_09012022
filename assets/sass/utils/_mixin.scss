@@ -36,7 +36,7 @@
    &:hover {
       background-color: var(--lightBackground);
       border: 1px solid var(--lightBorder);
-      cursor: pointer;
+      cursor: var(--pointer);
       backdrop-filter: blur(15px);
    }
    img, p{

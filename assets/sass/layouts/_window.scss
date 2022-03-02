@@ -47,7 +47,7 @@
       // Close/Reduce... from MacOS button
       //
       .button-management {
-         cursor: pointer;
+         cursor: var(--pointer);
          z-index: 2;
          display: flex;
          align-items: center;
@@ -76,7 +76,7 @@
          border-radius: 7px;
          margin-left: 0.5rem;
          margin-right: 10rem;
-         cursor: pointer;
+         cursor: var(--pointer);
          &:hover {
             background: var(--lightTerminalBodyBackground);
          }
@@ -165,7 +165,7 @@
    }
    
    .button-custom {
-      cursor: pointer;
+      cursor: var(--pointer);
       height: 3rem;
       &:hover {
          background-color: var(--lightScroll);

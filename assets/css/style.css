@@ -102,7 +102,7 @@
   margin: 0 0.5rem;
 }
 .container .terminal-header .button-management {
-  cursor: pointer;
+  cursor: var(--pointer);
   z-index: 2;
   display: flex;
   align-items: center;
@@ -143,7 +143,7 @@
   border-radius: 7px;
   margin-left: 0.5rem;
   margin-right: 10rem;
-  cursor: pointer;
+  cursor: var(--pointer);
 }
 .container .terminal-header .button-switch:hover {
   background: var(--lightTerminalBodyBackground);
@@ -223,7 +223,7 @@
   color: var(--lightText);
 }
 #contactform .button-custom {
-  cursor: pointer;
+  cursor: var(--pointer);
   height: 3rem;
 }
 #contactform .button-custom:hover {
@@ -277,6 +277,8 @@
 }
 
 html {
+  cursor: url(../images/cursor.png), auto !important;
+  --pointer: url("../images/pointer.png"), auto !important;
   --lightWallpaper: url("../images/wallpaper_dark.svg");
   --lightText: #FFFFFF;
   --lightBackground: rgba(33, 33, 33, 0.47);
@@ -345,7 +347,7 @@ body {
 .icons:hover {
   background-color: var(--lightBackground);
   border: 1px solid var(--lightBorder);
-  cursor: pointer;
+  cursor: var(--pointer);
   backdrop-filter: blur(15px);
 }
 .icons img, .icons p {
@@ -446,7 +448,7 @@ header #title-left ul, header #title-right ul {
   padding: 0 0.8rem;
 }
 header #title-left ul #email-copy, header #title-right ul #email-copy {
-  cursor: pointer;
+  cursor: var(--pointer);
   position: relative;
 }
 header #title-left ul li, header #title-right ul li {
