@@ -66,6 +66,9 @@
          .circle-grey {
             @include button-management;
             background: radial-gradient(125% 125% at 50% 50%, #CECDCD 0%, rgba(215, 215, 215, 0.6) 100%);
+            &:hover {
+               background: #969494;
+            }
          }
       }
       .button-switch {

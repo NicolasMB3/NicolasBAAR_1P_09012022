@@ -135,6 +135,9 @@
   margin: 0 0.4rem;
   background: radial-gradient(125% 125% at 50% 50%, #CECDCD 0%, rgba(215, 215, 215, 0.6) 100%);
 }
+.container .terminal-header .button-management .circle-grey:hover {
+  background: #969494;
+}
 .container .terminal-header .button-switch {
   background: var(--lightTerminalBar);
   color: var(--lightBtn);
