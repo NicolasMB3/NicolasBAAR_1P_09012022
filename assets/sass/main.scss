@@ -9,8 +9,9 @@
 // LIGHT MODE VARIABLES
 //
 html {
-   cursor: url(../images/cursor.png), auto !important;
+   cursor: url("../images/cursor.png"), auto !important;
    --pointer: url("../images/pointer.png"), auto !important;
+   --cursor: url("../images/cursor.png"), auto !important;
    --lightWallpaper: url('../images/wallpaper_dark.svg');
    --lightText: #FFFFFF;;
    --lightBackground: rgba(33, 33, 33, 0.47);
@@ -174,6 +175,16 @@ header {
             @include text;
             padding: 0.5rem 0.5rem;
             font-size: 14px;
+         }
+         #button-terminal--header, #button-contact--header, #button-file--header {
+            cursor: var(--pointer);
+            display: none;
+            padding: 0.4rem;
+            animation: close 200ms reverse;
+            &:hover {
+               border-radius: 5px;
+               background-color: var(--lightTerminalBar);
+            }
          }
       }
    }

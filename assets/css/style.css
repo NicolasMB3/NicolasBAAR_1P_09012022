@@ -162,13 +162,13 @@
 }
 .container .terminal .terminal-folder {
   color: var(--lightText);
-  cursor: initial;
+  cursor: var(--cursor);
   height: 100%;
   width: 100%;
 }
 .container .terminal #terminal-text {
   color: var(--lightText);
-  cursor: initial;
+  cursor: var(--cursor);
   height: 100%;
   width: auto;
   overflow: scroll;
@@ -277,8 +277,9 @@
 }
 
 html {
-  cursor: url(../images/cursor.png), auto !important;
+  cursor: url("../images/cursor.png"), auto !important;
   --pointer: url("../images/pointer.png"), auto !important;
+  --cursor: url("../images/cursor.png"), auto !important;
   --lightWallpaper: url("../images/wallpaper_dark.svg");
   --lightText: #FFFFFF;
   --lightBackground: rgba(33, 33, 33, 0.47);
@@ -456,6 +457,16 @@ header #title-left ul li, header #title-right ul li {
   color: var(--lightText);
   padding: 0.5rem 0.5rem;
   font-size: 14px;
+}
+header #title-left ul #button-terminal--header, header #title-left ul #button-contact--header, header #title-left ul #button-file--header, header #title-right ul #button-terminal--header, header #title-right ul #button-contact--header, header #title-right ul #button-file--header {
+  cursor: var(--pointer);
+  display: none;
+  padding: 0.4rem;
+  animation: close 200ms reverse;
+}
+header #title-left ul #button-terminal--header:hover, header #title-left ul #button-contact--header:hover, header #title-left ul #button-file--header:hover, header #title-right ul #button-terminal--header:hover, header #title-right ul #button-contact--header:hover, header #title-right ul #button-file--header:hover {
+  border-radius: 5px;
+  background-color: var(--lightTerminalBar);
 }
 
 main {

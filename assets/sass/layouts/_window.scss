@@ -99,13 +99,13 @@
       }
       .terminal-folder {
          @include text;
-         cursor: initial;
+         cursor: var(--cursor);
          height: 100%;
          width: 100%;
       }
       #terminal-text {
          @include text;
-         cursor: initial;
+         cursor: var(--cursor);
          height: 100%;
          width: auto;
          overflow: scroll;

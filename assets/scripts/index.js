@@ -217,7 +217,7 @@ function closeOpenTerminal() {
    const buttonClose = document.getElementsByClassName('circle-red');
    const openAndClose = document.getElementsByClassName('openClose');
 
-   Array.from(buttonClose).forEach((button) => {
+   [...buttonClose].forEach((button) => {
       button.addEventListener('click', function() {
          const container = document.getElementsByClassName('container');
          Array.from(container).forEach((ctn) => {
@@ -367,6 +367,9 @@ function displayWindows() {
    });
 };
 
+//
+// Get e-mail on click
+//
 function copyTextToClipboard(text) {
    if (!navigator.clipboard) {
      fallbackCopyTextToClipboard(text);
@@ -388,6 +391,56 @@ copyBobBtn.addEventListener('click', function() {
 });
 
 //
+// Reduce Windows in header
+//
+function reduce() {
+   var reduceButton = document.getElementsByClassName('circle-grey');
+
+   [...reduceButton].forEach((element) => {
+      element.addEventListener('click', function() {
+         var nameID = this.closest('.container').id;
+         this.closest('.container').style.visibility = 'hidden';
+
+         if(nameID === 'container-terminal') {
+            var terminalOpen = document.getElementById('button-terminal--header');
+            terminalOpen.style.display = 'inline';
+         } else if(nameID === 'container-file') {
+            var terminalOpen = document.getElementById('button-file--header');
+            terminalOpen.style.display = 'inline';
+         } else {
+            var terminalOpen = document.getElementById('button-contact--header');
+            terminalOpen.style.display = 'inline';
+         }
+
+      }); 
+   }); 
+}
+
+//
+// Open reduce Windows in header (need update????)
+//
+function openReduce() {
+   var reduceButtonOne = document.getElementById('button-terminal--header');
+   reduceButtonOne.addEventListener('dblclick', () => {
+      reduceButtonOne.style.display = 'none';
+      const containerTerminal = document.getElementById('container-terminal');
+      containerTerminal.style.visibility = 'visible';
+   })
+   var reduceButtonTwo = document.getElementById('button-contact--header');
+   reduceButtonTwo.addEventListener('dblclick', () => {
+      reduceButtonTwo.style.display = 'none';
+      const containerContact = document.getElementById('container-contact');
+      containerContact.style.visibility = 'visible';
+   })
+   var reduceButtonThird = document.getElementById('button-file--header');
+   reduceButtonThird.addEventListener('dblclick', () => {
+      reduceButtonThird.style.display = 'none';
+      const containerFile = document.getElementById('container-file');
+      containerFile.style.visibility = 'visible';
+   })
+}
+
+//
 // Run functions
 //
 displayWindows();
@@ -398,4 +451,6 @@ closeOpenTerminal();
 resize();
 dragAndDrop();
 pressKey();
+reduce();
+openReduce();
 sendEmail();
