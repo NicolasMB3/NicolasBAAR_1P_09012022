@@ -104,66 +104,65 @@ function writeAnwser(text) {
 //
 function pressKey() {
    inputValue.addEventListener("keypress", (e) => {
-      if (e.key === 'Enter') {
-         const binImage = document.getElementById('image-bin');
-         switch (inputValue.value.toLowerCase()) {
-            case 'status':
+      if (e.key !== 'Enter') return
+      const binImage = document.getElementById('image-bin');
+      switch (inputValue.value.toLowerCase()) {
+         case 'status':
+            inputToText();
+            writeAnwser(commands.status);
+            newInput();
+            break;
+         case 'nicolas':
+            inputToText();
+            writeAnwser(commands.nicolas);
+            newInput();
+            break;
+         case 'contact':
+            inputToText();
+            writeAnwser(commands.contact);
+            newInput();
+            break;
+         case 'clear':
+            binImage.src = "assets/images/folder-bin-not-empty.png";
+            textTerminal.innerHTML = '';
+            newInput();
+            break;
+         case 'clear bin':
+            inputToText();
+            writeAnwser(commands.clearbin);
+            binImage.src = "assets/images/folder-bin.png";
+            newInput();
+         break;
+         case 'theme light':
+            if (document.documentElement.getAttribute('data-theme') == 'light') {
                inputToText();
-               writeAnwser(commands.status);
+               writeAnwser(commands.alreadytheme + 'light.');
                newInput();
-               break;
-            case 'nicolas':
+            } else {
                inputToText();
-               writeAnwser(commands.nicolas);
+               document.documentElement.setAttribute('data-theme', 'light')
+               localStorage.setItem('mode', 'light');
+               writeAnwser(commands.theme);
                newInput();
-               break;
-            case 'contact':
+            }
+            break;
+         case 'theme dark':
+            if (document.documentElement.getAttribute('data-theme') == 'dark') {
                inputToText();
-               writeAnwser(commands.contact);
+               writeAnwser(commands.alreadytheme + 'dark.');
                newInput();
-               break;
-            case 'clear':
-               binImage.src = "assets/images/folder-bin-not-empty.png";
-               textTerminal.innerHTML = '';
-               newInput();
-               break;
-            case 'clear bin':
+            } else {
                inputToText();
-               writeAnwser(commands.clearbin);
-               binImage.src = "assets/images/folder-bin.png";
+               document.documentElement.setAttribute('data-theme', 'dark')
+               localStorage.setItem('mode', 'dark');
+               writeAnwser(commands.theme);
                newInput();
-              break;
-            case 'theme light':
-               if (document.documentElement.getAttribute('data-theme') == 'light') {
-                  inputToText();
-                  writeAnwser(commands.alreadytheme + 'light.');
-                  newInput();
-               } else {
-                  inputToText();
-                  document.documentElement.setAttribute('data-theme', 'light')
-                  localStorage.setItem('mode', 'light');
-                  writeAnwser(commands.theme);
-                  newInput();
-               }
-               break;
-            case 'theme dark':
-               if (document.documentElement.getAttribute('data-theme') == 'dark') {
-                  inputToText();
-                  writeAnwser(commands.alreadytheme + 'dark.');
-                  newInput();
-               } else {
-                  inputToText();
-                  document.documentElement.setAttribute('data-theme', 'dark')
-                  localStorage.setItem('mode', 'dark');
-                  writeAnwser(commands.theme);
-                  newInput();
-               }
-               break;
-            default:
-               inputToText();
-               writeAnwser(commands.unknow);
-               newInput();
-         };
+            }
+            break;
+         default:
+            inputToText();
+            writeAnwser(commands.unknow);
+            newInput();
       };
    });
 }
