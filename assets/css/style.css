@@ -263,6 +263,7 @@
 
 .notification-area-box {
   color: var(--lightText);
+  border: 1px solid var(--lightBorder);
   display: flex;
   justify-content: center;
   align-items: center;
