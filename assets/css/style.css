@@ -251,11 +251,13 @@
 
 #notification-area {
   position: absolute;
+  z-index: 1000;
   top: 50px;
   right: 20px;
   width: 20rem;
   overflow: scroll;
   overflow-x: hidden;
+  padding-right: 0.5rem;
   height: 90vh;
 }
 
