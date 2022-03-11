@@ -1,19 +1,38 @@
 @use '../utils' as *;
 
-.fa-circle-check, .fa-xmark {
-   margin-right: 0.7rem;
+#notification-area {
+   position: absolute;
+   top: 50px;
+   right: 20px;
+   width: 20rem;
+   overflow: scroll;
+   overflow-x: hidden;
+   height: 90vh;
 }
 
-.email-send-message-on {
+.notification-area-box {
    @include text;
-   @include alert-message;
-   z-index: 600;
-   background-color: rgba(12, 128, 12, 0.795);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: var(--lightBackground);
+   backdrop-filter: blur(15px);
+   border-radius: 10px;
+   width: 100%;
+   height: 5rem;
+   margin-bottom: 0.5rem;
+	animation: slide-out-top 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) 6s both;
 }
 
-.email-send-message-off {
-   @include text;
-   @include alert-message;
-   z-index: 600;
-   background-color: rgba(128, 12, 12, 0.795);
+@keyframes slide-out-top {
+   0% {
+     -webkit-transform: translateY(0);
+             transform: translateY(0);
+     opacity: 1;
+   }
+   100% {
+     -webkit-transform: translateY(-1000px);
+             transform: translateY(-1000px);
+     opacity: 0;
+   }
 }

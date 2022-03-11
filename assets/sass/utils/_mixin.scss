@@ -47,12 +47,3 @@
    }
 }
 
-@mixin alert-message {
-   visibility: hidden;
-   position: absolute;
-   top: 70px;
-   right: 40px;
-   border-radius: 5px;
-   padding: 1.4rem;
-   backdrop-filter: blur(15px);
-}

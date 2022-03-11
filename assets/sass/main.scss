@@ -174,7 +174,7 @@ header {
             display: inline;
             @include text;
             padding: 0.3rem 0.5rem;
-            font-size: 14px;
+            font-size: 14px; 
          }
          #button-terminal--header, #button-contact--header, #button-file--header {
             cursor: var(--pointer);

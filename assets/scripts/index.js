@@ -9,7 +9,7 @@ const commands = {
    nicolas: `Développeur web full-stack. Mordu d informatique, j’ai appris à programmer dès mon plus jeune âge dans divers langages informatiques comme JavaScript, PHP ... 
       Polyvalent, je maîtrise les différentes étapes techniques de la création d un site web ; de la compréhension des besoins utilisateurs, à la conception des 
       maquettes jusqu'au développement front-end et back-end.`,
-   contact: `Vous pouvez être en contact avec moi en m'envoyant un e-mail (nicolasbaar@outlook.fr) ou en cliquant sur le dossier Me contacter à gauche de l'écran.`,
+   contact: `Vous pouvez être en contact avec moi envoyant un e-mail à nicolasbaar@outlook.fr ou en cliquant sur le dossier 'Me contacter' à gauche de l'écran.`,
    clearbin: `La corbeille a été vidée.`,
    alreadytheme: `Le thème est déjà `,
    theme: `Le thème a correctement été changé.`,
@@ -234,12 +234,15 @@ function closeOpenTerminal() {
          if (icon.getAttribute('data-id') == 123) {
             containerFile.classList.remove("close-animation");
             containerFile.style.visibility = 'visible';
+            containerFile.style.zIndex = '5';
          } else if (icon.getAttribute('data-id') == 456) {
             containerContact.classList.remove("close-animation");
             containerContact.style.visibility = 'visible';
+            containerContact.style.zIndex = '5';
          } else {
             containerTerminal.classList.remove("close-animation");
             containerTerminal.style.visibility = 'visible';
+            containerTerminal.style.zIndex = '5';
          }
       });
    });
@@ -332,8 +335,6 @@ function darkMode() {
 
 function sendEmail() {
    const getFormButton = document.getElementById('form-button');
-   const formOk = document.getElementById('form-ok');
-   const formProblem = document.getElementById('form-problem');
 
    getFormButton.addEventListener('click', function() {
       var templateParams = {
@@ -346,11 +347,9 @@ function sendEmail() {
 
       emailjs.send('service_a80h2ni', 'template_766uk3r', templateParams)
       .then(function(response) {
-         formOk.style.visibility = 'visible';
-         formOk.classList.add("ending-animation");
+         notification("Message envoyé");
       }, function(error) {
-         formProblem.style.visibility = 'visible'
-         formProblem.classList.add("ending-animation");
+         notification("Problème lors de l'envoie");
       });
    })
 }
@@ -375,9 +374,7 @@ function copyTextToClipboard(text) {
      return;
    }
    navigator.clipboard.writeText(text).then(function() {
-      const formOk = document.getElementById('copy-ok');
-      formOk.style.visibility = 'visible';
-      formOk.classList.add("ending-animation");
+      notification("E-mail copié");
    }, function(err) {
      console.error('Async: Impossible de copier l\'e-mail : ', err);
    });
@@ -438,6 +435,30 @@ function openReduce() {
       containerFile.style.visibility = 'visible';
    })
 }
+
+function notification(text) {
+   const notificationArea = document.getElementById('notification-area');
+   const notificationId = new Date().getTime();
+   const para = document.createElement("div");
+   para.classList.add("notification-area-box");
+   para.innerText = text;
+   para.id = notificationId;
+   notificationArea.appendChild(para);
+   para.setAttribute("created-at", new Date().getTime());
+};
+
+function hideElement() {
+   var test = document.getElementsByClassName('notification-area-box');
+   for(let i = 0; i < test.length; i++) {
+      if((new Date().getTime() - test[i].getAttribute("created-at")) / 1000 > 7) {
+         test[i].remove();
+      }
+   }
+}
+
+setInterval(function () {
+	hideElement();
+}, 200);
 
 //
 // Run functions
