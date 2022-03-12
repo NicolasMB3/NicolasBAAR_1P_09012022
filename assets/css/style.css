@@ -251,7 +251,7 @@
 
 #notification-area {
   position: absolute;
-  z-index: 1000;
+  z-index: 3;
   top: 50px;
   right: 20px;
   width: 20rem;
