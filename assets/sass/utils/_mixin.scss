@@ -20,9 +20,7 @@
    @include text;
    align-items: center;
    display: flex;
-   width: 2rem;
    flex-wrap: wrap;
-   justify-content: center;
    text-align: center;
    width: 100px;
    height: 100px;
@@ -32,7 +30,6 @@
    -webkit-user-select: none;
    user-select: none;
    border: 1px solid var(--lightTransBorder);
-   color: var(--lightText);
    &:hover {
       background-color: var(--lightBackground);
       border: 1px solid var(--lightBorder);
