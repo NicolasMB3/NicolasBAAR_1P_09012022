@@ -127,7 +127,12 @@ a {
    width: 1.5rem;
 }
 
-::-webkit-scrollbar {
+.scroller {
+   scrollbar-color: var(--lightScroll) rgba(255, 255, 255, 0);
+   scrollbar-width: thin;
+}
+ 
+::-webkit-scrollbar{
    width: 0.4em;
    position: absolute;
 }

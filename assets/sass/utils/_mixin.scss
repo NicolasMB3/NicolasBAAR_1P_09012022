@@ -17,6 +17,7 @@
 }
 
 @mixin desktop-icons {
+   @include text;
    align-items: center;
    display: flex;
    width: 2rem;
@@ -31,7 +32,6 @@
    -webkit-user-select: none;
    user-select: none;
    border: 1px solid var(--lightTransBorder);
-   @include text;
    color: var(--lightText);
    &:hover {
       background-color: var(--lightBackground);

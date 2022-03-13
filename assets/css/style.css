@@ -361,6 +361,7 @@ body {
 }
 
 .icons {
+  color: var(--lightText);
   align-items: center;
   display: flex;
   width: 2rem;
@@ -375,7 +376,6 @@ body {
   -webkit-user-select: none;
   user-select: none;
   border: 1px solid var(--lightTransBorder);
-  color: var(--lightText);
   color: var(--lightText);
 }
 .icons:hover {
@@ -442,6 +442,11 @@ a:visited {
   margin-right: 0.3rem;
   justify-content: center;
   width: 1.5rem;
+}
+
+.scroller {
+  scrollbar-color: var(--lightScroll) rgba(255, 255, 255, 0);
+  scrollbar-width: thin;
 }
 
 ::-webkit-scrollbar {
