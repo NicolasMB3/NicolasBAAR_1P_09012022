@@ -22,6 +22,8 @@
       cursor: grab;
       .left-right {
          margin-left: 2rem;
+         display: flex;
+         flex-direction: row;
          .fa-chevron-left {
             margin-right: 1rem;
          }
@@ -160,11 +162,11 @@
       margin-left: 1rem;
    }
    form.form-example {
+      @include text;
       display: table;
       display: flex;
       flex-direction: column;
       width: 70%;
-      @include text;
    }
    
    .button-custom {

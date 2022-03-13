@@ -81,6 +81,8 @@
 }
 .container .terminal-header .left-right {
   margin-left: 2rem;
+  display: flex;
+  flex-direction: row;
 }
 .container .terminal-header .left-right .fa-chevron-left {
   margin-right: 1rem;
@@ -219,11 +221,11 @@
   margin-left: 1rem;
 }
 #contactform form.form-example {
+  color: var(--lightText);
   display: table;
   display: flex;
   flex-direction: column;
   width: 70%;
-  color: var(--lightText);
 }
 #contactform .button-custom {
   cursor: var(--pointer);
@@ -350,7 +352,6 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  min-height: 100vh;
 }
 
 .grid-icons {
