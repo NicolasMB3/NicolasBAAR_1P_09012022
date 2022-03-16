@@ -121,6 +121,17 @@ a {
    color: #57B40F;
 }
 
+.rainbow-text {
+   font-weight: bold;
+   background: #54CCFF;
+   background: -webkit-linear-gradient(to right, #54CCFF 0%, #173745 100%);
+   background: -moz-linear-gradient(to right, #54CCFF 0%, #173745 100%);
+   background: linear-gradient(to right, #54CCFF 0%, #173745 100%);
+   background-clip: text;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+}
+
 .fa-file-contract, .fa-signature, .fa-building, .fa-mobile-screen-button, .fa-paper-plane, .fa-discord {
    margin-right: 0.3rem;
    justify-content: center;

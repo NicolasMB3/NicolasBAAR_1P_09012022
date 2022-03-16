@@ -5,7 +5,6 @@ const textTerminal = document.getElementById('terminal-text');
 let inputValue = document.querySelector('#command');
 
 const commands = { 
-   status: `Je recherche activement une alternance pour Janvier 2022 🧑‍💻 ! Pour plus d'information tapez dans la console [alternance]`,
    nicolas: `Développeur web full-stack. Mordu d informatique, j’ai appris à programmer dès mon plus jeune âge dans divers langages informatiques comme JavaScript, PHP ... 
       Polyvalent, je maîtrise les différentes étapes techniques de la création d un site web ; de la compréhension des besoins utilisateurs, à la conception des 
       maquettes jusqu'au développement front-end et back-end.`,
@@ -93,7 +92,7 @@ function newInput() {
 //
 function writeAnwser(text) {
    const newDiv = document.createElement('div');
-   const newContent = document.createTextNode(`C\ > : ` + text);
+   const newContent = document.createTextNode(`C\\ > : ` + text);
    newDiv.append(newContent);
    textTerminal.appendChild(newDiv);
    inputValue.disabled = true;
@@ -107,9 +106,17 @@ function pressKey() {
       if (e.key !== 'Enter') return
       const binImage = document.getElementById('image-bin');
       switch (inputValue.value.toLowerCase()) {
-         case 'status':
+         case 'help':
             inputToText();
-            writeAnwser(commands.status);
+            textTerminal.innerHTML += `
+               <p class="rainbow-text">C\\ > : Voici les commandes disponibles :</p>
+               <ul id="commands-help">
+                  <li>help : Affiche toutes les commandes disponibles</li>
+                  <li>nicolas : En savoir plus sur moi</li>
+                  <li>theme [light/dark] : Change le thème du site</li>
+                  <li>contact : Rentrer en contact avec moi</li>
+                  <li>clear : Nettoie la console</li>
+               </ul>`
             newInput();
             break;
          case 'nicolas':
