@@ -16,7 +16,8 @@ const commands = {
 };
 
 //
-// Version
+// @param {String}   version    Website version
+// @return {String}  v[0.00]
 //
 function version(version) {
    const versionClass = document.getElementsByClassName('version');
@@ -88,7 +89,8 @@ function newInput() {
 }
 
 //
-// Create new text
+// @param {String}   text    Display text in terminal (Object.name)
+// @return {String}  Sentence in Object
 //
 function writeAnwser(text) {
    const newDiv = document.createElement('div');
@@ -373,7 +375,8 @@ function displayWindows() {
 };
 
 //
-// Get e-mail on click
+// @param {String}   text    Text on notification
+// @return {String}  Notification send
 //
 function copyTextToClipboard(text) {
    if (!navigator.clipboard) {
