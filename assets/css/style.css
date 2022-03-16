@@ -436,15 +436,12 @@ a:visited {
   color: #57B40F;
 }
 
-.rainbow-text {
-  font-weight: bold;
-  background: #54CCFF;
-  background: -webkit-linear-gradient(to right, #54CCFF 0%, #173745 100%);
-  background: -moz-linear-gradient(to right, #54CCFF 0%, #173745 100%);
-  background: linear-gradient(to right, #54CCFF 0%, #173745 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+#header-request {
+  box-shadow: var(--lightBackground) 0px 0px 0px 2px inset, var(--lightBackground) 10px -10px 0px -3px, rgba(30, 193, 27, 0.55) 10px -10px, var(--lightBackground) 20px -20px 0px -3px, rgba(255, 217, 19, 0.55) 20px -20px, var(--lightBackground) 30px -30px 0px -3px, rgba(255, 156, 85, 0.55) 30px -30px, var(--lightBackground) 40px -40px 0px -3px, rgba(255, 85, 85, 0.55) 40px -40px;
+  border-radius: 5px;
+  margin: 3rem 2rem 0 2rem;
+  padding: 1rem;
+  width: 40%;
 }
 
 .fa-file-contract, .fa-signature, .fa-building, .fa-mobile-screen-button, .fa-paper-plane, .fa-discord {

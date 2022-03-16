@@ -111,14 +111,16 @@ function pressKey() {
          case 'help':
             inputToText();
             textTerminal.innerHTML += `
-               <p class="rainbow-text">C\\ > : Voici les commandes disponibles :</p>
-               <ul id="commands-help">
-                  <li>help : Affiche toutes les commandes disponibles</li>
-                  <li>nicolas : En savoir plus sur moi</li>
-                  <li>theme [light/dark] : Change le thème du site</li>
-                  <li>contact : Rentrer en contact avec moi</li>
-                  <li>clear : Nettoie la console</li>
-               </ul>`
+               <div id="header-request">
+                  <p>C\\ > : Voici les commandes disponibles :</p>
+                  <ul id="commands-help">
+                     <li>help : Affiche toutes les commandes disponibles</li>
+                     <li>nicolas : En savoir plus sur moi</li>
+                     <li>theme [light/dark] : Change le thème du site</li>
+                     <li>contact : Rentrer en contact avec moi</li>
+                     <li>clear : Nettoie la console</li>
+                  </ul>
+               </div>`
             newInput();
             break;
          case 'nicolas':
