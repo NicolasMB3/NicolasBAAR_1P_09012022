@@ -325,10 +325,10 @@ function darkMode() {
    const switchButton = document.getElementsByClassName('button-switch')
    const mode = localStorage.getItem('mode');
 
-   if (mode == 'light') {
-      document.documentElement.setAttribute('data-theme', 'light');
-   } else {
+   if (mode == 'dark') {
       document.documentElement.setAttribute('data-theme', 'dark');
+   } else {
+      document.documentElement.setAttribute('data-theme', 'light');
    }
 
    [...switchButton].forEach((button) => {
