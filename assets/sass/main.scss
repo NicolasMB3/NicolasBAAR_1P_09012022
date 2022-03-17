@@ -1,7 +1,8 @@
 @use 'utils' as *;
-@use 'layouts/animation';
+@use 'layouts/header';
 @use 'layouts/window';
 @use 'layouts/notifications';
+@use 'layouts/animation';
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300;400;500;600;800&display=swap');
 
@@ -170,58 +171,6 @@ a {
 }
 
 //
-// Informations about me and display date and time
-//
-header {
-   @include box-gradiant;
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   background-color: var(--lightBackground);
-   border-bottom: 1px solid var(--lightBorder);
-   height: 2.2rem;
-   -moz-user-select: none;
-   -khtml-user-select: none;
-   -webkit-user-select: none;
-   user-select: none;
-   #discord {
-      border: 1px solid rgba(0, 0, 0, 0);
-      border-radius: 5px;
-      padding: 0.3rem;
-      &:hover {
-         background-color: var(--lightTerminalBar);
-      }
-   }
-   #title-left, #title-right {
-      ul {
-         list-style-type: none;
-         margin: 0.5rem 0;
-         padding: 0 0.8rem;
-         #email-copy {
-            cursor: var(--pointer);
-            position: relative;
-         }
-         li {
-            display: inline;
-            @include text;
-            padding: 0.3rem 0.5rem;
-            font-size: 14px; 
-         }
-         #button-terminal--header, #button-contact--header, #button-file--header {
-            cursor: var(--pointer);
-            display: none;
-            border: 1px solid rgba(0, 0, 0, 0);
-            animation: close 200ms reverse;
-            &:hover {
-               border-radius: 5px;
-               background-color: var(--lightTerminalBar);
-            }
-         }
-      }
-   }
-}
-
-//
 // Terminal box here head and box text are modified
 //
 main {
@@ -232,18 +181,40 @@ main {
    height: 92vh;
 }
 
-@media (max-width: 992px) {
-
-   #text-discord {
+@media (max-width: 1022px) {
+   #discord-text {
       display: none;
    }
+}
 
+@media (max-width: 992px) {
    main {
       height: auto;
    }
 
    body {
       height: 100%;
+   }
+
+   ul#list-header > li {
+      &:nth-child(2),&:nth-child(3) {
+         display: none;
+      }
+      &:nth-child(4n) {
+         -webkit-animation: hamburger 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+         animation: hamburger 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+         display: inline;
+      }
+   }
+   
+   #title-right ul > li {
+      &:nth-child(2), &:first-child {
+         display: none;
+      }
+   }
+
+   #text-discord {
+      display: none;
    }
 
    .container .terminal {
@@ -262,25 +233,6 @@ main {
 }
 
 @media (max-width: 610px) {
-
-   ul#list-header > li {
-      &:nth-child(2) {
-         display: none;
-      }
-   }
-
-   #text-discord {
-      display: none;
-   }
-
-   #title-right ul > li {
-      &:nth-child(1) {
-         display: none;
-      }
-      &:nth-child(2) {
-         display: none;
-      }
-   }
 
    main {
       height: auto;

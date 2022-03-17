@@ -1,0 +1,60 @@
+@use '../utils' as *;
+
+header {
+   @include box-gradiant;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   background-color: var(--lightBackground);
+   border-bottom: 1px solid var(--lightBorder);
+   height: 2.2rem;
+   -moz-user-select: none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+   user-select: none;
+}
+
+#title-left, #title-right {
+   ul {
+      list-style-type: none;
+      margin: 0.5rem 0;
+      padding: 0 0.8rem;
+      li {
+         @include text;
+         display: inline;
+         padding: 0.3rem 0.5rem;
+         font-size: 14px; 
+      }
+   }
+}
+
+#button-terminal--header, #button-contact--header, #button-file--header {
+   cursor: var(--pointer);
+   display: none;
+   border: 1px solid rgba(0, 0, 0, 0);
+   animation: close 200ms reverse;
+   &:hover {
+      border-radius: 5px;
+      background-color: var(--lightTerminalBar);
+   }
+}
+
+#discord {
+   border: 1px solid rgba(0, 0, 0, 0);
+   border-radius: 5px;
+   padding: 0.3rem;
+   &:hover {
+      background-color: var(--lightTerminalBar);
+   }
+}
+
+#email-copy {
+   cursor: var(--pointer);
+   position: relative;
+}
+
+ul#list-header > li {
+   &:nth-child(4), &:nth-child(5), &:nth-child(6), &:nth-child(7) {
+      display: none;
+   }
+}

@@ -1,65 +1,60 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300;400;500;600;800&display=swap");
-.close-animation {
-  animation: close 0.3s ease-in both;
+header {
+  box-shadow: 0px 0px 7.3px rgba(0, 0, 0, 0.035), 0px 0px 58px rgba(0, 0, 0, 0.07);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--lightBackground);
+  border-bottom: 1px solid var(--lightBorder);
+  height: 2.2rem;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
-@keyframes close {
-  0% {
-    opacity: 1;
-  }
-  10% {
-    transform: translateX(-20px);
-  }
-  80% {
-    opacity: 0.2;
-    transform: translateX(-500px);
-  }
-  100% {
-    transform: translateX(-1000px);
-    visibility: hidden;
-    opacity: 0;
-  }
+#title-left ul, #title-right ul {
+  list-style-type: none;
+  margin: 0.5rem 0;
+  padding: 0 0.8rem;
 }
-.ending-animation {
-  animation: ending 5s ease-in both;
+#title-left ul li, #title-right ul li {
+  color: var(--lightText);
+  display: inline;
+  padding: 0.3rem 0.5rem;
+  font-size: 14px;
 }
 
-@keyframes ending {
-  0% {
-    transform: translateY(-20px);
-    opacity: 0;
-  }
-  20% {
-    transform: translateY(0);
-    opacity: 0.8;
-  }
-  100% {
-    opacity: 1;
-    visibility: hidden;
-  }
+#button-terminal--header, #button-contact--header, #button-file--header {
+  cursor: var(--pointer);
+  display: none;
+  border: 1px solid rgba(0, 0, 0, 0);
+  animation: close 200ms reverse;
 }
-.fa-wifi:hover {
-  animation: wiggle 1000ms ease-in both;
+#button-terminal--header:hover, #button-contact--header:hover, #button-file--header:hover {
+  border-radius: 5px;
+  background-color: var(--lightTerminalBar);
 }
 
-@keyframes wiggle {
-  0% {
-    transform: rotate(10deg);
-  }
-  25% {
-    transform: rotate(-10deg);
-  }
-  50% {
-    transform: rotate(20deg);
-  }
-  75% {
-    transform: rotate(-5deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
+#discord {
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-radius: 5px;
+  padding: 0.3rem;
 }
+#discord:hover {
+  background-color: var(--lightTerminalBar);
+}
+
+#email-copy {
+  cursor: var(--pointer);
+  position: relative;
+}
+
+ul#list-header > li:nth-child(4), ul#list-header > li:nth-child(5), ul#list-header > li:nth-child(6), ul#list-header > li:nth-child(7) {
+  display: none;
+}
+
 .container {
   border-radius: 15px;
   backdrop-filter: blur(15px);
@@ -311,6 +306,69 @@
     opacity: 0;
   }
 }
+.close-animation {
+  animation: close 0.3s ease-in both;
+}
+
+@keyframes close {
+  0% {
+    opacity: 1;
+  }
+  10% {
+    transform: translateX(-20px);
+  }
+  80% {
+    opacity: 0.2;
+    transform: translateX(-500px);
+  }
+  100% {
+    transform: translateX(-1000px);
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+.ending-animation {
+  animation: ending 5s ease-in both;
+}
+
+@keyframes ending {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  20% {
+    transform: translateY(0);
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes hamburger {
+  0% {
+    position: absolute;
+    top: -1000px;
+    opacity: 0;
+  }
+  100% {
+    position: absolute;
+    top: 5px;
+    opacity: 1;
+  }
+}
+@keyframes hamburger {
+  0% {
+    position: absolute;
+    top: -1000px;
+    opacity: 0;
+  }
+  100% {
+    position: absolute;
+    top: 5px;
+    opacity: 1;
+  }
+}
 html {
   cursor: url("../images/cursor.png"), auto !important;
   --pointer: url("../images/pointer.png"), auto !important;
@@ -487,53 +545,6 @@ a:visited {
   outline: 1px solid var(--lightBorder);
 }
 
-header {
-  box-shadow: 0px 0px 7.3px rgba(0, 0, 0, 0.035), 0px 0px 58px rgba(0, 0, 0, 0.07);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: var(--lightBackground);
-  border-bottom: 1px solid var(--lightBorder);
-  height: 2.2rem;
-  -moz-user-select: none;
-  -khtml-user-select: none;
-  -webkit-user-select: none;
-  user-select: none;
-}
-header #discord {
-  border: 1px solid rgba(0, 0, 0, 0);
-  border-radius: 5px;
-  padding: 0.3rem;
-}
-header #discord:hover {
-  background-color: var(--lightTerminalBar);
-}
-header #title-left ul, header #title-right ul {
-  list-style-type: none;
-  margin: 0.5rem 0;
-  padding: 0 0.8rem;
-}
-header #title-left ul #email-copy, header #title-right ul #email-copy {
-  cursor: var(--pointer);
-  position: relative;
-}
-header #title-left ul li, header #title-right ul li {
-  display: inline;
-  color: var(--lightText);
-  padding: 0.3rem 0.5rem;
-  font-size: 14px;
-}
-header #title-left ul #button-terminal--header, header #title-left ul #button-contact--header, header #title-left ul #button-file--header, header #title-right ul #button-terminal--header, header #title-right ul #button-contact--header, header #title-right ul #button-file--header {
-  cursor: var(--pointer);
-  display: none;
-  border: 1px solid rgba(0, 0, 0, 0);
-  animation: close 200ms reverse;
-}
-header #title-left ul #button-terminal--header:hover, header #title-left ul #button-contact--header:hover, header #title-left ul #button-file--header:hover, header #title-right ul #button-terminal--header:hover, header #title-right ul #button-contact--header:hover, header #title-right ul #button-file--header:hover {
-  border-radius: 5px;
-  background-color: var(--lightTerminalBar);
-}
-
 main {
   display: flex;
   justify-content: center;
@@ -542,17 +553,35 @@ main {
   height: 92vh;
 }
 
-@media (max-width: 992px) {
-  #text-discord {
+@media (max-width: 1022px) {
+  #discord-text {
     display: none;
   }
-
+}
+@media (max-width: 992px) {
   main {
     height: auto;
   }
 
   body {
     height: 100%;
+  }
+
+  ul#list-header > li:nth-child(2), ul#list-header > li:nth-child(3) {
+    display: none;
+  }
+  ul#list-header > li:nth-child(4n) {
+    -webkit-animation: hamburger 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: hamburger 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    display: inline;
+  }
+
+  #title-right ul > li:nth-child(2), #title-right ul > li:first-child {
+    display: none;
+  }
+
+  #text-discord {
+    display: none;
   }
 
   .container .terminal {
@@ -568,21 +597,6 @@ main {
   }
 }
 @media (max-width: 610px) {
-  ul#list-header > li:nth-child(2) {
-    display: none;
-  }
-
-  #text-discord {
-    display: none;
-  }
-
-  #title-right ul > li:nth-child(1) {
-    display: none;
-  }
-  #title-right ul > li:nth-child(2) {
-    display: none;
-  }
-
   main {
     height: auto;
   }
