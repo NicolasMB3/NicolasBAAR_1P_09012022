@@ -148,6 +148,34 @@
    }
 }
 
+// @Help Message
+.colorNbos {
+   font-weight: bold;
+   background: #bfbfbf;
+   background: -webkit-linear-gradient(to right, #bfbfbf, #afafaf);
+   background: linear-gradient(to right, #bfbfbf, #afafaf); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   -webkit-background-clip: text;
+   background-clip: text;
+   color: transparent;
+}
+
+#header-request {
+   @include step1( 6px, white );
+   border-radius: 5px;
+   margin: 1rem 2rem 0.5rem 2rem;
+   padding: 1rem;
+   width: auto;
+   position: relative;
+   p {
+      text-align: center;
+   }
+   .custom-side-right {
+      position: absolute;
+      right: 20px;
+      top: 10px;
+   }
+}
+
 //
 // Contact form
 //

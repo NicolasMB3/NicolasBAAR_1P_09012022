@@ -204,6 +204,34 @@ ul#list-header > li:nth-child(4), ul#list-header > li:nth-child(5), ul#list-head
   font-family: "Source Code Pro", monospace;
 }
 
+.colorNbos {
+  font-weight: bold;
+  background: #bfbfbf;
+  background: -webkit-linear-gradient(to right, #bfbfbf, #afafaf);
+  background: linear-gradient(to right, #bfbfbf, #afafaf);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+#header-request {
+  box-shadow: var(--lightBackground) 0px 0px 0px 2px inset, var(--lightBackground) 10px -10px 0px -3px, rgba(78, 78, 78, 0.5) 10px -10px;
+  border-radius: 5px;
+  margin: 1rem 2rem 0.5rem 2rem;
+  padding: 1rem;
+  width: auto;
+  position: relative;
+}
+#header-request p {
+  text-align: center;
+}
+#header-request .custom-side-right {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+}
+
 #contactform {
   display: flex;
   margin-top: 2%;
@@ -413,6 +441,23 @@ body {
   background-size: cover;
 }
 
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 92vh;
+  height: -webkit-fill-available;
+}
+
+a {
+  color: var(--lightText);
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+
 .grid-icons {
   padding: 2rem 0 0 2rem;
   width: 100%;
@@ -479,48 +524,12 @@ body {
   color: var(--lightPlaceholder);
 }
 
-a {
-  color: var(--lightText);
-  text-decoration: none;
-}
-a:visited {
-  text-decoration: none;
-}
-
 .text--margin-left {
   margin-left: 10px;
 }
 
 .text--green {
   color: #57B40F;
-}
-
-.colorNbos {
-  font-weight: bold;
-  background: #bfbfbf;
-  background: -webkit-linear-gradient(to right, #bfbfbf, #afafaf);
-  background: linear-gradient(to right, #bfbfbf, #afafaf);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
-#header-request {
-  box-shadow: var(--lightBackground) 0px 0px 0px 2px inset, var(--lightBackground) 10px -10px 0px -3px, rgba(78, 78, 78, 0.5) 10px -10px;
-  border-radius: 5px;
-  margin: 1rem 2rem 0.5rem 2rem;
-  padding: 1rem;
-  width: auto;
-  position: relative;
-}
-#header-request p {
-  text-align: center;
-}
-#header-request .custom-side-right {
-  position: absolute;
-  right: 20px;
-  top: 10px;
 }
 
 .fa-file-contract, .fa-signature, .fa-building, .fa-mobile-screen-button, .fa-paper-plane, .fa-discord {
@@ -545,17 +554,10 @@ a:visited {
   outline: 1px solid var(--lightBorder);
 }
 
-main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  height: 92vh;
-}
-
 @media (max-width: 1022px) {
   #discord-text {
     display: none;
+    margin-right: 0;
   }
 }
 @media (max-width: 992px) {

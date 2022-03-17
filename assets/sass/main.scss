@@ -42,9 +42,7 @@ html[data-theme='light'] {
    --lightScroll: rgba(216, 216, 216, 0.7);
 }
 
-//
-// Disable navigator's margins and paddings (???)
-//
+// @HTML
 body {
    margin: 0;
    padding: 0;
@@ -59,9 +57,24 @@ body {
    background-size: cover;
 }
 
-//
-// Desktop icons
-//
+main {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+   min-height: 92vh;
+   height: -webkit-fill-available;
+}
+
+a {
+   @include text;
+   text-decoration: none;
+   &:visited {
+      text-decoration: none;
+   }
+}
+
+// @Desktop Icons
 .grid-icons {
    padding: 2rem 0 0 2rem;
    width: 100%;
@@ -72,9 +85,7 @@ body {
    @include desktop-icons;
 }
 
-//
-// General stylist class for bold text
-//
+// @Generals options
 .text--bold {
    font-weight: bold;
 }
@@ -106,47 +117,12 @@ body {
    color: var(--lightPlaceholder);
 }
 
-a {
-   @include text;
-   text-decoration: none;
-   &:visited {
-      text-decoration: none;
-   }
-}
-
 .text--margin-left {
    margin-left: 10px;
 }
 
 .text--green {
    color: #57B40F;
-}
-
-.colorNbos {
-   font-weight: bold;
-   background: #bfbfbf;
-   background: -webkit-linear-gradient(to right, #bfbfbf, #afafaf);
-   background: linear-gradient(to right, #bfbfbf, #afafaf); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-   -webkit-background-clip: text;
-   background-clip: text;
-   color: transparent;
-}
-
-#header-request {
-   @include step1( 6px, white );
-   border-radius: 5px;
-   margin: 1rem 2rem 0.5rem 2rem;
-   padding: 1rem;
-   width: auto;
-   position: relative;
-   p {
-      text-align: center;
-   }
-   .custom-side-right {
-      position: absolute;
-      right: 20px;
-      top: 10px;
-   }
 }
 
 .fa-file-contract, .fa-signature, .fa-building, .fa-mobile-screen-button, .fa-paper-plane, .fa-discord {
@@ -170,20 +146,10 @@ a {
    outline: 1px solid var(--lightBorder);
 }
 
-//
-// Terminal box here head and box text are modified
-//
-main {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-wrap: wrap;
-   height: 92vh;
-}
-
 @media (max-width: 1022px) {
    #discord-text {
       display: none;
+      margin-right: 0;
    }
 }
 
