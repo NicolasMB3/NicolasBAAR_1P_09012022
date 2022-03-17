@@ -232,15 +232,45 @@ main {
    height: 92vh;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 992px) {
+
+   #text-discord {
+      display: none;
+   }
+
+   main {
+      height: auto;
+   }
+
+   body {
+      height: 100%;
+   }
+
+   .container .terminal {
+      width: auto;
+   }
+
+   .container .terminal-header {
+      .research-bar {
+         width: 13rem;
+      }
+   }
+
+   .container .terminal #terminal-text #terminal-input input {
+      font-size: 16px;
+   }
+}
+
+@media (max-width: 610px) {
 
    ul#list-header > li {
       &:nth-child(2) {
          display: none;
       }
-      &:nth-child(3) {
-         display: none;
-      }
+   }
+
+   #text-discord {
+      display: none;
    }
 
    #title-right ul > li {
@@ -289,7 +319,7 @@ main {
          margin-right: 0;
       }
       .research-bar {
-         width: 13rem;
+         width: 60%;
       }
    }
 

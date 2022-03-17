@@ -3,6 +3,7 @@
 .container {
    border-radius: 15px;
    backdrop-filter: blur(15px);
+   -webkit-backdrop-filter: blur(15px);
    @include box-gradiant;
    //
    // Terminal head modifications here
