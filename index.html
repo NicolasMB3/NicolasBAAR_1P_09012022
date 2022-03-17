@@ -8,7 +8,6 @@
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
    <title class="version">CMD \> Nicolas BAAR </title>
    <link rel="icon" href="assets/images/favicon.png" />
-   <!-- Scripts initialize -->
    <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js" defer></script>
    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
    <script>
@@ -20,22 +19,6 @@
 </head>
 <body class="scroller">
    <div id="notification-area">
-   </div>
-   <div id="notAllowed">
-      <div id="notAllowed-center" class="drag">
-         <div class="button-management-notAllowed">
-            <div class="circle-red"></div>
-            <div class="circle-orange"></div>
-            <div class="circle-grey"></div>
-         </div>
-         <p>Bonjour, Utilisateur 👋</p>
-         <p>Mot de passe :</p>
-         <div id="input-wrongPassword">
-            <p>*********</p>
-         </div>
-         <p><span class="text--warning">Mot de passe erroné</span></p>
-         <p id="message-text">Le site n'est pas disponible pour les petites résolutions pour le moment ...</p>
-      </div>
    </div>
    <header id="header-section">
       <div id="title-left">
@@ -103,12 +86,12 @@
          </div>
          <div class="resize-drag terminal">
             <div id="terminal-text" class="scroller">
-               <p>[X-01] NBos terminal <span class="text--bold version"><!-- [version 0.01] --></span></p>
+               <p>[X-01] <span class="colorNbos">NBos terminal</span> <span class="text--bold version"><!-- [version 0.01] --></span></p>
                <p>(c)Nicolas BAAR. Tous droits réservés.</p>
                <p><span class="text--bold">C:\Users\Nicolas></span> npm run server</p>
-               <p>[NBos] : Démarrage du serveur ...</p>
-               <p>[NBos] : État du serveur : <span class="text--green text--bold">ON</span></p>
-               <p>[NBos] : Liste des commandes disponibles</p>
+               <p><span class="colorNbos">[NBos]</span> : Démarrage du serveur ...</p>
+               <p><span class="colorNbos">[NBos]</span> : État du serveur : <span class="text--green text--bold">ON</span></p>
+               <p><span class="colorNbos">[NBos]</span> : Liste des commandes disponibles</p>
                <ul id="commands-help">
                   <li>help : Affiche toutes les commandes disponibles</li>
                   <li>nicolas : En savoir plus sur moi</li>
@@ -205,8 +188,5 @@
          </div>
       </div>
    </main>
-   <footer>
-      <p><span class="text--bold version"><!-- [version 0.01] --></span><a href="https://github.com/NicolasMB3/NicolasBAAR_1P_09012022" target="_blank"><i class="fa-solid fa-code"></i> Code source</a></p>
-   </footer>
 </body>
 </html>

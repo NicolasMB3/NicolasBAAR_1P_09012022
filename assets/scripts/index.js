@@ -1,6 +1,4 @@
-// Version
 version(0.06);
-// Version
 const textTerminal = document.getElementById('terminal-text');
 let inputValue = document.querySelector('#command');
 
@@ -8,11 +6,12 @@ const commands = {
    nicolas: `Développeur web full-stack. Mordu d informatique, j’ai appris à programmer dès mon plus jeune âge dans divers langages informatiques comme JavaScript, PHP ... 
       Polyvalent, je maîtrise les différentes étapes techniques de la création d un site web ; de la compréhension des besoins utilisateurs, à la conception des 
       maquettes jusqu'au développement front-end et back-end.`,
-   contact: `Vous pouvez être en contact avec moi envoyant un e-mail à nicolasbaar@outlook.fr ou en cliquant sur le dossier 'Me contacter' à gauche de l'écran.`,
+   contact: `Pour me contacter => nicolasbaar@outlook.fr ou en cliquant sur le dossier 'Me contacter' à gauche de l'écran.`,
    clearbin: `La corbeille a été vidée.`,
    alreadytheme: `Le thème est déjà `,
    theme: `Le thème a correctement été changé.`,
-   unknow: `Merci d'écrire une commande (liste disponible avec la commande help)`
+   unknow: `Merci d'écrire une commande (liste disponible avec la commande help)`,
+   errorTheme: `Merci de spécifier un thème [dark/light]`
 };
 
 //
@@ -94,7 +93,7 @@ function newInput() {
 //
 function writeAnwser(text) {
    const newDiv = document.createElement('div');
-   const newContent = document.createTextNode(`C\\ > : ` + text);
+   const newContent = document.createTextNode(`C:\\ > : ` + text);
    newDiv.append(newContent);
    textTerminal.appendChild(newDiv);
    inputValue.disabled = true;
@@ -112,7 +111,8 @@ function pressKey() {
             inputToText();
             textTerminal.innerHTML += `
                <div id="header-request">
-                  <p>C\\ > : Voici les commandes disponibles :</p>
+                  <span class="custom-side-right">- X</span>
+                  <p>****** Commandes disponibles ******</p>
                   <ul id="commands-help">
                      <li>help : Affiche toutes les commandes disponibles</li>
                      <li>nicolas : En savoir plus sur moi</li>
@@ -169,6 +169,11 @@ function pressKey() {
                writeAnwser(commands.theme);
                newInput();
             }
+            break;
+         case 'theme':
+            inputToText();
+            writeAnwser(commands.errorTheme);
+            newInput();
             break;
          default:
             inputToText();

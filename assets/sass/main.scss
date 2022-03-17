@@ -64,7 +64,7 @@ body {
 .grid-icons {
    padding: 2rem 0 0 2rem;
    width: 100%;
-   height: 100%;
+   height: 85vh;
 }
 
 .icons {
@@ -121,12 +121,31 @@ a {
    color: #57B40F;
 }
 
+.colorNbos {
+   font-weight: bold;
+   background: #bfbfbf; /* fallback for old browsers */
+   background: -webkit-linear-gradient(to right, #bfbfbf, #afafaf); /* Chrome 10-25, Safari 5.1-6 */
+   background: linear-gradient(to right, #bfbfbf, #afafaf); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   -webkit-background-clip: text;
+   background-clip: text;
+   color: transparent;
+}
+
 #header-request {
    @include step1( 6px, white );
    border-radius: 5px;
-   margin: 1.5rem 2rem 0.5rem 2rem;
+   margin: 1rem 2rem 0.5rem 2rem;
    padding: 1rem;
-   width: 40%;
+   width: auto;
+   position: relative;
+   p {
+      text-align: center;
+   }
+   .custom-side-right {
+      position: absolute;
+      right: 20px;
+      top: 10px;
+   }
 }
 
 .fa-file-contract, .fa-signature, .fa-building, .fa-mobile-screen-button, .fa-paper-plane, .fa-discord {
@@ -213,101 +232,55 @@ main {
    height: 92vh;
 }
 
-//
-// Link (and contact text) with random sentences(?)
-//
-footer {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   margin-left: 1rem;
-   font-size: 14px;
-   @include text;
-   p {
-      margin-top: 3px;
-   }
-   i {
-      margin-left: 0.3rem;
-   }
-}
-
-#notAllowed {
-   @include text;
-   position: absolute;
-   visibility: hidden;
-   z-index: 100;
-   width: 100%;
-   min-height: 100vh;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-   text-align: center;
-   backdrop-filter: blur(18px) saturate(45%);
-   -webkit-backdrop-filter: blur(18px) saturate(45%);
-   #notAllowed-center {
-      @include box-gradiant;
-      padding: 3rem;
-      border-radius: 10px;
-      background-color: var(--lightTerminalBodyBackground);
-      .fa-xmark {
-         position: relative;
-         top: -35px;
-         right: -120px;
+@media (max-width: 576px) {
+   ul#list-header > li {
+      &:nth-child(2) {
+         display: none;
+      }
+      &:nth-child(3) {
+         display: none;
       }
    }
-   #input-wrongPassword {
-      display: flex;
-      margin-left: auto;
-      margin-right: auto;
-      text-align: center;
-      height: 2rem;
-      width: 100%;
-      background-color: var(--lightTerminalBar);
-      border-radius: 5px;
-      p {
-         margin: auto 0;
-         padding: 2.5% 0 0 4%;
-         color: var(--lightText);
+   #title-right ul > li {
+      &:nth-child(1) {
+         display: none;
+      }
+      &:nth-child(2) {
+         display: none;
       }
    }
-   #message-text {
-      text-align: center;
-      width: 12rem;
+   main {
+      height: auto;
    }
-}
-.button-management-notAllowed {
-   display: flex;
-   position: relative;
-   top: -35px;
-   left: -40px;
-   .circle-red {
-      @include button-management;
-      background: #EC6A5E;
-      &:hover {
-         background: #973c34;
-      }
+   body {
+      height: 100%;
    }
-   .circle-orange {
-      @include button-management;
-      background: #F5BF4F;
-   }
-   .circle-grey {
-      @include button-management;
-      background: radial-gradient(125% 125% at 50% 50%, #CECDCD 0%, rgba(215, 215, 215, 0.6) 100%);
-   }
-}
-
-@media (max-width: 992px) {
-   * {
-      overflow-y: hidden;
-   }
-
-   #notAllowed {
-      visibility: visible;
-   }
-
-   .container, header {
+   #container-contact, #container-file, #notification-area {
       display: none;
+   }
+   .absolute {
+      position: relative;
+   }  
+   .container {
+      margin: 1rem;
+      .terminal  {
+         width: auto;
+         height: 80vh;
+      }
+   }
+   .grid-icons {
+      display: none;
+   }
+   .container .terminal-header {
+      justify-content: center;
+      .button-management {
+         display: none;
+      }
+      .button-switch {
+         margin-right: 0;
+      }
+      .research-bar {
+         width: 13rem;
+      }
    }
 }

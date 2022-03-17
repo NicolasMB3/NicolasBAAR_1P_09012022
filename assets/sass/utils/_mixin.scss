@@ -46,5 +46,5 @@
 }
 
 @mixin step1($width, $color) {
-   box-shadow: var(--lightBackground) 0px 0px 0px 2px inset, var(--lightBackground) 10px -10px 0px -3px, rgba(30, 193, 27, 0.55) 10px -10px, var(--lightBackground) 20px -20px 0px -3px, rgb(255, 217, 19, 0.55) 20px -20px;
+   box-shadow: var(--lightBackground) 0px 0px 0px 2px inset, var(--lightBackground) 10px -10px 0px -3px, rgba(78, 78, 78, 0.5) 10px -10px;
 }
