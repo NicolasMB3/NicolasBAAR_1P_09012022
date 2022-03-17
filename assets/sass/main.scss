@@ -105,12 +105,6 @@ body {
    color: var(--lightPlaceholder);
 }
 
-input[type='text'],
-input[type='number'],
-textarea {
-  font-size: 16px;
-}
-
 a {
    @include text;
    text-decoration: none;
@@ -239,6 +233,7 @@ main {
 }
 
 @media (max-width: 576px) {
+
    ul#list-header > li {
       &:nth-child(2) {
          display: none;
@@ -247,6 +242,7 @@ main {
          display: none;
       }
    }
+
    #title-right ul > li {
       &:nth-child(1) {
          display: none;
@@ -255,18 +251,23 @@ main {
          display: none;
       }
    }
+
    main {
       height: auto;
    }
+
    body {
       height: 100%;
    }
+
    #container-contact, #container-file, #notification-area {
       display: none;
    }
+
    .absolute {
       position: relative;
-   }  
+   } 
+
    .container {
       margin: 1rem;
       .terminal  {
@@ -274,9 +275,11 @@ main {
          height: 80vh;
       }
    }
+
    .grid-icons {
       display: none;
    }
+
    .container .terminal-header {
       justify-content: center;
       .button-management {
@@ -288,5 +291,9 @@ main {
       .research-bar {
          width: 13rem;
       }
+   }
+
+   .container .terminal #terminal-text #terminal-input input {
+      font-size: 16px;
    }
 }
