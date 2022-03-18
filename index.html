@@ -16,16 +16,37 @@
    </script>
    <script src="assets/scripts/index.js" defer></script>
 </head>
-<body class="scroller">
-   <div id="notification-area">
+<body>
+   <div class="close-menu-responsive hideElement" data-active="false">
+      <i class="fa-solid fa-xmark" id="close-hiddenMenu"></i>
+      <div class="icon-responsive-1 flex-responsive">
+         <img src="assets/images/folder-full.png" alt="Icône pour le dossier CV sur le bureau" width="42" height="35"> 
+         <p>Me contacter</p>
+      </div>
+      <div class="icon-responsive-2 flex-responsive">
+         <img src="assets/images/discord.svg" alt="Icône pour le dossier CV sur le bureau" width="42" height="42"> 
+         <p>Discord communautaire</p>
+      </div>
+      <div class="icon-responsive-3 flex-responsive">
+         <img src="assets/images/chrome.png" alt="Icône pour le dossier CV sur le bureau" width="42" height="42"> 
+         <p>Linkedin</p>
+      </div>
+      <div class="icon-responsive-4 flex-responsive">
+         <img src="assets/images/folder-full.png" alt="Icône pour le dossier CV sur le bureau" width="42" height="32"> 
+         <p>Code source</p>
+      </div>
+      <div class="icon-responsive-5 flex-responsive">
+         <img src="assets/images/chrome.png" alt="Icône pour le dossier CV sur le bureau" width="42" height="42"> 
+         <p>CV Numérique</p>
+      </div>
    </div>
    <header id="header-section">
       <div id="title-left">
          <ul id="list-header">
             <li class="text--bold">NbOS</li>
             <li id="email-copy">nicolasbaar@outlook.fr</li>
-            <li><a id="discord" href="https://discord.gg/devweb" target="_blank"><i class="fa-brands fa-discord"></i><span id="discord-text">Discord communautaire</span></a></li>
-            <li><i class="fa-solid fa-bars"></i></li>
+            <li><a id="discord" href="https://discord.gg/devweb" target="_blank"><i class="fa-brands fa-discord"></i>Discord communautaire</a></li>
+            <li><button class="hamburger-button" id="openNavMenu"><i class="fa-solid fa-bars"></i></i></button></i></li>
             <li id="button-contact--header">Contact 🙋</li>
             <li id="button-file--header">Dossier 🗂️</li>
             <li id="button-terminal--header">Terminal 💾</li>

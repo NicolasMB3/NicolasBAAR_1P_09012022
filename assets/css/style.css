@@ -20,7 +20,7 @@ header {
   padding: 0 0.8rem;
 }
 #title-left ul li, #title-right ul li {
-  color: var(--lightText);
+  color: white;
   display: inline;
   padding: 0.3rem 0.5rem;
   font-size: 14px;
@@ -49,6 +49,75 @@ header {
 #email-copy {
   cursor: var(--pointer);
   position: relative;
+}
+
+.hamburger-button {
+  color: white;
+  background-color: #21212100;
+  border: none;
+}
+
+.close-menu-responsive {
+  position: relative;
+  color: white;
+  z-index: 500;
+  width: 100%;
+  height: 100vh;
+  min-height: -webkit-fill-available;
+  background-color: var(--lightTerminalBar);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(5%, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(5%, 1fr));
+  grid-template-areas: "icon-responsive-1 icon-responsive-4" "icon-responsive-2 icon-responsive-5" "icon-responsive-3 icon-responsive-6";
+  justify-items: center;
+  align-items: center;
+  backdrop-filter: blur(15px);
+  -webkit-animation: slide-in-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-in-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+.close-menu-responsive .fa-xmark {
+  font-size: 2em;
+  position: absolute;
+  top: 15px;
+  right: 25px;
+}
+
+.icon-responsive-1 {
+  grid-area: icon-responsive-1;
+}
+
+.icon-responsive-2 {
+  grid-area: icon-responsive-2;
+}
+
+.icon-responsive-3 {
+  grid-area: icon-responsive-3;
+}
+
+.icon-responsive-4 {
+  grid-area: icon-responsive-4;
+}
+
+.icon-responsive-5 {
+  grid-area: icon-responsive-5;
+}
+
+.flex-responsive {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  text-align: center;
+  width: 125px;
+  height: 125px;
+  border-radius: 5px;
+}
+.flex-responsive:hover {
+  background-color: var(--lightBackground);
+  border: 1px solid var(--lightBorder);
+  cursor: var(--pointer);
+  backdrop-filter: blur(15px);
 }
 
 ul#list-header > li:nth-child(4), ul#list-header > li:nth-child(5), ul#list-header > li:nth-child(6), ul#list-header > li:nth-child(7) {
@@ -509,6 +578,14 @@ a:visited {
   visibility: visible;
 }
 
+.hideElement {
+  display: none !important;
+}
+
+.cancelZIndex {
+  overscroll-behavior-y: none;
+}
+
 .draggable, .resizable, .gesturable {
   -ms-touch-action: none;
   touch-action: none;
@@ -642,6 +719,11 @@ a:visited {
 
   .container .terminal #terminal-text #terminal-input input {
     font-size: 16px;
+  }
+}
+@media (max-width: 332px) {
+  .close-menu-responsive {
+    grid-template-areas: "icon-responsive-1" "icon-responsive-2" "icon-responsive-3" "icon-responsive-4" "icon-responsive-5" "icon-responsive-6";
   }
 }
 

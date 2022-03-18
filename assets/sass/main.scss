@@ -102,6 +102,14 @@ a {
    visibility: visible;
 }
 
+.hideElement {
+   display: none !important;
+}
+
+.cancelZIndex {
+   overscroll-behavior-y: none;
+}
+
 .draggable, .resizable, .gesturable {
    -ms-touch-action: none;
    touch-action: none;
@@ -243,5 +251,17 @@ a {
 
    .container .terminal #terminal-text #terminal-input input {
       font-size: 16px;
+   }
+}
+
+@media (max-width: 332px) {
+   .close-menu-responsive {
+      grid-template-areas: 
+        "icon-responsive-1"
+        "icon-responsive-2"
+        "icon-responsive-3"
+        "icon-responsive-4"
+        "icon-responsive-5"
+        "icon-responsive-6";
    }
 }

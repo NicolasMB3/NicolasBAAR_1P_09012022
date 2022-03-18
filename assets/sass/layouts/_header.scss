@@ -1,7 +1,7 @@
-@use '../utils' as *;
-
 header {
-   @include box-gradiant;
+   box-shadow:
+      0px 0px 7.3px rgba(0, 0, 0, 0.035),
+      0px 0px 58px rgba(0, 0, 0, 0.07);
    display: flex;
    justify-content: space-between;
    align-items: center;
@@ -20,7 +20,7 @@ header {
       margin: 0.5rem 0;
       padding: 0 0.8rem;
       li {
-         @include text;
+         color: white;
          display: inline;
          padding: 0.3rem 0.5rem;
          font-size: 14px; 
@@ -51,6 +51,66 @@ header {
 #email-copy {
    cursor: var(--pointer);
    position: relative;
+}
+
+// @Hidden Menu
+
+.hamburger-button {
+   color: white;
+   background-color: #21212100;
+   border: none;
+}
+
+.close-menu-responsive {
+   position: relative;
+   color: white;
+   z-index: 500;
+   width: 100%;
+   height: 100vh;
+   min-height: -webkit-fill-available;
+   background-color: var(--lightTerminalBar);
+   display: grid; 
+   grid-template-columns: repeat(auto-fit, minmax(5%, 1fr));
+   grid-template-rows: repeat(auto-fit, minmax(5%, 1fr)); 
+   grid-template-areas: 
+     "icon-responsive-1 icon-responsive-4"
+     "icon-responsive-2 icon-responsive-5"
+     "icon-responsive-3 icon-responsive-6"; 
+   justify-items: center; 
+   align-items: center; 
+   backdrop-filter: blur(15px);
+   -webkit-animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+   .fa-xmark {
+      font-size: 2em;
+      position: absolute;
+      top: 15px;
+      right: 25px;
+   }
+}
+
+.icon-responsive-1 { grid-area: icon-responsive-1; }
+.icon-responsive-2 { grid-area: icon-responsive-2; }
+.icon-responsive-3 { grid-area: icon-responsive-3; }
+.icon-responsive-4 { grid-area: icon-responsive-4; }
+.icon-responsive-5 { grid-area: icon-responsive-5; }
+
+.flex-responsive {
+   align-items: center;
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   flex-wrap: wrap;
+   text-align: center;
+   width: 125px;
+   height: 125px;
+   border-radius: 5px;
+   &:hover {
+      background-color: var(--lightBackground);
+      border: 1px solid var(--lightBorder);
+      cursor: var(--pointer);
+      backdrop-filter: blur(15px);
+   }
 }
 
 ul#list-header > li {

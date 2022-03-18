@@ -504,18 +504,36 @@ function removeResize() {
 	})
 }
 
+// @Params null
+function displayMenu() {
+	const hamburgerIcon = document.getElementById('openNavMenu');
+	const hiddenMenu = document.body.childNodes[1];
+	const header = document.getElementById('header-section');
+	const closeButton = document.getElementById('close-hiddenMenu');
+	hamburgerIcon.addEventListener('click', () => {
+		if (hiddenMenu.dataset.active) {
+			hiddenMenu.classList.remove('hideElement');
+			hiddenMenu.dataset.active = true;
+			header.classList.add('hideElement');
+			document.body.children[2].classList.add('hideElement');
+		}
+	})
+
+	closeButton.addEventListener('click', () => {
+		if (hiddenMenu.dataset.active) {
+			hiddenMenu.classList.add('hideElement');
+			hiddenMenu.dataset.active = false;
+			header.classList.remove('hideElement');
+			document.body.children[2].classList.remove('hideElement');
+		}
+	})
+}
+
 //
 // Run functions
 //
-displayWindows();
-time();
-date();
-darkMode();
-closeOpenTerminal();
-resize();
-dragAndDrop();
-pressKey();
-reduce();
-openReduce();
-sendEmail();
-removeResize();
+displayWindows(); time();
+date(); darkMode(); closeOpenTerminal();
+resize(); dragAndDrop(); pressKey(); reduce();
+openReduce(); sendEmail(); removeResize();
+displayMenu();
