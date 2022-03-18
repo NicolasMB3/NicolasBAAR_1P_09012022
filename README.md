@@ -7,7 +7,7 @@
 
 <div align="center">
 
-  ### 🗂️ CV - Nicolas BAAR
+  ### 🗂️ CV - Nicolas BAAR [DEV BRANCH]
 
 <img align="center" src="./assets/images/github-header.png" alt="Présentation en image du projet"/>
 </div>
