@@ -155,7 +155,7 @@ ul#list-header > li:nth-child(4), ul#list-header > li:nth-child(5), ul#list-head
 .container .terminal-header .research-bar {
   background: var(--lightTerminalBar);
   border-radius: 7px;
-  width: 20rem;
+  width: 40%;
   display: flex;
   align-items: center;
   justify-content: center;
