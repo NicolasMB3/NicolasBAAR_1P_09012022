@@ -135,14 +135,14 @@ function pressKey() {
 				newInput();
 				break;
 			case 'clear':
-				binImage.src = "assets/images/folder-bin-not-empty.png";
+				binImage.src = "assets/images/bin-full.svg";
 				textTerminal.innerHTML = '';
 				newInput();
 				break;
 			case 'clear bin':
 				inputToText();
 				writeAnwser(commands.clearbin);
-				binImage.src = "assets/images/folder-bin.png";
+				binImage.src = "assets/images/bin.svg";
 				newInput();
 				break;
 			case 'theme light':
