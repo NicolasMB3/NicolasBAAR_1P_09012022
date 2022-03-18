@@ -510,7 +510,7 @@ function displayMenu() {
 	const hiddenMenu = document.body.childNodes[1];
 	const header = document.getElementById('header-section');
 	const closeButton = document.getElementById('close-hiddenMenu');
-	hamburgerIcon.addEventListener('click', () => {
+	hamburgerIcon.addEventListener('click', function() {
 		if (hiddenMenu.dataset.active) {
 			hiddenMenu.classList.remove('hideElement');
 			hiddenMenu.dataset.active = true;
@@ -519,7 +519,7 @@ function displayMenu() {
 		}
 	})
 
-	closeButton.addEventListener('click', () => {
+	closeButton.addEventListener('click', function() {
 		if (hiddenMenu.dataset.active) {
 			hiddenMenu.classList.add('hideElement');
 			hiddenMenu.dataset.active = false;
