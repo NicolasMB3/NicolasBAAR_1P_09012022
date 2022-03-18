@@ -6,6 +6,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300;400;500;600;800&display=swap');
 
+
 // 
 // LIGHT MODE VARIABLES
 //
@@ -40,6 +41,11 @@ html[data-theme='light'] {
    --lightPlaceholder: rgb(255, 255, 255);
    --lightBtn: #FFBD07;
    --lightScroll: rgba(216, 216, 216, 0.7);
+}
+
+html, body {
+   max-width: 100%;
+   overflow-x: hidden;
 }
 
 // @HTML
@@ -83,27 +89,33 @@ a {
 
 .icons {
    @include desktop-icons;
-   animation: icons 2s both;
-   -webkit-animation: icons 0.5s both;
+   animation: icons-left 2s both;
+   -webkit-animation: icons-left 0.5s both;
 }
 
-#cv {
+.icons-right {
+   @include desktop-icons;
+   animation: icons-right 2s both;
+   -webkit-animation: icons-right 0.5s both;
+}
+
+#cv, .icon-responsive-1 {
    animation-duration: 1s;
 }
 
-#contacter {
+#contacter, .icon-responsive-2 {
    animation-duration: 1.2s;
 }
 
-#linkedin {
+#linkedin, .icon-responsive-3 {
    animation-duration: 1.5s;
 }
 
-#terminal {
+#terminal, .icon-responsive-4 {
    animation-duration: 1.7s;
 }
 
-#corbeille {
+#corbeille, .icon-responsive-5 {
    animation-duration: 1.9s;
 }
 
@@ -126,10 +138,6 @@ a {
 
 .hideElement {
    display: none !important;
-}
-
-.cancelZIndex {
-   overscroll-behavior-y: none;
 }
 
 .draggable, .resizable, .gesturable {

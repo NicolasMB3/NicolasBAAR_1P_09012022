@@ -17,7 +17,7 @@
    }
 }
 
-@-webkit-keyframes icons {
+@-webkit-keyframes icons-left {
    0% {
       position: absolute;
       left: -1000px;
@@ -29,10 +29,36 @@
    }
 }
 
-@keyframes icons {
+@keyframes icons-left {
    0% {
       position: absolute;
-      left: -1000px;
+      left: -2000px;
+      opacity: 0;
+   }
+   100% {
+      position: relative;
+      left: 0;
+      opacity: 1;
+   }
+}
+
+@-webkit-keyframes icons-right {
+   0% {
+      position: absolute;
+      left: 2000px;
+      opacity: 0;
+   }
+   100% {
+      position: relative;
+      left: 0;
+      opacity: 1;
+   }
+}
+
+@keyframes icons-right {
+   0% {
+      position: absolute;
+      left: 2000px;
       opacity: 0;
    }
    100% {

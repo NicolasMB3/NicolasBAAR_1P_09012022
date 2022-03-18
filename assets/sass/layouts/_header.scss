@@ -84,24 +84,6 @@ header {
 .icon-responsive-4 { grid-area: icon-responsive-4; }
 .icon-responsive-5 { grid-area: icon-responsive-5; }
 
-.flex-responsive {
-   align-items: center;
-   display: flex;
-   justify-content: center;
-   flex-direction: column;
-   flex-wrap: wrap;
-   text-align: center;
-   width: 125px;
-   height: 125px;
-   border-radius: 5px;
-   &:hover {
-      background-color: var(--lightBackground);
-      border: 1px solid var(--lightBorder);
-      cursor: var(--pointer);
-      backdrop-filter: blur(15px);
-   }
-}
-
 ul#list-header > li {
    &:nth-child(4), &:nth-child(5), &:nth-child(6), &:nth-child(7) {
       cursor: var(--pointer);
