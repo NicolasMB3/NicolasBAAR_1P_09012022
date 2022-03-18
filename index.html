@@ -6,7 +6,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta name="theme-color" content="#485c91"/>
    <meta name="description" content="🗂️ Portfolio imitant le système MacOS, qui présente mon parcours, mes recherches et permet de me contacter par e-mail, tout en étant interactif">
-   <link rel="stylesheet" href="assets/css/style.css">
+   <link rel="stylesheet" href="assets/css/style.min.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
    <title class="version">CMD \> Nicolas BAAR </title>
    <link rel="icon" href="assets/images/favicon.png"/>
@@ -46,7 +46,7 @@
             <li class="text--bold">NbOS</li>
             <li id="email-copy">nicolasbaar@outlook.fr</li>
             <li><a id="discord" href="https://discord.gg/devweb" target="_blank"><i class="fa-brands fa-discord"></i>Discord communautaire</a></li>
-            <li><button aria-label="Left Align" class="hamburger-button" id="openNavMenu"><i class="fa-solid fa-bars"></i></button></li>
+            <li class="hamburger-button" id="openNavMenu"><i class="fa-solid fa-bars"></i></li>
             <li id="button-contact--header">Contact 🙋</li>
             <li id="button-file--header">Dossier 🗂️</li>
             <li id="button-terminal--header">Terminal 💾</li>
@@ -63,25 +63,25 @@
    </header>
    <main>
       <div class="grid-icons">
-         <div class="icons drag openClose" data-id="123">
+         <div class="icons drag openClose" id="cv" data-id="123">
             <img src="assets/images/folder.svg" alt="Icône pour le dossier CV sur le bureau" width="42" height="42"> 
             <p>CV Numérique</p>
          </div>
-         <div class="icons drag openClose" data-id="456">
+         <div class="icons drag openClose" id="contacter" data-id="456">
             <img src="assets/images/folder.svg" alt="Icône pour le me contacter sur le bureau" width="42" height="42"> 
             <p>Me contacter</p>
          </div>
-         <div class="icons drag">
+         <div class="icons drag" id="linkedin">
             <a href="https://www.linkedin.com/in/nicolasbaar02/" target="_blank">
                <img src="assets/images/chrome.svg" alt="Icône pour le dossier Linkedin sur le bureau" width="42" height="42"> 
                <p>Page Linkedin</p>
             </a>
          </div>
-         <div class="icons drag openClose" data-id="789">
+         <div class="icons drag openClose" id="terminal" data-id="789">
             <img src="assets/images/terminal.svg" alt="Icône pour le terminal sur le bureau" width="42" height="42"> 
             <p>Terminal</p>
          </div>
-         <div class="icons drag">
+         <div class="icons drag" id="corbeille">
             <img id="image-bin" src="assets/images/bin.svg" alt="Icône pour le dossier Corbeille sur le bureau" width="42" height="42"> 
             <p>Corbeille</p>
          </div>

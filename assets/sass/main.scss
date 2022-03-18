@@ -67,7 +67,7 @@ main {
 }
 
 a {
-   @include text;
+   color: var(--lightText);
    text-decoration: none;
    &:visited {
       text-decoration: none;
@@ -83,6 +83,28 @@ a {
 
 .icons {
    @include desktop-icons;
+   animation: icons 2s both;
+   -webkit-animation: icons 0.5s both;
+}
+
+#cv {
+   animation-duration: 1s;
+}
+
+#contacter {
+   animation-duration: 1.2s;
+}
+
+#linkedin {
+   animation-duration: 1.5s;
+}
+
+#terminal {
+   animation-duration: 1.7s;
+}
+
+#corbeille {
+   animation-duration: 1.9s;
 }
 
 // @Generals options

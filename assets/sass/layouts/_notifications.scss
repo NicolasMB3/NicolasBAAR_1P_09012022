@@ -12,7 +12,7 @@
 }
 
 .notification-area-box {
-   @include text;
+   color: var(--lightText);
    border: 1px solid var(--lightBorder);
    display: flex;
    justify-content: center;

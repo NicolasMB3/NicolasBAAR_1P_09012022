@@ -1,15 +1,13 @@
 @use '../utils' as *;
 
 .container {
+   @include box-gradiant;
    border-radius: 15px;
    backdrop-filter: blur(15px);
    -webkit-backdrop-filter: blur(15px);
-   @include box-gradiant;
-   //
-   // Terminal head modifications here
-   //
    .terminal-header {
-      @include text;
+      cursor: grab;
+      color: var(--lightText);
       width: auto;
       background-color: var(--lightTerminalHeaderBackground);
       border: 1px solid var(--lightBorder);
@@ -20,7 +18,6 @@
       align-items: center;
       backdrop-filter: blur(15px) saturate(120%);
       -webkit-backdrop-filter: blur(15px) saturate(121%);
-      cursor: grab;
       .left-right {
          margin-left: 2rem;
          display: flex;
@@ -45,35 +42,6 @@
             }
          }
       }
-
-      //
-      // Close/Reduce... from MacOS button
-      //
-      .button-management {
-         cursor: var(--pointer);
-         z-index: 2;
-         display: flex;
-         align-items: center;
-         margin: 1rem;
-         .circle-red {
-            @include button-management;
-            background: #EC6A5E;
-            &:hover {
-               background: #973c34;
-            }
-         }
-         .circle-orange {
-            @include button-management;
-            background: #F5BF4F;
-         }
-         .circle-grey {
-            @include button-management;
-            background: radial-gradient(125% 125% at 50% 50%, #CECDCD 0%, rgba(215, 215, 215, 0.6) 100%);
-            &:hover {
-               background: #969494;
-            }
-         }
-      }
       .button-switch {
          background: var(--lightTerminalBar);
          color: var(--lightBtn);
@@ -88,61 +56,87 @@
          }
       }
    }
+}
 
-   //
-   // Terminal text modifications here
-   //
-   .terminal {
-      height: 60vh;
-      width: 60vw;
-      background: var(--lightTerminalBodyBackground);
-      border-radius: 0 0 20px 20px;
-      border: 1px solid var(--lightBorder);
-      border-top: 0;
-      padding: 1rem;
-      li {
-         padding: 0.2rem 0;
+.button-management {
+   cursor: var(--pointer);
+   z-index: 2;
+   display: flex;
+   align-items: center;
+   margin: 1rem;
+   .circle-red {
+      @include button-management;
+      background: #EC6A5E;
+      &:hover {
+         background: #973c34;
       }
-      .terminal-folder {
-         @include text;
-         cursor: var(--cursor);
-         height: 100%;
-         width: 100%;
+   }
+   .circle-orange {
+      @include button-management;
+      background: #F5BF4F;
+   }
+   .circle-grey {
+      @include button-management;
+      background: radial-gradient(125% 125% at 50% 50%, #CECDCD 0%, rgba(215, 215, 215, 0.6) 100%);
+      &:hover {
+         background: #969494;
       }
-      #terminal-text {
-         @include text;
-         cursor: var(--cursor);
-         height: 100%;
-         width: auto;
-         overflow: scroll;
-         overflow-x: hidden;
-         font-family: 'Source Code Pro', monospace;
-         font-size: 14px;
-         #terminal-input {
-            display: flex;
-            align-items: center;
-            input {
-               @include text;
-               width: 80%;
-               font-size: 14px;
-               margin-left: 0.5rem;
-               height: 20px;
-               font-family: 'Source Code Pro', monospace;
-               background-color: #f5be4f00;
-               border: none;
-               outline: none;
-            }
+   }
+}
+
+//
+// Terminal text modifications here
+//
+.terminal {
+   height: 60vh;
+   width: 60vw;
+   background: var(--lightTerminalBodyBackground);
+   border-radius: 0 0 20px 20px;
+   border: 1px solid var(--lightBorder);
+   border-top: 0;
+   padding: 1rem;
+   li {
+      padding: 0.2rem 0;
+   }
+   .terminal-folder {
+      color: var(--lightText);
+      cursor: var(--cursor);
+      height: 100%;
+      width: 100%;
+   }
+   #terminal-text {
+      color: var(--lightText);
+      cursor: var(--cursor);
+      height: 100%;
+      width: auto;
+      overflow: scroll;
+      overflow-x: hidden;
+      font-family: 'Source Code Pro', monospace;
+      font-size: 14px;
+      #terminal-input {
+         display: flex;
+         align-items: center;
+         input {
+            color: var(--lightText);
+            width: 80%;
+            font-size: 14px;
+            margin-left: 0.5rem;
+            height: 20px;
+            font-family: 'Source Code Pro', monospace;
+            background-color: #f5be4f00;
+            border: none;
+            outline: none;
          }
-         #terminal-input-new {
-            display: flex;
-            align-items: center;
-            padding: 0.7rem 0;
-            #new-input--style {
-               @include text;
-               padding-left: 0.5rem;
-               font-size: 14px;
-               font-family: 'Source Code Pro', monospace;
-            }
+      }
+      #terminal-input-new {
+         display: flex;
+         align-items: center;
+         padding: 0.7rem 0;
+         #new-input--style {
+            color: var(--lightText);
+            padding-left: 0.5rem;
+            font-size: 14px;
+            font-family: 'Source Code Pro', monospace;
          }
       }
    }
@@ -160,7 +154,7 @@
 }
 
 #header-request {
-   @include step1( 6px, white );
+   @include step1( 6px, var(--lightText) );
    border-radius: 5px;
    margin: 1rem 2rem 0.5rem 2rem;
    padding: 1rem;
@@ -191,7 +185,7 @@
       margin-left: 1rem;
    }
    form.form-example {
-      @include text;
+      color: var(--lightText);
       display: table;
       display: flex;
       flex-direction: column;
@@ -217,7 +211,7 @@
    }
    
    label, input {
-      @include text;
+      color: var(--lightText);
       display: table-cell;
       width: 100%;
       height: 30px;
