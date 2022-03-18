@@ -56,7 +56,7 @@ header {
    position: relative;
    color: var(--lightText);
    z-index: 500;
-   width: 100%;
+   max-width: 100vw;
    height: 100vh;
    min-height: -webkit-fill-available;
    background-color: var(--lightTerminalBar);
@@ -83,6 +83,7 @@ header {
 .icon-responsive-3 { grid-area: icon-responsive-3; }
 .icon-responsive-4 { grid-area: icon-responsive-4; }
 .icon-responsive-5 { grid-area: icon-responsive-5; }
+.icon-responsive-6 { grid-area: icon-responsive-6; }
 
 ul#list-header > li {
    &:nth-child(4), &:nth-child(5), &:nth-child(6), &:nth-child(7) {

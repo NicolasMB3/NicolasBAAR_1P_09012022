@@ -11,6 +11,7 @@ const commands = {
 	clearbin: `La corbeille a été vidée.`,
 	alreadytheme: `Le thème est déjà `,
 	theme: `Le thème a correctement été changé.`,
+	application: `Ouverture du menu ...`,
 	unknow: `Merci d'écrire une commande (liste disponible avec la commande help)`,
 	errorTheme: `Merci de spécifier un thème [dark/light]`
 };
@@ -119,6 +120,7 @@ function pressKey() {
                      <li>nicolas : En savoir plus sur moi</li>
                      <li>theme [light/dark] : Change le thème du site</li>
                      <li>contact : Rentrer en contact avec moi</li>
+							<li>application : Ouvre le menu application</li>
                      <li>clear : Nettoie la console</li>
                   </ul>
                </div>`
@@ -174,6 +176,17 @@ function pressKey() {
 			case 'theme':
 				inputToText();
 				writeAnwser(commands.errorTheme);
+				newInput();
+				break;
+			case 'application':
+				inputToText();
+				writeAnwser(commands.application);
+				const hiddenMenu = document.body.childNodes[1];
+				const header = document.getElementById('header-section');
+				header.classList.add('hideElement');
+				hiddenMenu.classList.remove('hideElement');
+				hiddenMenu.dataset.active = true;
+				document.body.children[2].classList.add('hideElement');
 				newInput();
 				break;
 			default:
@@ -527,6 +540,18 @@ function displayMenu() {
 			document.body.children[2].classList.remove('hideElement');
 		}
 	})
+}
+
+if(document.documentElement.clientWidth < 992) {
+	const container = document.getElementById('container-terminal');
+	const textTerminal = container.childNodes[3];
+	container.classList.remove('drag');
+	textTerminal.classList.remove('resize-drag');
+} else {
+	const container = document.getElementById('container-terminal');
+	const textTerminal = container.childNodes[3];
+	container.classList.add('drag');
+	textTerminal.classList.add('resize-drag');
 }
 
 //
