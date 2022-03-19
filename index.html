@@ -195,27 +195,30 @@
                <hr style="width:40%; margin-bottom: 1rem;">
                <form action="#" id="form-contact" class="form-example">
                   <div class="form-example">
-                    <label for="name"><i class="fa-solid fa-signature"></i>Votre prénom : </label>
+                    <label for="name"><i class="fa-solid fa-signature"></i>> Prénom*</label>
                     <input type="text" name="name" id="name" class="contactme-input" autocomplete="off" required>
                   </div>
                   <div class="form-example">
-                    <label for="entreprise"><i class="fa-solid fa-building"></i>Vous êtes une entreprise : </label>
-                    <input type="text" name="entreprise" id="entreprise" class="contactme-input" autocomplete="off" required>
+                     <label for="entreprise"><i class="fa-solid fa-building"></i>> Êtes-vous une entreprise ?*</label>
+                     <select name="entreprise" id="entreprise" class="contactme-input" required>
+                        <option value="yes">Oui</option>
+                        <option value="no">Non</option>
+                     </select>
                   </div>
                   <div class="form-example">
-                     <label for="phone"><i class="fa-solid fa-mobile-screen-button"></i>Numéro de téléphone : </label>
-                     <input type="tel" pattern="[06][0-9]{9}" name="phone" id="phone" class="contactme-input" autocomplete="off" required>
+                     <label for="phone"><i class="fa-solid fa-mobile-screen-button"></i>> Numéro de téléphone</label>
+                     <input type="tel" pattern="[06][0-9]{9}" name="phone" id="phone" class="contactme-input" autocomplete="off">
                   </div>
                   <div class="form-example">
-                     <label for="email"><i class="fa-solid fa-paper-plane"></i>Adresse e-mail : </label>
+                     <label for="email"><i class="fa-solid fa-paper-plane"></i>> Adresse e-mail*</label>
                      <input type="email" name="email" id="email" class="contactme-input" autocomplete="off" required>
                   </div>
                   <div class="form-example">
-                     <label for="description"><i class="fa-solid fa-file-contract"></i>Pourquoi souhaitez-vous me contacter :</label>
+                     <label for="description"><i class="fa-solid fa-file-contract"></i>> Pourquoi souhaitez-vous me contacter ?*</label>
                      <input type="text" name="description" id="description" class="contactme-input" autocomplete="off" required>
                   </div>
                   <div class="form-example">
-                    <input id="form-button" class="button-custom" value="Envoyer">
+                    <input type="submit" id="form-button" class="button-custom" value="Envoyer">
                   </div>
                 </form>
             </div>
