@@ -1,4 +1,5 @@
 .close-animation {
+   -webkit-animation: close 0.3s ease-in both;
    animation: close 0.3s ease-in both;
 }
 
@@ -21,6 +22,7 @@
 }
 
 .ending-animation {
+   -webkit-animation: ending 5s ease-in both;
    animation: ending 5s ease-in both;
 }
 
@@ -41,51 +43,52 @@
 
 @-webkit-keyframes icons-left {
    0% {
-      position: absolute;
-      left: -1000px;
+      -webkit-transform: translateX(-1000px);
+               transform: translateX(-1000px);
       opacity: 0;
    }
    100% {
-      position: relative;
+      -webkit-transform: translateX(0);
+               transform: translateX(0);
       opacity: 1;
    }
 }
 
 @keyframes icons-left {
    0% {
-      position: absolute;
-      left: -2000px;
+      -webkit-transform: translateX(-1000px);
+               transform: translateX(-1000px);
       opacity: 0;
    }
    100% {
-      position: relative;
-      left: 0;
+      -webkit-transform: translateX(0);
+               transform: translateX(0);
       opacity: 1;
    }
 }
 
 @-webkit-keyframes icons-right {
    0% {
-      position: absolute;
-      left: 2000px;
+      -webkit-transform: translateX(1000px);
+               transform: translateX(1000px);
       opacity: 0;
    }
    100% {
-      position: relative;
-      left: 0;
+      -webkit-transform: translateX(0);
+               transform: translateX(0);
       opacity: 1;
    }
 }
 
 @keyframes icons-right {
    0% {
-      position: absolute;
-      left: 2000px;
+      -webkit-transform: translateX(1000px);
+               transform: translateX(1000px);
       opacity: 0;
    }
    100% {
-      position: relative;
-      left: 0;
+      -webkit-transform: translateX(0);
+               transform: translateX(0);
       opacity: 1;
    }
 }

@@ -4,8 +4,8 @@ const textTerminal = document.getElementById('terminal-text');
 let inputValue = document.querySelector('#command');
 
 const commands = {
-	nicolas: `Développeur web full-stack. Mordu d informatique, j’ai appris à programmer dès mon plus jeune âge dans divers langages informatiques comme JavaScript, PHP ... 
-      Polyvalent, je maîtrise les différentes étapes techniques de la création d un site web ; de la compréhension des besoins utilisateurs, à la conception des 
+	nicolas: `> Développeur web full-stack à la recherche de sa première expérience professionnelle. <br>Mordu d'informatique, j’ai appris à programmer dès mon plus jeune âge dans divers langages informatiques comme JavaScript, PHP ... 
+      Polyvalent, je maîtrise les différentes étapes techniques de la création d'un site web ; de la compréhension des besoins utilisateurs, à la conception des 
       maquettes jusqu'au développement front-end et back-end.`,
 	contact: `Pour me contacter => nicolasbaar@outlook.fr ou en cliquant sur le dossier 'Me contacter' à gauche de l'écran.`,
 	clearbin: `La corbeille a été vidée.`,
@@ -128,7 +128,19 @@ function pressKey() {
 				break;
 			case 'nicolas':
 				inputToText();
-				writeAnwser(commands.nicolas);
+				textTerminal.innerHTML += `
+               <div id="header-request">
+                  <span class="custom-side-right">- X</span>
+                  <p>****** Nicolas BAAR ******</p>
+						<div id="my-self-flex">
+							<div id="my-self-flex--image">
+								<img src="https://via.placeholder.com/150" alt="Photo de profil">
+							</div>
+							<div>
+								${commands.nicolas}
+							</div>
+						</div>
+               </div>`
 				newInput();
 				break;
 			case 'contact':

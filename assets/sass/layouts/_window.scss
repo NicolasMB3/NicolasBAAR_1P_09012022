@@ -219,3 +219,14 @@
       outline: none;
    }
 }
+
+#my-self-flex {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 2rem;
+   padding: 2rem;
+   #my-self-flex--image img {
+      border-radius: 10px;
+   }
+}

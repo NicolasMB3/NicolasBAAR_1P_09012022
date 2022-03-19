@@ -16,15 +16,15 @@ html {
    --cursor: url("../images/cursor.png"), auto !important;
    --lightWallpaper: url('../images/wallpaper_dark.svg');
    --lightText: #FFFFFF;
-   --lightBackground: rgba(33, 33, 33, 0.47);
+   --lightBackground: rgba(70, 70, 70, 0.47);
    --lightBorder: #212121;
-   --lightTerminalHeaderBackground: rgba(33, 33, 33, 0.5);
-   --lightTerminalBodyBackground: rgba(33, 33, 33, 0.40);
-   --lightTerminalBar: rgba(12, 15, 18, 0.3);
+   --lightTerminalHeaderBackground: rgba(49, 49, 49, 0.5);
+   --lightTerminalBodyBackground: rgba(54, 54, 54, 0.4);
+   --lightTerminalBar: rgba(61, 74, 87, 0.3);
    --lightPlaceholder: rgb(241, 237, 237);
    --lightBtn: #FFFFFF;
    --lightTransBorder: rgba(241, 237, 237, 0);
-   --lightScroll: rgba(33, 33, 33, 0.70);
+   --lightScroll: rgba(59, 59, 59, 0.7);
 }
 
 // 
@@ -80,6 +80,13 @@ a {
    }
 }
 
+br {
+   content: "";
+   display: block;
+   margin-top: 0.8rem;
+}
+ 
+
 // @Desktop Icons
 .grid-icons {
    padding: 2rem 0 0 2rem;
@@ -122,7 +129,6 @@ a {
 #corbeille, .icon-responsive-6 {
    animation-duration: 2.2s;
 }
-
 
 // @Generals options
 .text--bold {
@@ -178,7 +184,7 @@ a {
    scrollbar-color: var(--lightScroll) rgba(255, 255, 255, 0);
    scrollbar-width: thin;
 }
- 
+
 ::-webkit-scrollbar{
    width: 0.4em;
    position: absolute;
@@ -238,6 +244,10 @@ a {
 
    .container .terminal #terminal-text #terminal-input input {
       font-size: 16px;
+   }
+
+   #my-self-flex {
+      flex-direction: column;
    }
 }
 
