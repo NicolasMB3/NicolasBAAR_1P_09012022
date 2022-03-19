@@ -108,6 +108,12 @@ br {
    -webkit-animation: icons-right 0.5s both;
 }
 
+.icons-left {
+   @include desktop-icons;
+   animation: icons-left-app 2s both;
+   -webkit-animation: icons-left-app 0.5s both;
+}
+
 #cv, .icon-responsive-1 {
    animation-duration: 1s;
 }
