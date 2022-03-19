@@ -311,14 +311,14 @@ function resize() {
 					var y = (parseFloat(target.getAttribute('data-y')) || 0)
 
 					// update the element's style
-					target.style.width = event.rect.width + 'px'
-					target.style.height = event.rect.height + 'px'
+					target.style.width = ((100 * event.rect.width) / window.innerWidth)  + 'vw'
+					target.style.height = ((100 * event.rect.height) / window.innerHeight) + 'vh'
 
 					// translate when resizing from top or left edges
 					x += event.deltaRect.left
 					y += event.deltaRect.top
 
-					target.style.transform = 'translate(' + x + 'rem,' + y + 'rem)'
+					target.style.transform = 'translate(' + x + 'vw,' + y + 'vh)'
 
 					target.setAttribute('data-x', x)
 					target.setAttribute('data-y', y)

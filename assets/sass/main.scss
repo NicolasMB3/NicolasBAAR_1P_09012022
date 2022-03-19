@@ -237,8 +237,19 @@ br {
    }
 
    .container .terminal-header {
+      justify-content: space-between;
+      .left-right {
+         display: none;
+      }
+   }
+
+   .container .terminal-header {
+      justify-content: center;
+      .button-switch {
+         margin-right: 1rem;
+      }
       .research-bar {
-         width: 13rem;
+         width: 100%;
       }
    }
 
@@ -282,15 +293,14 @@ br {
    }
 
    .container .terminal-header {
-      justify-content: center;
       .button-management {
          display: none;
       }
       .button-switch {
-         margin-right: 0;
+         margin-right: 1rem;
       }
       .research-bar {
-         width: 60%;
+         width: 40%;
       }
    }
 
