@@ -4,10 +4,11 @@ const textTerminal = document.getElementById('terminal-text');
 let inputValue = document.querySelector('#command');
 
 const commands = {
-	nicolas: `> Développeur web full-stack à la recherche de sa première expérience professionnelle. <br>Mordu d'informatique, j’ai appris à programmer dès mon plus jeune âge dans divers langages informatiques comme JavaScript, PHP ... 
-      Polyvalent, je maîtrise les différentes étapes techniques de la création d'un site web ; de la compréhension des besoins utilisateurs, à la conception des 
+	nicolas: `> Développeur web full-stack à la recherche de sa première expérience professionnelle. <br>Mordu d'informatique, j’ai appris à programmer dès mon plus jeune âge dans divers langages informatiques comme JavaScript, PHP et Lua. 
+	<br>Polyvalent, je maîtrise les différentes étapes techniques de la création d'un site web ; de la compréhension des besoins utilisateurs, à la conception des 
       maquettes jusqu'au développement front-end et back-end.`,
-	contact: `Pour me contacter => nicolasbaar@outlook.fr ou en cliquant sur le dossier 'Me contacter' à gauche de l'écran.`,
+	contactOpen: `Merci de remplir le formulaire de contact déjà afficher sur la page [Me contacter].`,
+	contactClose: `Ouverture du dossier [Me contacter] en cours.`,
 	clearbin: `La corbeille a été vidée.`,
 	alreadytheme: `Le thème est déjà `,
 	theme: `Le thème a correctement été changé.`,
@@ -114,10 +115,10 @@ function pressKey() {
 				textTerminal.innerHTML += `
                <div id="header-request">
                   <span class="custom-side-right">- X</span>
-                  <p>****** Commandes disponibles ******</p>
+                  <p>****** COMMANDES DISPONIBLES ******</p>
                   <ul id="commands-help">
                      <li>help : Affiche toutes les commandes disponibles</li>
-                     <li>nicolas : En savoir plus sur moi</li>
+                     <li>about : En savoir plus sur moi</li>
                      <li>theme [light/dark] : Change le thème du site</li>
                      <li>contact : Rentrer en contact avec moi</li>
 							<li>application : Ouvre le menu application</li>
@@ -126,15 +127,15 @@ function pressKey() {
                </div>`
 				newInput();
 				break;
-			case 'nicolas':
+			case 'about':
 				inputToText();
 				textTerminal.innerHTML += `
                <div id="header-request">
                   <span class="custom-side-right">- X</span>
-                  <p>****** Nicolas BAAR ******</p>
+                  <p>****** À PROPOS DE MOI ******</p>
 						<div id="my-self-flex">
 							<div id="my-self-flex--image">
-								<img src="https://via.placeholder.com/150" alt="Photo de profil">
+								<img src="assets/images/picture.png" alt="Photo de profil">
 							</div>
 							<div>
 								${commands.nicolas}
@@ -145,7 +146,21 @@ function pressKey() {
 				break;
 			case 'contact':
 				inputToText();
-				writeAnwser(commands.contact);
+				const containerContact = document.getElementById('container-contact');
+				if(containerContact.style.visibility === 'visible') {
+					writeAnwser(commands.contactOpen);
+					setTimeout(function() {
+						containerContact.classList.remove("close-animation");
+						containerContact.style.zIndex = '50';
+					}, 2000);
+				} else {
+					writeAnwser(commands.contactClose);
+					setTimeout(function() {
+						containerContact.classList.remove("close-animation");
+						containerContact.style.visibility = 'visible';
+						containerContact.style.zIndex = '50';
+					}, 1000);
+				}
 				newInput();
 				break;
 			case 'clear':
@@ -255,8 +270,22 @@ function dragAndDrop() {
 // Open and close terminal when doublie click on icon or button close is pressed
 //
 function closeOpenTerminal() {
-	const buttonClose = document.getElementsByClassName('circle-red');
+	const buttonClose = document.getElementsByClassName('closeAction');
 	const openAndClose = document.getElementsByClassName('openClose');
+	const appClose = document.getElementById('application-contact');
+
+	appClose.addEventListener('click', function() {
+		const hiddenMenu = document.body.childNodes[1];
+		const header = document.getElementById('header-section');
+		const containerContact = document.getElementById('container-contact');
+		hiddenMenu.classList.add('hideElement');
+		hiddenMenu.dataset.active = false;
+		header.classList.remove('hideElement');
+		document.body.children[2].classList.remove('hideElement');
+		containerContact.classList.remove("close-animation");
+		containerContact.style.visibility = 'visible';
+		containerContact.style.zIndex = '5';
+	});
 
 	[...buttonClose].forEach((button) => {
 		button.addEventListener('click', function() {
@@ -556,18 +585,24 @@ function displayMenu() {
 	})
 }
 
-if(document.documentElement.clientWidth < 992) {
+function displayResponsive() {
 	const container = document.getElementById('container-terminal');
 	const textTerminal = container.childNodes[3];
-	container.classList.remove('drag');
-	textTerminal.classList.remove('resize-drag');
-} else {
-	const container = document.getElementById('container-terminal');
-	const textTerminal = container.childNodes[3];
-	container.classList.add('drag');
-	textTerminal.classList.add('resize-drag');
-}
+	const contact = document.getElementById('container-contact');
+	const textContact = contact.childNodes[3];
 
+	if(document.documentElement.clientWidth < 992) {
+		container.classList.remove('drag');
+		textTerminal.classList.remove('resize-drag');
+		contact.classList.remove('drag');
+		textContact.classList.remove('resize-drag');
+	} else {
+		container.classList.add('drag');
+		textTerminal.classList.add('resize-drag');
+		contact.classList.add('drag');
+		textContact.classList.add('resize-drag');
+	}	
+}
 //
 // Run functions
 //
@@ -575,4 +610,4 @@ displayWindows(); time();
 date(); darkMode(); closeOpenTerminal();
 resize(); dragAndDrop(); pressKey(); reduce();
 openReduce(); sendEmail(); removeResize();
-displayMenu();
+displayMenu(); displayResponsive();

@@ -19,7 +19,7 @@
 <body class="scroller">
    <div class="close-menu-responsive hideElement" data-active="false">
       <i class="fa-solid fa-xmark" id="close-hiddenMenu"></i>
-      <div class="icon-responsive-1 icons">
+      <div class="icon-responsive-1 icons" id="application-contact">
          <img src="assets/images/folder.svg" alt="Icône pour le dossier CV sur le bureau" width="42" height="42"> 
          <p>Contact</p>
       </div>
@@ -102,7 +102,7 @@
       <div class="container drag absolute" id="container-terminal" data-active="true">
          <div class="terminal-header">
             <div class="button-management">
-               <div class="circle-red"></div>
+               <div class="circle-red closeAction"></div>
                <div class="circle-orange"></div>
                <div class="circle-grey"></div>
                <div class="left-right">
@@ -127,7 +127,7 @@
                <p><span class="colorNbos">[NbOS]</span> : Liste des commandes disponibles</p>
                <ul id="commands-help">
                   <li>help : Affiche toutes les commandes disponibles</li>
-                  <li>nicolas : En savoir plus sur moi</li>
+                  <li>about : En savoir plus sur moi</li>
                   <li>theme [light/dark] : Change le thème du site</li>
                   <li>contact : Rentrer en contact avec moi</li>
                   <li>application : Ouvre le menu application</li>
@@ -144,7 +144,7 @@
       <div class="container drag absolute visibility" id="container-file">
          <div class="terminal-header">
             <div class="button-management">
-               <div class="circle-red"></div>
+               <div class="circle-red closeAction"></div>
                <div class="circle-orange"></div>
                <div class="circle-grey"></div>
                <div class="left-right">
@@ -173,8 +173,11 @@
       <!-- Folder : Contact Me -->
       <div class="container drag absolute visibility" id="container-contact">
          <div class="terminal-header">
+            <div id="button-close-responsive" class="closeAction">
+               <i class="fa-solid fa-xmark"></i>
+            </div>
             <div class="button-management">
-               <div class="circle-red"></div>
+               <div class="circle-red closeAction"></div>
                <div class="circle-orange"></div>
                <div class="circle-grey"></div>
                <div class="left-right">

@@ -25,6 +25,7 @@ html {
    --lightBtn: #FFFFFF;
    --lightTransBorder: rgba(241, 237, 237, 0);
    --lightScroll: rgba(59, 59, 59, 0.7);
+   --closeButton: rgba(114, 14, 14, 0.795);
 }
 
 // 
@@ -41,6 +42,7 @@ html[data-theme='light'] {
    --lightPlaceholder: rgb(255, 255, 255);
    --lightBtn: #FFBD07;
    --lightScroll: rgba(216, 216, 216, 0.7);
+   --closeButton: rgba(143, 51, 51, 0.795);
 }
 
 html, body {
@@ -272,7 +274,16 @@ br {
       height: 100%;
    }
 
-   #container-contact, #container-file, #notification-area {
+   #container-contact {
+      position: absolute;
+      width: 95%;
+   }
+
+   #contactform label {
+      padding: 5% 0;
+   }
+
+   #container-file, #notification-area {
       display: none;
    }
 
@@ -293,6 +304,9 @@ br {
    }
 
    .container .terminal-header {
+      #button-close-responsive {
+         display: block;
+      }
       .button-management {
          display: none;
       }
@@ -300,8 +314,12 @@ br {
          margin-right: 1rem;
       }
       .research-bar {
-         width: 40%;
+         width: 60%;
       }
+   }
+
+   #contactform form.form-example {
+      width: 80%;
    }
 
    .container .terminal #terminal-text #terminal-input input {

@@ -55,6 +55,19 @@
             background: var(--lightTerminalBodyBackground);
          }
       }
+      #button-close-responsive {
+         display: none;
+         background: var(--closeButton);
+         font-size: 12px;
+         padding: 0.3rem 0.7rem;
+         border-radius: 7px;
+         margin-left: 0.5rem;
+         margin-right: 0.5rem;
+         cursor: var(--pointer);
+         &:hover {
+            background: var(--lightTerminalBodyBackground);
+         }
+      }
    }
 }
 
