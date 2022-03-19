@@ -82,7 +82,7 @@ function newInput() {
 	textTerminal.innerHTML +=
 		`<div id="terminal-input">
          <p><span class="text--bold">C:\\Users\\Nicolas></span></p>
-         <input type="text" id="command" name="command" required minlength="4" maxlength="14" autocomplete="off" autofocus>
+         <input type="text" id="command" name="command" required minlength="4" maxlength="14" autocomplete="off" placeholder="/..." autofocus>
       </div>`
 	inputValue = document.querySelector('#command');
 	inputValue.focus();
@@ -390,9 +390,9 @@ function sendEmail() {
 
 		emailjs.send('service_a80h2ni', 'template_766uk3r', templateParams)
 			.then(function(response) {
-				notification("Message envoyé");
+				notification("Message envoyé", '#57B40F');
 			}, function(error) {
-				notification("Problème lors de l'envoie");
+				notification("Problème lors de l'envoie", '#973c34');
 			});
 	})
 }
@@ -409,7 +409,7 @@ function displayWindows() {
 };
 
 //
-// @param {String}   text    Text on notification
+// @param {String} {String}   text    Text on notification
 // @return {String}  Notification send
 //
 function copyTextToClipboard(text) {
@@ -418,9 +418,9 @@ function copyTextToClipboard(text) {
 		return;
 	}
 	navigator.clipboard.writeText(text).then(function() {
-		notification("E-mail copié");
+		notification("E-mail copié", '#57B40F');
 	}, function(err) {
-		console.error('Async: Impossible de copier l\'e-mail : ', err);
+		notification("Problème lors de la copie", '#973c34');
 	});
 }
 
@@ -480,11 +480,13 @@ function openReduce() {
 	})
 }
 
-function notification(text) {
+// @Params {String} {String}	(Text), (#fff)
+function notification(text, color) {
 	const notificationArea = document.getElementById('notification-area');
 	const notificationId = new Date().getTime();
 	const para = document.createElement("div");
 	para.classList.add("notification-area-box");
+	para.style.borderRight = '5px solid ' + color;
 	para.innerText = text;
 	para.id = notificationId;
 	notificationArea.appendChild(para);
