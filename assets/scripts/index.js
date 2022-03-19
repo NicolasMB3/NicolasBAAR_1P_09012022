@@ -284,7 +284,7 @@ function closeOpenTerminal() {
 		document.body.children[2].classList.remove('hideElement');
 		containerContact.classList.remove("close-animation");
 		containerContact.style.visibility = 'visible';
-		containerContact.style.zIndex = '5';
+		containerContact.style.zIndex = '500';
 	});
 
 	[...buttonClose].forEach((button) => {
