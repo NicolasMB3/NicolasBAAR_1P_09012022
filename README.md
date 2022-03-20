@@ -14,7 +14,9 @@
 
 ## À propos :
 
-Hello World ! 👋 Mon portfolio est un projet qui me tient à cœur et qui a pour but principal d'être un exemple de création pour ma recherche d'alternance qui commencerait en janvier 2022. Titulaire d'un BAC+2 en Développement web, j'ai décidé de rejoindre Epitech pour élargir mes connaissances tout en restant autodidacte. Si vous souhaitez plus d'informations sur moi ou sur mon parcours, n'hésitez pas à tester le site et à découvrir les nombreuses interactions.
+Hello World ! 👋 Mon portfolio est un projet qui me tient à cœur et qui a pour but principal d'être un exemple de création pour ma recherche d'emploi. Titulaire d'un BAC+2 en développement web, j'ai décidé en 2021 de rejoindre OpenClassrooms pour élargir mes connaissances tout en restant autodidacte. Si vous souhaitez plus d'informations sur moi ou sur mon parcours, n'hésitez pas à tester le site et à découvrir les nombreuses interactions.
+
+Seriez-vous la première entreprise qui m'aide à devenir un développeur senior ?
 
 Contenance du site :
 * Commandes via un terminal pour en savoir plus sur mon profil,
