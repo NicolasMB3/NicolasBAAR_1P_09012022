@@ -474,7 +474,7 @@ function reduce() {
 	var reduceButton = document.getElementsByClassName('circle-grey');
 
 	[...reduceButton].forEach((element) => {
-		element.addEventListener('click', () => {
+		element.addEventListener('click', function() {
 			var nameID = this.closest('.container').id;
 			this.closest('.container').style.visibility = 'hidden';
 
