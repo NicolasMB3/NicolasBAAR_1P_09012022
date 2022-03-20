@@ -473,7 +473,7 @@ copyBobBtn.addEventListener('click', function() {
 function reduce() {
 	var reduceButton = document.getElementsByClassName('circle-grey');
 
-	[...reduceButton].forEach(function(element) {
+	[...reduceButton].forEach((element) => {
 		element.addEventListener('click', () => {
 			var nameID = this.closest('.container').id;
 			this.closest('.container').style.visibility = 'hidden';
