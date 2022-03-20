@@ -287,7 +287,7 @@ function closeOpenTerminal() {
 		containerContact.style.zIndex = '500';
 	});
 
-	[...buttonClose].forEach((button) => {
+	[...buttonClose].forEach(function(button) {
 		button.addEventListener('click', function() {
 			const container = document.getElementsByClassName('container');
 			Array.from(container).forEach((ctn) => {
@@ -296,7 +296,7 @@ function closeOpenTerminal() {
 		});
 	});
 
-	[...openAndClose].forEach((icon) => {
+	[...openAndClose].forEach(function(icon) {
 		icon.addEventListener('dblclick', function(e) {
 			const containerTerminal = document.getElementById('container-terminal');
 			const containerFile = document.getElementById('container-file');
@@ -404,7 +404,7 @@ function darkMode() {
 		document.documentElement.setAttribute('data-theme', 'light');
 	}
 
-	[...switchButton].forEach((button) => {
+	[...switchButton].forEach(function(button) {
 		button.addEventListener('click', function() {
 			if (document.documentElement.getAttribute("data-theme") == "dark") {
 				document.documentElement.setAttribute('data-theme', 'light');
@@ -437,7 +437,7 @@ function sendEmail() {
 function displayWindows() {
 	const allWindows = [...document.getElementsByClassName('container')];
 	let dataActive = '10';
-	allWindows.forEach((item) => {
+	allWindows.forEach(function(item) {
 		item.addEventListener('click', () => {
 			item.style.zIndex = dataActive;
 			dataActive++;
@@ -473,7 +473,7 @@ copyBobBtn.addEventListener('click', function() {
 function reduce() {
 	var reduceButton = document.getElementsByClassName('circle-grey');
 
-	[...reduceButton].forEach((element) => {
+	[...reduceButton].forEach(function(element) {
 		element.addEventListener('click', function() {
 			var nameID = this.closest('.container').id;
 			this.closest('.container').style.visibility = 'hidden';
@@ -546,7 +546,7 @@ setInterval(function() {
 function removeResize() {
 	const getData = document.querySelectorAll('.terminal');
 	window.addEventListener("resize", function() {
-		[...getData].forEach((element) => {
+		[...getData].forEach(function(element) {
 			if (window.innerWidth < 992) {
 				element.classList.remove('resize-drag');
 			} else {
