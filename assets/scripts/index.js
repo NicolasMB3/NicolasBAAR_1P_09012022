@@ -474,7 +474,7 @@ function reduce() {
 	var reduceButton = document.getElementsByClassName('circle-grey');
 
 	[...reduceButton].forEach(function(element) {
-		element.addEventListener('click', function() {
+		element.addEventListener('click', () => {
 			var nameID = this.closest('.container').id;
 			this.closest('.container').style.visibility = 'hidden';
 
@@ -562,6 +562,7 @@ function displayMenu() {
 	const hiddenMenu = document.body.childNodes[1];
 	const header = document.getElementById('header-section');
 	const closeButton = document.getElementById('close-hiddenMenu');
+	
 	hamburgerIcon.addEventListener('click', function() {
 		if (hiddenMenu.dataset.active) {
 			hiddenMenu.classList.remove('hideElement');
