@@ -418,24 +418,20 @@ function darkMode() {
 }
 
 function sendEmail() {
-	const getFormButton = document.getElementById('form-button');
+	var templateParams = {
+		name: document.getElementById('name').value,
+		entreprise: document.getElementById('entreprise').value,
+		phone: document.getElementById('phone').value,
+		email: document.getElementById('email').value,
+		description: document.getElementById('description').value
+	};
 
-	getFormButton.addEventListener('click', function() {
-		var templateParams = {
-			name: document.getElementById('name').value,
-			entreprise: document.getElementById('entreprise').value,
-			phone: document.getElementById('phone').value,
-			email: document.getElementById('email').value,
-			description: document.getElementById('description').value
-		};
-
-		emailjs.send('service_a80h2ni', 'template_766uk3r', templateParams)
-			.then(function(response) {
-				notification("Message envoyé", '#57B40F');
-			}, function(error) {
-				notification("Problème lors de l'envoie", '#973c34');
-			});
-	})
+	emailjs.send('service_a80h2ni', 'template_766uk3r', templateParams)
+		.then(function(response) {
+			notification("Message envoyé", '#57B40F');
+		}, function(error) {
+			notification("Problème lors de l'envoie", '#973c34');
+		});
 }
 
 function displayWindows() {
@@ -603,11 +599,37 @@ function displayResponsive() {
 		textContact.classList.add('resize-drag');
 	}	
 }
+
+function validateForm() {
+	const getFormButton = document.getElementById('form-button');
+
+	getFormButton.addEventListener('click', function(e) {
+		const firstname = document.forms["contact-form"]["name"].value;
+		const phoneNumber = document.forms["contact-form"]["phone"].value;
+		const email = document.forms["contact-form"]["email"].value;
+		const contactText = document.forms["contact-form"]["description"].value;
+		const regexEmail = /^\w+([.-]?\w+)@\w+([.-]?\w+)(.\w{2,3})+$/;
+		const regexLetter = /^[a-zA-Z-]+$/;
+
+		if (!firstname.match(regexLetter)) {
+			notification(firstname + " n'est pas un prénom valide", '#973c34');
+		} else if (!phoneNumber.match(phoneNumber)) {
+			notification(phoneNumber + " n'est pas un numéro valide", '#973c34');
+		} else if (!email.match(regexEmail)) {
+			notification(phoneNumber + " n'est pas un e-mail valide", '#973c34');
+		} else if (!contactText.match(regexLetter)) {
+			notification(phoneNumber + " n'est pas un texte valide", '#973c34');
+		} else {
+			sendEmail();
+			e.preventDefault();
+		}
+	});
+}
 //
 // Run functions
 //
 displayWindows(); time();
 date(); darkMode(); closeOpenTerminal();
 resize(); dragAndDrop(); pressKey(); reduce();
-openReduce(); sendEmail(); removeResize();
-displayMenu(); displayResponsive();
+openReduce(); removeResize();
+displayMenu(); displayResponsive(); validateForm();

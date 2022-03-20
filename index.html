@@ -11,7 +11,7 @@
    <title class="version">CMD \> Nicolas BAAR </title>
    <link rel="icon" href="assets/images/favicon.png"/>
    <link rel="apple-touch-icon" href="assets/images/favicon.png">
-   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js" async></script>
+   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
    <script>(function() { emailjs.init("user_e4MVLTTonZoL69En0byMU"); })();</script>
    <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js" defer></script>
    <script src="assets/scripts/index.js" defer></script>
@@ -127,6 +127,7 @@
             <div id="terminal-text" class="scroller">
                <p>[X-01] <span class="colorNbos">NbOS terminal</span> <span class="text--bold version"><!-- [version 0.01] --></span></p>
                <p>(c)Nicolas BAAR. Tous droits réservés.</p>
+               <p>Pour une meilleure expérience, merci d'utiliser un ordinateur.</p>
                <p><span class="text--bold">C:\Users\Nicolas></span> npm run server</p>
                <p><span class="colorNbos">[NbOS]</span> : Démarrage du serveur ...</p>
                <p><span class="colorNbos">[NbOS]</span> : État du serveur : <span class="text--green text--bold">ON</span></p>
@@ -202,8 +203,8 @@
             <div class="terminal-folder" id="contactform">
                <h2>Me contacter<i class="fa-solid fa-reply"></i></h2>
                <hr style="width:40%; margin-bottom: 1rem;">
-               <form action="#" id="form-contact" class="form-example">
-                  <div class="form-example">
+               <form action="#" name="contact-form" id="form-contact" class="form-example">
+                  <div class="form-example" id="name-input">
                     <label for="name"><i class="fa-solid fa-signature"></i>> Prénom*</label>
                     <input type="text" name="name" id="name" class="contactme-input" autocomplete="off" required>
                   </div>
@@ -214,20 +215,21 @@
                         <option value="no">Non</option>
                      </select>
                   </div>
-                  <div class="form-example">
+                  <div class="form-example" id="phone-input">
                      <label for="phone"><i class="fa-solid fa-mobile-screen-button"></i>> Numéro de téléphone</label>
                      <input type="tel" pattern="[06][0-9]{9}" name="phone" id="phone" class="contactme-input" autocomplete="off">
                   </div>
-                  <div class="form-example">
+                  <div class="form-example" id="email-input">
                      <label for="email"><i class="fa-solid fa-paper-plane"></i>> Adresse e-mail*</label>
                      <input type="email" name="email" id="email" class="contactme-input" autocomplete="off" required>
                   </div>
-                  <div class="form-example">
+                  <div class="form-example" id="description-input">
                      <label for="description"><i class="fa-solid fa-file-contract"></i>> Pourquoi souhaitez-vous me contacter ?*</label>
                      <input type="text" name="description" id="description" class="contactme-input" autocomplete="off" required>
                   </div>
+                  * Obligatoire
                   <div class="form-example">
-                    <input type="submit" id="form-button" class="button-custom" value="Envoyer">
+                    <input type="button" id="form-button" class="button-custom" value="Envoyer">
                   </div>
                 </form>
             </div>
