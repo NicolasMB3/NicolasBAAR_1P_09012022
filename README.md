@@ -20,9 +20,11 @@ Seriez-vous la première entreprise qui m'aide à devenir un développeur senior
 
 Contenance du site :
 * Commandes via un terminal pour en savoir plus sur mon profil,
-* Fenêtres et icônes déplaçables avec la souris (touchScreen à voir),
+* Fenêtres et icônes déplaçables avec la souris (InteractJS),
 * Ouverture des dossiers pour accéder à du contenu supplémentaire,
-* Activation/Désactivation du mode sombre.
+* Activation/Désactivation du mode sombre,
+* Dossiers me contacter et fichiers,
+* Système de notification.
 
 ## Développé avec :
 
