@@ -120,7 +120,7 @@ function pressKey() {
                      <li>help : Affiche toutes les commandes disponibles</li>
                      <li>about : En savoir plus sur moi</li>
                      <li>theme [light/dark] : Change le thème du site</li>
-                     <li>contact : Rentrer en contact avec moi</li>
+                     <li>contact : Me contacter</li>
 							<li>application : Ouvre le menu application</li>
                      <li>clear : Nettoie la console</li>
                   </ul>
@@ -617,9 +617,9 @@ function validateForm() {
 		} else if (!phoneNumber.match(phoneNumber)) {
 			notification(phoneNumber + " n'est pas un numéro valide", '#973c34');
 		} else if (!email.match(regexEmail)) {
-			notification(phoneNumber + " n'est pas un e-mail valide", '#973c34');
+			notification(email + " n'est pas un e-mail valide", '#973c34');
 		} else if (!contactText.match(regexLetter)) {
-			notification(phoneNumber + " n'est pas un texte valide", '#973c34');
+			notification(contactText + " n'est pas un texte valide", '#973c34');
 		} else {
 			sendEmail();
 			e.preventDefault();
