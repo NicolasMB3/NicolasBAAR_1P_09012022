@@ -610,7 +610,7 @@ function validateForm() {
 		const email = document.forms["contact-form"]["email"].value;
 		const contactText = document.forms["contact-form"]["description"].value;
 		const regexEmail = /^\w+([.-]?\w+)@\w+([.-]?\w+)(.\w{2,3})+$/;
-		const regexLetter = /^([a-zA-Z]{2,}\s[a-zA-Z]{1,}'?-?[a-zA-Z]{2,}\s?([a-zA-Z]{1,})?)/;
+		const regexLetter = /^(?=.{1,50}$)[a-z]+(?:['_.\s][a-z]+)*$/i;
 
 		if (!firstname.match(regexLetter)) {
 			notification(firstname + " n'est pas un prénom valide", '#973c34');
