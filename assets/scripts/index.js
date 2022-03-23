@@ -618,8 +618,6 @@ function validateForm() {
 			notification(phoneNumber + " n'est pas un numéro valide", '#973c34');
 		} else if (!email.match(regexEmail)) {
 			notification(email + " n'est pas un e-mail valide", '#973c34');
-		} else if (!contactText.match(regexLetter)) {
-			notification(contactText + " n'est pas un texte valide", '#973c34');
 		} else {
 			sendEmail();
 			e.preventDefault();
