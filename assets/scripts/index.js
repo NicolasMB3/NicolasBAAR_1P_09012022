@@ -613,13 +613,33 @@ function validateForm() {
 		const regexLetter = /^(?=.{1,50}$)[a-z]+(?:['_.\s][a-z]+)*$/i;
 
 		if (!firstname.match(regexLetter)) {
+			const nameInput = document.getElementById('name');
+			nameInput.style.border = '2px solid #973c34'
 			notification(firstname + " n'est pas un prénom valide", '#973c34');
+			nameInput.addEventListener('click', function() {
+				nameInput.style.border = ''
+			})
 		} else if (!phoneNumber.match(phoneNumber)) {
+			const phoneInput = document.getElementById('phone');
+			phoneInput.style.border = '2px solid #973c34'
 			notification(phoneNumber + " n'est pas un numéro valide", '#973c34');
+			phoneInput.addEventListener('click', function() {
+				phoneInput.style.border = ''
+			})
 		} else if (!email.match(regexEmail)) {
+			const emailInput = document.getElementById('email');
+			emailInput.style.border = '2px solid #973c34'
 			notification(email + " n'est pas un e-mail valide", '#973c34');
-		} else if (contactText == null) {
-			notification("Merci de remplir le champs", '#973c34');
+			emailInput.addEventListener('click', function() {
+				emailInput.style.border = ''
+			})
+		} else if (contactText == '') {
+			const descriptionInput = document.getElementById('description');
+			descriptionInput.style.border = '2px solid #973c34'
+			notification("merci de remplir les champs indiqués", '#973c34');
+			descriptionInput.addEventListener('click', function() {
+				descriptionInput.style.border = ''
+			})
 		} else {
 			sendEmail();
 			e.preventDefault();
