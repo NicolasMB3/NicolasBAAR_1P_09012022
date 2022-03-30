@@ -112,14 +112,15 @@
       padding: 0.2rem 0;
    }
    .terminal-folder {
-      color: var(--lightText);
       cursor: var(--cursor);
+      display: flex;
+      color: var(--lightText);
       height: 100%;
       width: 100%;
    }
    #terminal-text {
-      color: var(--lightText);
       cursor: var(--cursor);
+      color: var(--lightText);
       height: 100%;
       width: auto;
       overflow: scroll;
