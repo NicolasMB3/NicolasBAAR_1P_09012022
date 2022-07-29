@@ -4,7 +4,7 @@
   "description": "Private portfolio for work-study research",
   "main": "index.js",
   "scripts": {
-    "babel": "babel index.js -o index-format.js"
+    "babel": "babel assets/scripts/index.js -o assets/scripts/index-format.js"
   },
   "repository": {
     "type": "git",

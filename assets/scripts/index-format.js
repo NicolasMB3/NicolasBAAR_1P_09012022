@@ -1,4 +1,4 @@
-version(0.06);
+version(0.07);
 const textTerminal = document.getElementById('terminal-text');
 let inputValue = document.querySelector('#command');
 const commands = {
@@ -13,23 +13,22 @@ const commands = {
   application: `Ouverture du menu ...`,
   unknow: `Merci d'écrire une commande (liste disponible avec la commande help)`,
   errorTheme: `Merci de spécifier un thème [dark/light]`
-}; 
-
-//
+}; //
 // @param {String}   version    Website version
 // @return {String}  v[0.00]
 //
+
 function version(version) {
   const versionClass = document.getElementsByClassName('version');
   [...versionClass].forEach(element => {
     element.innerHTML += 'v' + '[' + version + ']';
   });
   return version;
-} 
-
-//
+} //
 // Display time in header -> HH:MM AM/PM
 //
+
+
 function time() {
   setInterval(() => {
     let getTime = new Date();
@@ -43,28 +42,28 @@ function time() {
 
     document.getElementById('time').innerHTML = time;
   }, 1000);
-} 
-
-//
+} //
 // Display date in header -> DD/MM/YY
 //
+
+
 function date() {
   let getDate = new Date();
   let date = ("0" + getDate.getDate()).slice(-2) + '/' + ("0" + (getDate.getMonth() + 1)).slice(-2) + '/' + getDate.getFullYear();
   document.getElementById('date').innerHTML = date;
-}
-
-//
+} //
 // Remove old input
 //
+
+
 function removeInput() {
   let removedInput = document.querySelector('#terminal-input');
   removedInput.remove();
-}
-
-//
+} //
 // Replace input's value to text and place value in text
 //
+
+
 function inputToText() {
   // Stockage de la valeur écrite
   const tempDataInput = inputValue.value;
@@ -74,11 +73,11 @@ function inputToText() {
          <span class="text--bold" id="terminal-title">C:\\Users\\Nicolas></span>
          <span id="new-input--style">` + tempDataInput + `</span>
       </div>`;
-}
-
-//
+} //
 // Create new input
 //
+
+
 function newInput() {
   textTerminal.innerHTML += `<div id="terminal-input">
          <p><span class="text--bold">C:\\Users\\Nicolas></span></p>
@@ -87,23 +86,23 @@ function newInput() {
   inputValue = document.querySelector('#command');
   inputValue.focus();
   pressKey();
-} 
-
-//
+} //
 // @param {String}   text    Display text in terminal (Object.name)
 // @return {String}  Sentence in Object
 //
+
+
 function writeAnwser(text) {
   const newDiv = document.createElement('div');
   const newContent = document.createTextNode(`C:\\> : ` + text);
   newDiv.append(newContent);
   textTerminal.appendChild(newDiv);
   inputValue.disabled = true;
-} 
-
-//
+} //
 // Write awnser when words/sentences are pressed
 //
+
+
 function pressKey() {
   inputValue.addEventListener("keypress", e => {
     if (e.key !== 'Enter') return;
@@ -237,11 +236,11 @@ function pressKey() {
 
     ;
   });
-}
-
-//
+} //
 // Drag and drop system -> InteractJS
 //
+
+
 function dragAndDrop() {
   // target elements with the "draggable" class
   interact('.drag').styleCursor(false).draggable({
@@ -273,11 +272,11 @@ function dragAndDrop() {
 
 
   window.dragMoveListener = dragMoveListener;
-}
-
-//
+} //
 // Open and close terminal when doublie click on icon or button close is pressed
 //
+
+
 function closeOpenTerminal() {
   const buttonClose = document.getElementsByClassName('closeAction');
   const openAndClose = document.getElementsByClassName('openClose');
@@ -323,11 +322,11 @@ function closeOpenTerminal() {
       }
     });
   });
-}
-
-//
+} //
 // Resize window on right and bottom corner
 //
+
+
 function resize() {
   interact('.resize-drag').resizable({
     // resize from all edges and corners
@@ -354,8 +353,7 @@ function resize() {
       }
 
     },
-    modifiers: [
-    // keep the edges inside the parent
+    modifiers: [// keep the edges inside the parent
     interact.modifiers.restrictEdges({
       inner: {
         left: 100,
@@ -385,11 +383,11 @@ function resize() {
       endOnly: true
     })]
   });
-} 
-
-//
+} //
 // Dark mode and light mode
 //
+
+
 function darkMode() {
   const switchButton = document.getElementsByClassName('button-switch');
   const mode = localStorage.getItem('mode');
@@ -439,12 +437,11 @@ function displayWindows() {
   });
 }
 
-; 
-
-//
+; //
 // @param {String} {String}   text    Text on notification
 // @return {String}  Notification send
 //
+
 function copyTextToClipboard(text) {
   if (!navigator.clipboard) {
     fallbackCopyTextToClipboard(text);
@@ -461,11 +458,10 @@ function copyTextToClipboard(text) {
 var copyBobBtn = document.getElementById('email-copy');
 copyBobBtn.addEventListener('click', function () {
   copyTextToClipboard('nicolasbaar@outlook.fr');
-});
-
-//
+}); //
 // Reduce Windows in header
 //
+
 function reduce() {
   var reduceButton = document.getElementsByClassName('circle-grey');
   [...reduceButton].forEach(element => {
@@ -485,11 +481,11 @@ function reduce() {
       }
     });
   });
-} 
-
-//
+} //
 // Open reduce Windows in header (need update????)
 //
+
+
 function openReduce() {
   var reduceButtonOne = document.getElementById('button-terminal--header');
   reduceButtonOne.addEventListener('dblclick', () => {
@@ -509,9 +505,9 @@ function openReduce() {
     const containerFile = document.getElementById('container-file');
     containerFile.style.visibility = 'visible';
   });
-} 
+} // @Params {String} {String}	(Text), (#fff)
 
-// @Params {String} {String}	(Text), (#fff)
+
 function notification(text, color) {
   const notificationArea = document.getElementById('notification-area');
   const notificationId = new Date().getTime();
@@ -523,6 +519,8 @@ function notification(text, color) {
   notificationArea.appendChild(para);
   para.setAttribute("created-at", new Date().getTime());
 }
+
+;
 
 function hideElement() {
   var test = document.getElementsByClassName('notification-area-box');
@@ -549,9 +547,9 @@ function removeResize() {
       }
     });
   });
-} 
+} // @Params null
 
-// @Params null
+
 function displayMenu() {
   const hamburgerIcon = document.getElementById('openNavMenu');
   const hiddenMenu = document.body.childNodes[1];
@@ -637,11 +635,11 @@ function validateForm() {
       e.preventDefault();
     }
   });
-} 
-
-//
+} //
 // Run functions
 //
+
+
 displayWindows();
 time();
 date();
