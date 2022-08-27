@@ -1,4 +1,4 @@
-version(0.07);
+version(0.06);
 const textTerminal = document.getElementById('terminal-text');
 let inputValue = document.querySelector('#command');
 const commands = {
@@ -529,6 +529,16 @@ function hideElement() {
     if ((new Date().getTime() - test[i].getAttribute("created-at")) / 1000 > 7) {
       test[i].remove();
     }
+  }
+
+  if (document.getElementById("notification-area").childElementCount > 5) {
+    var test = document.getElementsByClassName('notification-area-box');
+
+    for (let i = 0; i < document.getElementById("notification-area").children.length; i++) {
+      test[0].remove();
+    }
+
+    notification("❌ Nombre des notifications dépassé", '#973c34');
   }
 }
 

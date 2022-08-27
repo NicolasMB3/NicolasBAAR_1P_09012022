@@ -537,6 +537,13 @@ function hideElement() {
 			test[i].remove();
 		}
 	}
+	if(document.getElementById("notification-area").childElementCount > 5) {
+		var test = document.getElementsByClassName('notification-area-box');
+		for (let i = 0; i < document.getElementById("notification-area").children.length; i++) {
+			test[0].remove();
+		}
+		notification("❌ Nombre des notifications dépassé", '#973c34');
+	}
 }
 
 setInterval(function() {
