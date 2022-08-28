@@ -203,19 +203,13 @@ br {
    outline: 1px solid var(--lightBorder);
 }
 
-.error-form {
-   margin-top: .5rem;
-   color: #96190e;
-}
+@media (max-width: 992px) {
 
-@media (max-width: 1022px) {
-   #discord-text {
-      display: none;
+   .tooltip {
+      display: none !important;
       margin-right: 0;
    }
-}
 
-@media (max-width: 992px) {
    main {
       height: auto;
    }

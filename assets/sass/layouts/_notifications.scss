@@ -39,6 +39,11 @@
    animation: loading 6s ease-in both;
 }
 
+.error-form {
+   margin-top: .5rem;
+   color: #96190e;
+}
+
 @keyframes loading {
    0% {
       width: 90%;
