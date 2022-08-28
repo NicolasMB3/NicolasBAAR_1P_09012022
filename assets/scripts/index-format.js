@@ -538,7 +538,7 @@ function hideElement() {
       test[0].remove();
     }
 
-    notification("❌ Nombre des notifications dépassé", '#973c34');
+    notification("Le nombre de notifications dépassé, les deux premières notifications ont été supprimées", '#973c34');
   }
 }
 

@@ -12,6 +12,8 @@
 }
 
 .notification-area-box {
+   text-align: center;
+   padding: 2rem 0 2rem;
    color: var(--lightText);
    border: 1px solid var(--lightBorder);
    display: flex;
@@ -21,7 +23,7 @@
    backdrop-filter: blur(15px);
    border-radius: 7px 2px 2px 7px;
    width: 100%;
-   height: 5rem;
+   height: 100%;
    margin-bottom: 0.5rem;
 	animation: slide-out-top 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) 6s both;
 }
