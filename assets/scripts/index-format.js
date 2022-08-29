@@ -4,7 +4,7 @@ let inputValue = document.querySelector('#command');
 const commands = {
   nicolas: `> Développeur web full-stack à la recherche de sa première expérience professionnelle. <br>Mordu d'informatique, j’ai appris à programmer dès mon plus jeune âge dans divers langages informatiques comme JavaScript, PHP et Lua. 
 	<br>Polyvalent, je maîtrise les différentes étapes techniques de la création d'un site web ; de la compréhension des besoins utilisateurs, à la conception des 
-      maquettes jusqu'au développement front-end et back-end.`,
+      maquettes jusqu'au développement front-end et back-end.<br>Pour en savoir plus sur mes compétences, la commande : <b>stack</b> est disponible sur le terminal`,
   contactOpen: `Merci de remplir le formulaire de contact déjà afficher sur la page [Me contacter].`,
   contactClose: `Ouverture du dossier [Me contacter] en cours.`,
   clearbin: `La corbeille a été vidée.`,
