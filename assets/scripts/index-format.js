@@ -345,7 +345,7 @@ function pressKey() {
         newInput();
         break;
 
-      case 'stack':
+      case 'application':
         inputToText();
         writeAnwser(commands.application);
         const hiddenMenu = document.body.childNodes[1];
