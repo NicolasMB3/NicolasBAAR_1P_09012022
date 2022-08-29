@@ -31,7 +31,7 @@
       </div>
       <div class="icon-responsive-2 icons-left" data-id="789">
          <img src="assets/images/terminal.svg" alt="Icône pour le terminal sur le bureau" width="42" height="42"> 
-         <p>Terminal</p>
+         <p>Stack technique</p>
       </div>
       <div class="icon-responsive-3 icons-left">
          <a href="https://www.linkedin.com/in/nicolasbaar02/" target="_blank">
@@ -46,7 +46,7 @@
          </a>
       </div>
       <div class="icon-responsive-5 icons-right">
-         <a href="assets/extras/CV_2022.pdf" target="_blank">
+         <a href="assets/extras/CV_2022_C.pdf" target="_blank">
             <img src="assets/images/chrome.svg" alt="Icône pour le dossier CV sur le bureau" width="42" height="42"> 
             <p>CV Numérique</p>
          </a>
@@ -61,7 +61,10 @@
    <header id="header-section">
       <div id="title-left">
          <ul id="list-header">
-            <li class="text--bold">NbOS</li>
+            <div class="tooltip">
+               <span class="tooltiptext"><b>Crédit</b>: 🙋 Nicolas BAAR <br/> 2022</span>
+               <li class="text--bold">NbOS</li>
+            </div>
             <div class="tooltip">
                <span class="tooltiptext">📌 Copier l'adresse</span>
                <li id="email-copy">nicolasbaar@outlook.fr</li>
@@ -148,7 +151,7 @@
                </ul>
                <div id="terminal-input">
                   <p><span class="text--bold" id="terminal-title">C:\Users\Nicolas></span></p>
-                  <input type="text" id="command" name="command" placeholder="help" required minlength="4" maxlength="14" autocomplete="off" autofocus>
+                  <input type="text" onkeypress="clickPress(event)" id="command" name="command" placeholder="help" required minlength="4" maxlength="14" autocomplete="off" autofocus>
                </div>
             </div>
          </div>

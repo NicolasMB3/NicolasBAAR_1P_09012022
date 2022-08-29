@@ -248,3 +248,27 @@
       border-radius: 10px;
    }
 }
+
+#stack {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-template-rows: repeat(auto, 1fr);
+   gap: 1rem;
+   width: 98%;
+   height: auto;
+   #javascript {
+      padding: 1rem;
+      background-color: var(--lightTerminalHeaderBackground);
+      border: 1px solid var(--lightBorder);
+      border-radius: 5px;
+      width: auto;
+      height: auto;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      gap: 2rem;
+   }
+}

@@ -205,6 +205,19 @@ br {
 
 @media (max-width: 992px) {
 
+   #stack {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(auto, 1fr);
+   }
+
+   #contactform form.form-example {
+      width: 100%;
+   }
+
+   #terminal, #corbeille, #contacter {
+      display: none;
+   }
+
    .tooltip {
       display: none !important;
       margin-right: 0;
@@ -235,8 +248,8 @@ br {
       }
    }
 
-   #text-discord, #notification-area {
-      display: none;
+   #notification-area {
+      z-index: 500;
    }
 
    .container .terminal {
@@ -270,6 +283,11 @@ br {
 }
 
 @media (max-width: 610px) {
+
+   #stack {
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(auto, 1fr);
+   }
 
    main {
       height: auto;
@@ -320,10 +338,6 @@ br {
       .research-bar {
          width: 60%;
       }
-   }
-
-   #contactform form.form-example {
-      width: 80%;
    }
 
    .container .terminal #terminal-text #terminal-input input {

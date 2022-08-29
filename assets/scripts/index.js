@@ -3,6 +3,11 @@ version(0.06);
 const textTerminal = document.getElementById('terminal-text');
 let inputValue = document.querySelector('#command');
 
+function updateScroll(){
+	var element = document.getElementById("terminal-text");
+	element.scrollTop = element.scrollHeight;
+}
+
 const commands = {
 	nicolas: `> Développeur web full-stack à la recherche de sa première expérience professionnelle. <br>Mordu d'informatique, j’ai appris à programmer dès mon plus jeune âge dans divers langages informatiques comme JavaScript, PHP et Lua. 
 	<br>Polyvalent, je maîtrise les différentes étapes techniques de la création d'un site web ; de la compréhension des besoins utilisateurs, à la conception des 
@@ -14,7 +19,8 @@ const commands = {
 	theme: `Le thème a correctement été changé.`,
 	application: `Ouverture du menu ...`,
 	unknow: `Merci d'écrire une commande (liste disponible avec la commande help)`,
-	errorTheme: `Merci de spécifier un thème [dark/light]`
+	errorTheme: `Merci de spécifier un thème [dark/light]`,
+	stackjs: `Lorem, ipsum dolor sit amet consectetur adipisicing elit.`
 };
 
 //
@@ -127,21 +133,59 @@ function pressKey() {
                </div>`
 				newInput();
 				break;
-			case 'about':
+			case 'stack':
 				inputToText();
 				textTerminal.innerHTML += `
-               <div id="header-request">
-                  <span class="custom-side-right">- X</span>
-                  <p>****** À PROPOS DE MOI ******</p>
-						<div id="my-self-flex">
-							<div id="my-self-flex--image">
-								<img src="assets/images/picture.png" alt="Photo de profil">
-							</div>
-							<div>
-								${commands.nicolas}
-							</div>
+				<div id="stack">
+					<div id="javascript">
+						<div>
+							<img src="assets/images/logo-javascript.svg" width="50rem" heigth="50rem" alt="Photo de profil">
 						</div>
-               </div>`
+						<div>
+							${commands.stackjs}
+						</div>
+					</div>
+					<div id="javascript">
+						<div>
+							<img src="assets/images/logo-javascript.svg" width="50rem" heigth="50rem" alt="Photo de profil">
+						</div>
+						<div>
+							${commands.stackjs}
+						</div>
+					</div>
+					<div id="javascript">
+						<div>
+							<img src="assets/images/logo-javascript.svg" width="50rem" heigth="50rem" alt="Photo de profil">
+						</div>
+						<div>
+							${commands.stackjs}
+						</div>
+					</div>
+					<div id="javascript">
+						<div>
+							<img src="assets/images/logo-javascript.svg" width="50rem" heigth="50rem" alt="Photo de profil">
+						</div>
+						<div>
+							${commands.stackjs}
+						</div>
+					</div>
+					<div id="javascript">
+						<div>
+							<img src="assets/images/logo-javascript.svg" width="50rem" heigth="50rem" alt="Photo de profil">
+						</div>
+						<div>
+							${commands.stackjs}
+						</div>
+					</div>
+					<div id="javascript">
+						<div>
+							<img src="assets/images/logo-javascript.svg" width="50rem" heigth="50rem" alt="Photo de profil">
+						</div>
+						<div>
+							${commands.stackjs}
+						</div>
+					</div>
+				</div>`
 				newInput();
 				break;
 			case 'contact':
@@ -205,7 +249,25 @@ function pressKey() {
 				writeAnwser(commands.errorTheme);
 				newInput();
 				break;
-			case 'application':
+			// ToDo
+			case 'about':
+				inputToText();
+				textTerminal.innerHTML += `
+					<div id="header-request">
+						<span class="custom-side-right">- X</span>
+						<p>****** À PROPOS DE MOI ******</p>
+						<div id="my-self-flex">
+							<div id="my-self-flex--image">
+								<img src="assets/images/picture.png" alt="Photo de profil">
+							</div>
+							<div>
+								${commands.nicolas}
+							</div>
+						</div>
+					</div>`
+				newInput();
+				break;
+			case 'stack':
 				inputToText();
 				writeAnwser(commands.application);
 				const hiddenMenu = document.body.childNodes[1];
@@ -653,6 +715,7 @@ function validateForm() {
 		}
 	});
 }
+
 //
 // Run functions
 //
