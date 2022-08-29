@@ -251,12 +251,12 @@
 
 #stack {
    display: grid;
-   grid-template-columns: repeat(3, 1fr);
+   grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
    grid-template-rows: repeat(auto, 1fr);
    gap: 1rem;
    width: 98%;
    height: auto;
-   #javascript {
+   .javascript {
       padding: 1rem;
       background-color: var(--lightTerminalHeaderBackground);
       border: 1px solid var(--lightBorder);
@@ -265,10 +265,44 @@
       height: auto;
       display: flex;
       flex-direction: row;
-      flex-wrap: nowrap;
-      justify-content: center;
       align-items: center;
-      align-content: center;
       gap: 2rem;
+      .center-text {
+         font-weight: bold;
+         display: flex;
+         justify-content: center;
+         justify-self: center;
+      }
+   }
+}
+
+.subcont {
+   width: 20rem;
+   .background-stack {
+      background-color: var(--lightTerminalHeaderBackground);
+      border: 1px solid var(--lightBorder);
+      border-radius: 99px;
+      width: auto;
+      height: auto;
+      .pourcentage-90 {
+         @include pourcentage;
+         width: 90%;
+      }
+      .pourcentage-80 {
+         @include pourcentage;
+         width: 80%;
+      }
+      .pourcentage-70 {
+         @include pourcentage;
+         width: 70%;
+      }
+      .pourcentage-60 {
+         @include pourcentage;
+         width: 60%;
+      }
+      .pourcentage-40 {
+         @include pourcentage;
+         width: 40%;
+      }
    }
 }

@@ -206,8 +206,7 @@ br {
 @media (max-width: 992px) {
 
    #stack {
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(auto, 1fr);
+      grid-template-columns: repeat(1, 1fr);
    }
 
    #contactform form.form-example {
@@ -283,11 +282,6 @@ br {
 }
 
 @media (max-width: 610px) {
-
-   #stack {
-      grid-template-columns: repeat(1, 1fr);
-      grid-template-rows: repeat(auto, 1fr);
-   }
 
    main {
       height: auto;

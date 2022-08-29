@@ -45,3 +45,13 @@
 @mixin step1($width, $color) {
    box-shadow: var(--lightBackground) 0px 0px 0px 2px inset, var(--lightBackground) 10px -10px 0px -3px, rgba(78, 78, 78, 0.5) 10px -10px;
 }
+
+@mixin pourcentage {
+   border-right: 3px solid #366d17;
+   border-radius: 99px;
+   background-color: #458b1c;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   align-self: center;
+}

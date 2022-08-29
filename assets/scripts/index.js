@@ -3,11 +3,6 @@ version(0.06);
 const textTerminal = document.getElementById('terminal-text');
 let inputValue = document.querySelector('#command');
 
-function updateScroll(){
-	var element = document.getElementById("terminal-text");
-	element.scrollTop = element.scrollHeight;
-}
-
 const commands = {
 	nicolas: `> Développeur web full-stack à la recherche de sa première expérience professionnelle. <br>Mordu d'informatique, j’ai appris à programmer dès mon plus jeune âge dans divers langages informatiques comme JavaScript, PHP et Lua. 
 	<br>Polyvalent, je maîtrise les différentes étapes techniques de la création d'un site web ; de la compréhension des besoins utilisateurs, à la conception des 
@@ -19,8 +14,7 @@ const commands = {
 	theme: `Le thème a correctement été changé.`,
 	application: `Ouverture du menu ...`,
 	unknow: `Merci d'écrire une commande (liste disponible avec la commande help)`,
-	errorTheme: `Merci de spécifier un thème [dark/light]`,
-	stackjs: `Lorem, ipsum dolor sit amet consectetur adipisicing elit.`
+	errorTheme: `Merci de spécifier un thème [dark/light]`
 };
 
 //
@@ -137,54 +131,126 @@ function pressKey() {
 				inputToText();
 				textTerminal.innerHTML += `
 				<div id="stack">
-					<div id="javascript">
+					<div class="javascript">
+						<div>
+							<img src="assets/images/html.png" width="50rem" heigth="50rem" alt="Photo de profil">
+						</div>
+						<div class="subcont">
+							<div class="center-text">
+								<p>HTML</p>
+							</div>
+							<div class="background-stack">
+								<div class="pourcentage-90">
+									<div>90%</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="javascript">
+						<div>
+							<img src="assets/images/css.png" width="50rem" heigth="50rem" alt="Photo de profil">
+						</div>
+						<div class="subcont">
+							<div class="center-text">
+								<p>CSS</p>
+							</div>
+							<div class="background-stack">
+								<div class="pourcentage-90">
+									<div>90%</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="javascript">
+						<div>
+							<img src="assets/images/sass.png" width="50rem" heigth="50rem" alt="Photo de profil">
+						</div>
+						<div class="subcont">
+							<div class="center-text">
+								<p>SaSS</p>
+							</div>
+							<div class="background-stack">
+								<div class="pourcentage-80">
+									<div>80%</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="javascript">
 						<div>
 							<img src="assets/images/logo-javascript.svg" width="50rem" heigth="50rem" alt="Photo de profil">
 						</div>
-						<div>
-							${commands.stackjs}
+						<div class="subcont">
+							<div class="center-text">
+								<p>Javascript</p>
+							</div>
+							<div class="background-stack">
+								<div class="pourcentage-80">
+									<div>80%</div>
+								</div>
+							</div>
 						</div>
 					</div>
-					<div id="javascript">
+					<div class="javascript">
 						<div>
-							<img src="assets/images/logo-javascript.svg" width="50rem" heigth="50rem" alt="Photo de profil">
+							<img src="assets/images/vue.png" width="50rem" heigth="50rem" alt="Photo de profil">
 						</div>
-						<div>
-							${commands.stackjs}
-						</div>
-					</div>
-					<div id="javascript">
-						<div>
-							<img src="assets/images/logo-javascript.svg" width="50rem" heigth="50rem" alt="Photo de profil">
-						</div>
-						<div>
-							${commands.stackjs}
-						</div>
-					</div>
-					<div id="javascript">
-						<div>
-							<img src="assets/images/logo-javascript.svg" width="50rem" heigth="50rem" alt="Photo de profil">
-						</div>
-						<div>
-							${commands.stackjs}
+						<div class="subcont">
+							<div class="center-text">
+								<p>Vuejs</p>
+							</div>
+							<div class="background-stack">
+								<div class="pourcentage-70">
+									<div>70%</div>
+								</div>
+							</div>
 						</div>
 					</div>
-					<div id="javascript">
+					<div class="javascript">
 						<div>
-							<img src="assets/images/logo-javascript.svg" width="50rem" heigth="50rem" alt="Photo de profil">
+							<img src="assets/images/nodejs.png" width="50rem" heigth="50rem" alt="Photo de profil">
 						</div>
-						<div>
-							${commands.stackjs}
+						<div class="subcont">
+							<div class="center-text">
+								<p>Node.js</p>
+							</div>
+							<div class="background-stack">
+								<div class="pourcentage-60">
+									<div>60%</div>
+								</div>
+							</div>
 						</div>
 					</div>
-					<div id="javascript">
+					<div class="javascript">
 						<div>
-							<img src="assets/images/logo-javascript.svg" width="50rem" heigth="50rem" alt="Photo de profil">
+							<img src="assets/images/sql.webp" width="50rem" heigth="50rem" alt="Photo de profil">
 						</div>
+						<div class="subcont">
+							<div class="center-text">
+								<p>MySQL</p>
+							</div>
+							<div class="background-stack">
+								<div class="pourcentage-60">
+									<div>60%</div>
+								</div>
+							</div>
+						</div>
+					</div>	
+					<div class="javascript">
 						<div>
-							${commands.stackjs}
+							<img src="assets/images/php.png" width="50rem" heigth="50rem" alt="Photo de profil">
 						</div>
-					</div>
+						<div class="subcont">
+							<div class="center-text">
+								<p>PHP</p>
+							</div>
+							<div class="background-stack">
+								<div class="pourcentage-40">
+									<div>40%</div>
+								</div>
+							</div>
+						</div>
+					</div>	
 				</div>`
 				newInput();
 				break;
