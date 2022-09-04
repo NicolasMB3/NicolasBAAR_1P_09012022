@@ -3,6 +3,8 @@ version(0.06);
 const textTerminal = document.getElementById('terminal-text');
 let inputValue = document.querySelector('#command');
 
+let dataActive = '10';
+
 const commands = {
 	nicolas: `> Développeur web full-stack à la recherche de sa première expérience professionnelle. <br>Mordu d'informatique, j’ai appris à programmer dès mon plus jeune âge dans divers langages informatiques comme JavaScript, PHP et Lua. 
 	<br>Polyvalent, je maîtrise les différentes étapes techniques de la création d'un site web ; de la compréhension des besoins utilisateurs, à la conception des 
@@ -433,15 +435,15 @@ function closeOpenTerminal() {
 			if (icon.getAttribute('data-id') == 123) {
 				containerFile.classList.remove("close-animation");
 				containerFile.style.visibility = 'visible';
-				containerFile.style.zIndex = '5';
+				containerFile.style.zIndex = dataActive + 1;
 			} else if (icon.getAttribute('data-id') == 456) {
 				containerContact.classList.remove("close-animation");
 				containerContact.style.visibility = 'visible';
-				containerContact.style.zIndex = '5';
+				containerContact.style.zIndex = dataActive + 1;
 			} else {
 				containerTerminal.classList.remove("close-animation");
 				containerTerminal.style.visibility = 'visible';
-				containerTerminal.style.zIndex = '5';
+				containerTerminal.style.zIndex = dataActive + 1;
 			}
 		});
 	});
@@ -564,7 +566,6 @@ function sendEmail() {
 
 function displayWindows() {
 	const allWindows = [...document.getElementsByClassName('container')];
-	let dataActive = '10';
 	allWindows.forEach(function(item) {
 		item.addEventListener('click', () => {
 			item.style.zIndex = dataActive;
