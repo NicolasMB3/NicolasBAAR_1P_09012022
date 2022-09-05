@@ -423,11 +423,37 @@ function closeOpenTerminal() {
     containerContact.style.visibility = 'visible';
     containerContact.style.zIndex = '500';
   });
+  const container = document.getElementsByClassName('container');
+  Array.from(container).forEach(ctn => {
+    if (ctn.dataset.x != 0 || ctn.dataset.x != null) {
+      [...openAndClose].forEach(function (icon) {
+        let count = 15;
+        icon.addEventListener('dblclick', function (e) {
+          const containerTerminal = document.getElementById('container-terminal');
+          const containerFile = document.getElementById('container-file');
+          const containerContact = document.getElementById('container-contact');
+
+          if (icon.getAttribute('data-id') == 123) {
+            containerFile.style.transform = `translate(-` + count + `px, ` + count + `px)`;
+            count += 15;
+          } else if (icon.getAttribute('data-id') == 456) {
+            containerContact.style.transform = `translate(-` + count + `px, ` + count + `px)`;
+            count += 15;
+          } else {
+            containerTerminal.style.transform = `translate(-` + count + `px, ` + count + `px)`;
+            count += 15;
+          }
+        });
+      });
+    }
+  });
   [...buttonClose].forEach(function (button) {
     button.addEventListener('click', function () {
-      const container = document.getElementsByClassName('container');
       Array.from(container).forEach(ctn => {
         this.closest('.container').classList.add("close-animation");
+        this.closest('.container').style.transform = "";
+        this.closest('.container').dataset.x = "0";
+        this.closest('.container').dataset.y = "0";
       });
     });
   });
@@ -441,17 +467,14 @@ function closeOpenTerminal() {
         containerFile.classList.remove("close-animation");
         containerFile.style.visibility = 'visible';
         containerFile.style.zIndex = dataActive + 1;
-        console.log(this.style.zIndex);
       } else if (icon.getAttribute('data-id') == 456) {
         containerContact.classList.remove("close-animation");
         containerContact.style.visibility = 'visible';
         containerContact.style.zIndex = dataActive + 1;
-        console.log(this.style.zIndex);
       } else {
         containerTerminal.classList.remove("close-animation");
         containerTerminal.style.visibility = 'visible';
         containerTerminal.style.zIndex = dataActive + 1;
-        console.log(this.style.zIndex);
       }
     });
   });

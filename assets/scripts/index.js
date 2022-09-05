@@ -417,11 +417,16 @@ function closeOpenTerminal() {
 		containerContact.style.zIndex = '500';
 	});
 
+	const container = document.getElementsByClassName('container');
+
 	[...buttonClose].forEach(function(button) {
 		button.addEventListener('click', function() {
-			const container = document.getElementsByClassName('container');
 			Array.from(container).forEach((ctn) => {
+				this.closest('.container').setAttribute("data-active", "false");
 				this.closest('.container').classList.add("close-animation");
+				this.closest('.container').style.transform = "";
+				this.closest('.container').dataset.x = "0";
+				this.closest('.container').dataset.y = "0";
 			});
 		});
 	});
@@ -436,14 +441,55 @@ function closeOpenTerminal() {
 				containerFile.classList.remove("close-animation");
 				containerFile.style.visibility = 'visible';
 				containerFile.style.zIndex = dataActive + 1;
+				containerFile.setAttribute("data-active", "true");
 			} else if (icon.getAttribute('data-id') == 456) {
 				containerContact.classList.remove("close-animation");
 				containerContact.style.visibility = 'visible';
 				containerContact.style.zIndex = dataActive + 1;
+				containerContact.setAttribute("data-active", "true");
 			} else {
 				containerTerminal.classList.remove("close-animation");
 				containerTerminal.style.visibility = 'visible';
 				containerTerminal.style.zIndex = dataActive + 1;
+				containerTerminal.setAttribute("data-active", "true");
+			}
+
+			let array = []
+
+			Array.from(container).forEach((ctn) => {
+				if(ctn.getAttribute('data-active') == 'true') {
+					array.push(ctn)
+				}
+			})
+
+			if(array.length == 2) {
+				if (icon.getAttribute('data-id') == 123) {
+					containerFile.style.transform = "translate(-15px, 15px)";
+					containerFile.setAttribute("data-x", "-15");
+					containerFile.setAttribute("data-y", "15");
+				} else if (icon.getAttribute('data-id') == 456) {
+					containerContact.style.transform = "translate(-15px, 15px)";
+					containerContact.setAttribute("data-x", "-15");
+					containerContact.setAttribute("data-y", "15");
+				} else {
+					containerTerminal.style.transform = "translate(-15px, 15px)";
+					containerTerminal.setAttribute("data-x", "-15");
+					containerTerminal.setAttribute("data-y", "15");
+				}
+			} else if (array.length > 2) {
+				if (icon.getAttribute('data-id') == 123) {
+					containerFile.style.transform = "translate(-30px, 30px)";
+					containerFile.setAttribute("data-x", "-30");
+					containerFile.setAttribute("data-y", "30");
+				} else if (icon.getAttribute('data-id') == 456) {
+					containerContact.style.transform = "translate(-30px, 30px)";
+					containerContact.setAttribute("data-x", "-30");
+					containerContact.setAttribute("data-y", "30");
+				} else {
+					containerTerminal.style.transform = "translate(-30px, 30px)";
+					containerTerminal.setAttribute("data-x", "-30");
+					containerTerminal.setAttribute("data-y", "30");
+				}
 			}
 		});
 	});
