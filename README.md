@@ -23,7 +23,7 @@ Contenance du site :
 * Fenêtres et icônes déplaçables avec la souris (InteractJS),
 * Ouverture des dossiers pour accéder à du contenu supplémentaire,
 * Activation/Désactivation du mode sombre,
-* Dossiers me contacter et fichiers,
+* Dossier "me contacter" et "autres fichiers",
 * Système de notification.
 
 ## Développé avec :
